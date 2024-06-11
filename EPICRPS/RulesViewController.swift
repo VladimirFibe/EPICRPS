@@ -20,8 +20,8 @@ final class RulesViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 22
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.addArrangedSubview(RulesRowView(number: 1, text: "PP"))
-        stackView.addArrangedSubview(RulesRowView(number: 2, text: "PP"))
+        stackView.addArrangedSubview(RulesRowView(number: 1, text: "Игра проводится между игроком и комьютером."))
+        stackView.addArrangedSubview(RulesRowView(number: 2, text: "Жесты:"))
         stackView.addArrangedSubview(RulesRowView(number: 3, text: "У игрока есть 30 сек. для выбора жеста."))
         stackView.addArrangedSubview(RulesRowView(number: 4, text: "PP"))
         stackView.addArrangedSubview(RulesRowView(number: 5, text: "За каждую победу игрок получает 500 баллов, которые можно посмотреть на доске лидеров."))
