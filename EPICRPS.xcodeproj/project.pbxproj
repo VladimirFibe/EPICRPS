@@ -12,6 +12,8 @@
 		AE2FA89F2C16DD600094AAA1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89E2C16DD600094AAA1 /* SplashViewController.swift */; };
 		AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */; };
 		AE2FA8A72C16DD610094AAA1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A62C16DD610094AAA1 /* Base */; };
+		B3299ADB2C1A21DE0062C3B8 /* Extension+SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3299ADA2C1A21DE0062C3B8 /* Extension+SplashViewController.swift */; };
+		B3299ADD2C1A22CD0062C3B8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3299ADC2C1A22CD0062C3B8 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE2FA8A62C16DD610094AAA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE2FA8A82C16DD610094AAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3299ADA2C1A21DE0062C3B8 /* Extension+SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SplashViewController.swift"; sourceTree = "<group>"; };
+		B3299ADC2C1A22CD0062C3B8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,56 @@
 		AE2FA8992C16DD600094AAA1 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
+				B3299AD82C1A20F80062C3B8 /* View */,
+				B3299AD72C1A20BC0062C3B8 /* Controller */,
+				B3299AD92C1A21A90062C3B8 /* Extension+SplashViewController */,
 				AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */,
 				AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */,
-				AE2FA89E2C16DD600094AAA1 /* SplashViewController.swift */,
-				AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */,
-				AE2FA8A52C16DD610094AAA1 /* LaunchScreen.storyboard */,
 				AE2FA8A82C16DD610094AAA1 /* Info.plist */,
+				AE2FA8A52C16DD610094AAA1 /* LaunchScreen.storyboard */,
+				AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */,
 			);
 			path = EPICRPS;
+			sourceTree = "<group>";
+		};
+		B3299AD62C1A207C0062C3B8 /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AE2FA89E2C16DD600094AAA1 /* SplashViewController.swift */,
+			);
+			path = SplashViewController;
+			sourceTree = "<group>";
+		};
+		B3299AD72C1A20BC0062C3B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3299AD62C1A207C0062C3B8 /* SplashViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3299AD82C1A20F80062C3B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3299ADE2C1A23490062C3B8 /* SplashView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3299AD92C1A21A90062C3B8 /* Extension+SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B3299ADA2C1A21DE0062C3B8 /* Extension+SplashViewController.swift */,
+			);
+			path = "Extension+SplashViewController";
+			sourceTree = "<group>";
+		};
+		B3299ADE2C1A23490062C3B8 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				B3299ADC2C1A22CD0062C3B8 /* SplashView.swift */,
+			);
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE2FA89F2C16DD600094AAA1 /* SplashViewController.swift in Sources */,
+				B3299ADB2C1A21DE0062C3B8 /* Extension+SplashViewController.swift in Sources */,
+				B3299ADD2C1A22CD0062C3B8 /* SplashView.swift in Sources */,
 				AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */,
 				AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */,
 			);
