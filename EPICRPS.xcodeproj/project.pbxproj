@@ -13,6 +13,10 @@
 		AE2FA89F2C16DD600094AAA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89E2C16DD600094AAA1 /* ViewController.swift */; };
 		AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */; };
 		AE2FA8A72C16DD610094AAA1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A62C16DD610094AAA1 /* Base */; };
+		B9760AE12C19DAB40000BFAB /* EllipticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9760AE02C19DAB40000BFAB /* EllipticalGradientLayer.swift */; };
+		B9760AE52C19F5F40000BFAB /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9760AE42C19F5F40000BFAB /* EllipticalRadialGradientView.swift */; };
+		B9C6FBC62C199C6100A0F131 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6FBC52C199C6100A0F131 /* FightResultViewController.swift */; };
+		B9C6FBC82C199CEE00A0F131 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6FBC72C199CEE00A0F131 /* FightResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE2FA8A62C16DD610094AAA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE2FA8A82C16DD610094AAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9760AE02C19DAB40000BFAB /* EllipticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalGradientLayer.swift; sourceTree = "<group>"; };
+		B9760AE42C19F5F40000BFAB /* EllipticalRadialGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalRadialGradientView.swift; sourceTree = "<group>"; };
+		B9C6FBC52C199C6100A0F131 /* FightResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
+		B9C6FBC72C199CEE00A0F131 /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +68,31 @@
 				AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */,
 				AE2FA89E2C16DD600094AAA1 /* ViewController.swift */,
 				51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */,
+				B9C6FBC92C199CFA00A0F131 /* FightResult */,
 				AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */,
 				AE2FA8A52C16DD610094AAA1 /* LaunchScreen.storyboard */,
 				AE2FA8A82C16DD610094AAA1 /* Info.plist */,
 			);
 			path = EPICRPS;
+			sourceTree = "<group>";
+		};
+		B9760AE62C1A02CC0000BFAB /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				B9760AE02C19DAB40000BFAB /* EllipticalGradientLayer.swift */,
+				B9760AE42C19F5F40000BFAB /* EllipticalRadialGradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		B9C6FBC92C199CFA00A0F131 /* FightResult */ = {
+			isa = PBXGroup;
+			children = (
+				B9C6FBC52C199C6100A0F131 /* FightResultViewController.swift */,
+				B9C6FBC72C199CEE00A0F131 /* FightResultView.swift */,
+				B9760AE62C1A02CC0000BFAB /* GradientView */,
+			);
+			path = FightResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C6FBC82C199CEE00A0F131 /* FightResultView.swift in Sources */,
 				AE2FA89F2C16DD600094AAA1 /* ViewController.swift in Sources */,
+				B9C6FBC62C199C6100A0F131 /* FightResultViewController.swift in Sources */,
 				51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */,
+				B9760AE12C19DAB40000BFAB /* EllipticalGradientLayer.swift in Sources */,
 				AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */,
+				B9760AE52C19F5F40000BFAB /* EllipticalRadialGradientView.swift in Sources */,
 				AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
