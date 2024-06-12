@@ -8,7 +8,7 @@
 import UIKit
 
 final class FightResultViewController: UIViewController {
-
+    
     private let customView = FightResultView()
     
     override func loadView() {
@@ -17,13 +17,13 @@ final class FightResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         customView.configureView()
         customView.delegate = self
     }
     
-
-
+    
+    
 }
 
 extension FightResultViewController: FightResultViewDelegate {
@@ -34,11 +34,4 @@ extension FightResultViewController: FightResultViewDelegate {
     func repeatButtonPressed() {
 #warning("go to RoundOneVC")
     }
-    
-    
-}
-
-@available(iOS 17.0, *)
-#Preview {
-    FightResultViewController()
 }

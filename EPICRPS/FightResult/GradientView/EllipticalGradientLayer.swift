@@ -8,10 +8,10 @@
 import UIKit
 
 final class EllipticalGradientLayer: CALayer {
-
+    
     private var innerColor: CGColor?
     private var outsideColor: CGColor?
-
+    
     init(innerColor: CGColor, outsideColor: CGColor) {
         super.init()
         
@@ -29,7 +29,7 @@ final class EllipticalGradientLayer: CALayer {
         let colors = [innerColor, outsideColor]
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let colorLocations: [CGFloat] = [0.0, 1.0]
-
+        
         /// CGGradient — это Core Graphics объект, который описывает градиент. Градиент определяется набором цветов и их расположениями.
         /// - colorsSpace:  цветовое пространство, в котором будут интерполироваться цвета градиента. По дефолту стандартное цветового пространства устройства
         /// - colors — массив, содержащий цвета градиента.
@@ -41,13 +41,13 @@ final class EllipticalGradientLayer: CALayer {
                 locations: colorLocations
             )
         else { return }
-
+        
         let center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
         
         // startRadius и endRadius определяют размер innerColor
         let startRadius: CGFloat = 0
         let endRadius: CGFloat = max(bounds.size.width, bounds.size.height) / 2
-
+        
         ctx.saveGState()
         ctx.translateBy(x: center.x, y: center.y)
         ctx.scaleBy(x: bounds.size.width / bounds.size.height, y: 1.0)

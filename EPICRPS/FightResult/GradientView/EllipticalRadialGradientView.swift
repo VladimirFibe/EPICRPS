@@ -8,7 +8,7 @@
 import UIKit
 
 final class EllipticalRadialGradientView: UIView {
-
+    
     private var isGradientDrawn = false
     
     private var gradientLayer: EllipticalGradientLayer?
@@ -24,7 +24,7 @@ final class EllipticalRadialGradientView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         

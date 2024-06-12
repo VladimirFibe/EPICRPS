@@ -13,11 +13,11 @@ protocol FightResultViewDelegate: AnyObject {
 }
 
 final class FightResultView: UIView {
-
+    
     weak var delegate: FightResultViewDelegate?
     
     private let appearance = Appearance()
-
+    
     private let avatarImageView = UIImageView()
     
     private lazy var avatarBackgroundView: UIView = {
@@ -48,14 +48,14 @@ final class FightResultView: UIView {
     }()
     
     private let homeButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setImage(UIImage(named: "home"), for: .normal)
         button.addTarget(self, action: #selector(homeButtonPressed), for: .touchUpInside)
         return button
     }()
     
     private let repeatButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setImage(UIImage(named: "repeat"), for: .normal)
         button.addTarget(self, action: #selector(repeatButtonPressed), for: .touchUpInside)
         return button
@@ -82,7 +82,7 @@ final class FightResultView: UIView {
     
     private func addSubviews() {
         
-      addSubview(avatarBackgroundView)
+        addSubview(avatarBackgroundView)
         avatarBackgroundView.addSubview(avatarImageView)
         addSubview(resultLabel)
         addSubview(scoreLabel)
