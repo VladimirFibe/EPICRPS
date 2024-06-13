@@ -5,7 +5,6 @@
 //  Created by Pavel Kostin on 12.06.2024.
 //
 
-import Foundation
 import UIKit
 
 protocol SplashViewDelegate: AnyObject {
