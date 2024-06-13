@@ -10,13 +10,15 @@
 		51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */; };
 		AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */; };
 		AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */; };
-		AE2FA89F2C16DD600094AAA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89E2C16DD600094AAA1 /* ViewController.swift */; };
 		AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */; };
 		AE2FA8A72C16DD610094AAA1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A62C16DD610094AAA1 /* Base */; };
-		B9760AE12C19DAB40000BFAB /* EllipticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9760AE02C19DAB40000BFAB /* EllipticalGradientLayer.swift */; };
-		B9760AE52C19F5F40000BFAB /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9760AE42C19F5F40000BFAB /* EllipticalRadialGradientView.swift */; };
-		B9C6FBC62C199C6100A0F131 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6FBC52C199C6100A0F131 /* FightResultViewController.swift */; };
-		B9C6FBC82C199CEE00A0F131 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6FBC72C199CEE00A0F131 /* FightResultView.swift */; };
+		D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9BC2C1AD6860004B1EA /* SplashView.swift */; };
+		D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C02C1AD6960004B1EA /* SplashViewController.swift */; };
+		D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */; };
+		D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */; };
+		D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */; };
+		D934C9CE2C1AD72B0004B1EA /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */; };
+		D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C72C1AD72B0004B1EA /* AppFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +26,16 @@
 		AE2FA8972C16DD600094AAA1 /* EPICRPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICRPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE2FA89E2C16DD600094AAA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE2FA8A62C16DD610094AAA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE2FA8A82C16DD610094AAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9760AE02C19DAB40000BFAB /* EllipticalGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalGradientLayer.swift; sourceTree = "<group>"; };
-		B9760AE42C19F5F40000BFAB /* EllipticalRadialGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalRadialGradientView.swift; sourceTree = "<group>"; };
-		B9C6FBC52C199C6100A0F131 /* FightResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
-		B9C6FBC72C199CEE00A0F131 /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
+		D934C9BC2C1AD6860004B1EA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		D934C9C02C1AD6960004B1EA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SplashViewController.swift"; sourceTree = "<group>"; };
+		D934C9C72C1AD72B0004B1EA /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +68,13 @@
 		AE2FA8992C16DD600094AAA1 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
+				D934C9CB2C1AD72B0004B1EA /* Fonts */,
+				D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */,
+				D934C9C22C1AD6960004B1EA /* Controller */,
+				D934C9BE2C1AD6860004B1EA /* View */,
 				AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */,
 				AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */,
-				AE2FA89E2C16DD600094AAA1 /* ViewController.swift */,
 				51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */,
-				B9C6FBC92C199CFA00A0F131 /* FightResult */,
 				AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */,
 				AE2FA8A52C16DD610094AAA1 /* LaunchScreen.storyboard */,
 				AE2FA8A82C16DD610094AAA1 /* Info.plist */,
@@ -76,23 +82,55 @@
 			path = EPICRPS;
 			sourceTree = "<group>";
 		};
-		B9760AE62C1A02CC0000BFAB /* GradientView */ = {
+		D934C9BD2C1AD6860004B1EA /* SplashView */ = {
 			isa = PBXGroup;
 			children = (
-				B9760AE02C19DAB40000BFAB /* EllipticalGradientLayer.swift */,
-				B9760AE42C19F5F40000BFAB /* EllipticalRadialGradientView.swift */,
+				D934C9BC2C1AD6860004B1EA /* SplashView.swift */,
 			);
-			path = GradientView;
+			path = SplashView;
 			sourceTree = "<group>";
 		};
-		B9C6FBC92C199CFA00A0F131 /* FightResult */ = {
+		D934C9BE2C1AD6860004B1EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B9C6FBC52C199C6100A0F131 /* FightResultViewController.swift */,
-				B9C6FBC72C199CEE00A0F131 /* FightResultView.swift */,
-				B9760AE62C1A02CC0000BFAB /* GradientView */,
+				D934C9BD2C1AD6860004B1EA /* SplashView */,
 			);
-			path = FightResult;
+			path = View;
+			sourceTree = "<group>";
+		};
+		D934C9C12C1AD6960004B1EA /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D934C9C02C1AD6960004B1EA /* SplashViewController.swift */,
+			);
+			path = SplashViewController;
+			sourceTree = "<group>";
+		};
+		D934C9C22C1AD6960004B1EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D934C9C12C1AD6960004B1EA /* SplashViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */,
+			);
+			path = "Extension+SplashViewController";
+			sourceTree = "<group>";
+		};
+		D934C9CB2C1AD72B0004B1EA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D934C9C72C1AD72B0004B1EA /* AppFont.swift */,
+				D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */,
+				D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */,
+				D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */,
+				D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */,
+				D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */,
+				D934C9CE2C1AD72B0004B1EA /* Rubik-Bold.ttf in Resources */,
 				AE2FA8A72C16DD610094AAA1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,14 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C6FBC82C199CEE00A0F131 /* FightResultView.swift in Sources */,
-				AE2FA89F2C16DD600094AAA1 /* ViewController.swift in Sources */,
-				B9C6FBC62C199C6100A0F131 /* FightResultViewController.swift in Sources */,
 				51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */,
-				B9760AE12C19DAB40000BFAB /* EllipticalGradientLayer.swift in Sources */,
+				D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */,
+				D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */,
 				AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */,
-				B9760AE52C19F5F40000BFAB /* EllipticalRadialGradientView.swift in Sources */,
 				AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */,
+				D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */,
+				D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -343,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
