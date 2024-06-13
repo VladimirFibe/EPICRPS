@@ -28,7 +28,8 @@ final class FightResultViewController: UIViewController {
 
 extension FightResultViewController: FightResultViewDelegate {
     func homeButtonPressed() {
-#warning("go to SplashVC")
+        let vc = SplashViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func repeatButtonPressed() {

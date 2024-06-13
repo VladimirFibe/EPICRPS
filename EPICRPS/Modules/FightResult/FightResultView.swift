@@ -28,15 +28,13 @@ final class FightResultView: UIView {
     
     private let resultLabel: UILabel = {
         let label = UILabel()
-#warning("Поменять шрифт")
-        label.font = .systemFont(ofSize: 21)
+        label.font = RubikFont.bold.apply(size: 21)
         return label
     }()
     
     private let scoreLabel: UILabel = {
         let label = UILabel()
-#warning("Поменять шрифт")
-        label.font = .systemFont(ofSize: 41)
+        label.font = RubikFont.bold.apply(size: 41)
         label.textColor = .white
         return label
     }()
@@ -47,14 +45,14 @@ final class FightResultView: UIView {
         return stack
     }()
     
-    private let homeButton: UIButton = {
+    private lazy var homeButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "home"), for: .normal)
         button.addTarget(self, action: #selector(homeButtonPressed), for: .touchUpInside)
         return button
     }()
     
-    private let repeatButton: UIButton = {
+    private lazy var repeatButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "repeat"), for: .normal)
         button.addTarget(self, action: #selector(repeatButtonPressed), for: .touchUpInside)
