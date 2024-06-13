@@ -16,6 +16,7 @@ class RulesRowView: UIView {
         createLabel()
         numberLabel.text = String(number)
         textLabel.text = text
+        //textLabel.attributedText
     }
     
     required init?(coder: NSCoder) {
@@ -29,31 +30,29 @@ class RulesRowView: UIView {
             textLabel.topAnchor.constraint(equalTo: topAnchor),
             textLabel.leadingAnchor.constraint(equalTo: numberLabel.trailingAnchor, constant: 8),
             textLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
-            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            textLabel.widthAnchor.constraint(equalToConstant: 300)
-
+            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
          textLabel.numberOfLines = 0
-         textLabel.textColor = .black
+         textLabel.textColor = UIColor(named: "TextColor")
          textLabel.font = .systemFont(ofSize: 16, weight: .regular)
      }
      
      private func createNumber() {
          addSubview(numberLabel)
-         numberLabel.text = "1"
          numberLabel.translatesAutoresizingMaskIntoConstraints = false
          NSLayoutConstraint.activate([
             numberLabel.widthAnchor.constraint(equalToConstant: 29),
             numberLabel.heightAnchor.constraint(equalToConstant: 29),
-            numberLabel.topAnchor.constraint(equalTo: topAnchor),
             numberLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            numberLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            numberLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
          ])
          numberLabel.textAlignment = .center
          numberLabel.layer.cornerRadius = 14.5
          numberLabel.layer.masksToBounds = true
-         numberLabel.backgroundColor = .yellow
-         numberLabel.textColor = .black
+         //numberLabel.layer.shadowColor = UIColor.black.cgColor
+         //numberLabel.layer.shadowOffset = CGSize(width: 20, height: 20)
+         numberLabel.backgroundColor = UIColor(named: "CircleColor")
+         numberLabel.textColor = UIColor(named: "TextColor")
          numberLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
     
      }
