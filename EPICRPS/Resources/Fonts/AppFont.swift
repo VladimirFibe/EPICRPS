@@ -16,7 +16,7 @@ extension AppFontProtocol {
 }
 
 extension AppFontProtocol {
-    private func apply(size value: CGFloat) -> UIFont {
+    func apply(size value: CGFloat) -> UIFont {
         UIFont.init(name: rawValue, size: value) ?? .systemFont(ofSize: value)
     }
 }
