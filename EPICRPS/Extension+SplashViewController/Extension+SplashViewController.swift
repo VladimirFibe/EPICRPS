@@ -28,7 +28,11 @@ extension UIImageView {
 
 extension UIStackView {
     
-    convenience init(aligment: UIStackView.Alignment, axis: NSLayoutConstraint.Axis, distribution: UIStackView.Distribution) {
+    convenience init(
+        aligment: UIStackView.Alignment = .fill,
+        axis: NSLayoutConstraint.Axis = .horizontal,
+        distribution: UIStackView.Distribution = .fill
+    ) {
         self.init()
         self.alignment = aligment
         self.axis = axis

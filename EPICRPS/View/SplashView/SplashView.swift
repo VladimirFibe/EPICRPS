@@ -18,10 +18,10 @@ final class SplashView: UIView {
     weak var delegate: SplashViewDelegate?
     
     //MARK: - UI Components
-    private let middleTopHorizontalStack = UIStackView(aligment: .fill, axis: .horizontal, distribution: .fill)
-    private let middleBottomHorizontalStack = UIStackView(aligment: .fill, axis: .horizontal, distribution: .fill)
-    private let middleVerticalStack = UIStackView(aligment: .center, axis: .vertical, distribution: .fill)
-    private let bottomStackView = UIStackView(aligment: .center, axis: .vertical, distribution: .fill)
+    private let middleTopHorizontalStack = UIStackView()
+    private let middleBottomHorizontalStack = UIStackView()
+    private let middleVerticalStack = UIStackView(aligment: .center, axis: .vertical)
+    private let bottomStackView = UIStackView(aligment: .center, axis: .vertical)
     private let topHandImage = UIImageView(image: .topHand)
     private let bottomHandImage = UIImageView(image: .bottomHand)
     private let startButton = UIButton(image: .start)
