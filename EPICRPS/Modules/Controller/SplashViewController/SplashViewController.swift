@@ -49,7 +49,8 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewDelegate {
     func startButtonPressed() {
-        print("Start button pressed")
+        let controller = RoundViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func resultButtonPressed() {
