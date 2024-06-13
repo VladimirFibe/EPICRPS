@@ -32,7 +32,7 @@ final class SplashView: UIView {
     private let epicLable: UILabel = {
         let lable = UILabel()
         lable.text = Resources.Strings.epicLable
-        lable.font = .systemFont(ofSize: 30, weight: .black)
+        lable.font = RubikFont.bold.splashTitle
         lable.shadowColor = .epicLableShadow
         lable.shadowOffset = CGSize(width: 2, height: 2)
         lable.textColor = .epicLable
