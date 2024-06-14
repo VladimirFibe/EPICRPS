@@ -13,7 +13,7 @@ protocol FightResultViewDelegate: AnyObject {
 }
 
 final class FightResultView: UIView {
-    
+
     weak var delegate: FightResultViewDelegate?
     
     private let appearance = Appearance()
@@ -126,11 +126,10 @@ final class FightResultView: UIView {
         avatarBackgroundView.layer.cornerRadius = avatarBackgroundView.frame.height / 2
     }
     
-    func configureView() {
-#warning("Переписать в соответствии с логикой")
+    func configureView(with recent: Recent) {
         
-        let isVictory = Bool.random()
-        let isFirstPlayer = Bool.random()
+        let isVictory = recent.currentCount > recent.playerCount
+        let isFirstPlayer = isVictory
         
         let innerColor = isVictory
         ? appearance.winInnerColor
@@ -154,7 +153,7 @@ final class FightResultView: UIView {
         ? appearance.winTextColor
         : appearance.loseTextColor
         
-        scoreLabel.text = "3 - 1"
+        scoreLabel.text = "\(recent.currentCount) - \(recent.playerCount)"
     }
     
     private func setBackgroundView(withGradient innerColor: CGColor, _ outsideColor: CGColor) {

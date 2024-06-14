@@ -8,6 +8,10 @@
 import UIKit
 
 class RoundViewController: UIViewController {
+    private let service = RoundService(recent: Recent(id: "id", name: "Steve", currentId: "currentId", currentName: "Me"))
+    private lazy var useCase = RoundUseCase(service: service)
+    private lazy var store = RoundStore(useCase: useCase)
+    var bag = Bag()
     
     // MARK: - UI Element
     private lazy var backgroundImage: UIImageView = {
@@ -119,11 +123,11 @@ class RoundViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
+        setupObservers()
     }
     
     // MARK: - Setup View
     private func setupView() {
-        
         view.backgroundColor = .systemBackground
         [backgroundImage, gameLabel, wHandsImage, vsLabel, mHandsImage, verticalProgressView, borderLabel, firstPlayerProgressView, secondPlayerProgressView, stoneFigure, paperFigure, scissorsFigure, firstLogo, secondLogo ].forEach {view.addSubview($0)}
         
@@ -133,15 +137,46 @@ class RoundViewController: UIViewController {
     }
     
     @objc private func tapStone() {
-        print("tapStone")
+        store.sendAction(.round(0))
     }
     
     @objc private func tapPaper() {
-        print("tapPaper")
+        store.sendAction(.round(1))
     }
     
     @objc private func tapScissors() {
-        print("tapScissors")
+        store.sendAction(.round(2))
+    }
+    
+    private func setupObservers() {
+        
+        store
+            .events
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] event in
+                guard let self = self else { return }
+                switch event {
+                case .done(let recent):
+                    self.updateUI(with: recent)
+                }
+            }.store(in: &bag)
+    }
+    
+    private func updateUI(with recent: Recent) {
+        wHandsImage.image = UIImage(named: recent.playerImage)
+        mHandsImage.image = UIImage(named: recent.currentImage)
+        vsLabel.text = recent.text
+        if recent.currentCount == 3 || recent.playerCount == 3 {
+            let controller = FightResultViewController(recent: recent)
+            self.navigationController?.pushViewController(controller, animated: true)
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.wHandsImage.image = .femaleHand
+                self.mHandsImage.image = .maleHand
+                self.vsLabel.text = "Ваш ход"
+                
+            }
+        }
     }
 }
 

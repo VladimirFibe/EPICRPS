@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */; };
-		AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */; };
-		AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */; };
-		AE2FA8A42C16DD610094AAA1 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets 2.xcassets */; };
+		AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */; };
 		B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */; };
 		B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */; };
 		B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */; };
@@ -24,15 +21,12 @@
 		D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C72C1AD72B0004B1EA /* AppFont.swift */; };
 		D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9D32C1B0F1B0004B1EA /* UIButton.swift */; };
 		D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */; };
-		D934C9E52C1B133B0004B1EA /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9E42C1B133B0004B1EA /* RPSGame.swift */; };
+		D96A74202C1C7AC60093E893 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A741F2C1C7AC60093E893 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightLoadViewController.swift; sourceTree = "<group>"; };
 		AE2FA8972C16DD600094AAA1 /* EPICRPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICRPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE2FA8A32C16DD610094AAA1 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 2.xcassets"; sourceTree = "<group>"; };
+		AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE2FA8A82C16DD610094AAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
 		B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
@@ -47,14 +41,40 @@
 		D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		D934C9D32C1B0F1B0004B1EA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D934C9E02C1B104E0004B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D934C9E42C1B133B0004B1EA /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
+		D96A741F2C1C7AC60093E893 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		D934C9E32C1B123B0004B1EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				RoundService.swift,
+				RoundStore.swift,
+				RoundUseCase.swift,
 				RoundViewController.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A74172C1C6D7D0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppDelegate.swift,
+				SceneDelegate.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A741B2C1C6E750093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Recent.swift,
+				RPSGame.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A741E2C1C71F10093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FightLoadViewController.swift,
 			);
 			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
 		};
@@ -62,6 +82,9 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D934C9E22C1B123B0004B1EA /* Round */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D934C9E32C1B123B0004B1EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Round; sourceTree = "<group>"; };
+		D96A74162C1C6D7D0093E893 /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74172C1C6D7D0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
+		D96A741A2C1C6E750093E893 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A741B2C1C6E750093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+		D96A741D2C1C71F10093E893 /* FirgtLoad */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A741E2C1C71F10093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = FirgtLoad; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +117,13 @@
 		AE2FA8992C16DD600094AAA1 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9D52C1B0F1B0004B1EA /* Extension UIKit */,
+				D96A74162C1C6D7D0093E893 /* App */,
+				D96A741A2C1C6E750093E893 /* Models */,
+				D934C9D52C1B0F1B0004B1EA /* Extensions */,
 				B9C7C52D2C1AF3650058F836 /* Modules */,
 				B9C7C52C2C1AF3390058F836 /* Resources */,
-				AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */,
-				AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */,
 				AE2FA8A82C16DD610094AAA1 /* Info.plist */,
-				D934C9E42C1B133B0004B1EA /* RPSGame.swift */,
+				D96A741C2C1C6E8D0093E893 /* Supporting Files */,
 			);
 			path = EPICRPS;
 			sourceTree = "<group>";
@@ -128,7 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */,
-				AE2FA8A32C16DD610094AAA1 /* Assets 2.xcassets */,
+				D96A741F2C1C7AC60093E893 /* Store.swift */,
+				AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */,
 				D934C9CB2C1AD72B0004B1EA /* Fonts */,
 			);
 			path = Resources;
@@ -137,12 +161,12 @@
 		B9C7C52D2C1AF3650058F836 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D934C9C22C1AD6960004B1EA /* Splash */,
+				D96A741D2C1C71F10093E893 /* FirgtLoad */,
 				D934C9E22C1B123B0004B1EA /* Round */,
 				B9C7C5222C1AE3BE0058F836 /* FightResult */,
 				D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */,
-				D934C9C22C1AD6960004B1EA /* Controller */,
 				D934C9BE2C1AD6860004B1EA /* View */,
-				51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -163,20 +187,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D934C9C12C1AD6960004B1EA /* SplashViewController */ = {
+		D934C9C22C1AD6960004B1EA /* Splash */ = {
 			isa = PBXGroup;
 			children = (
 				D934C9C02C1AD6960004B1EA /* SplashViewController.swift */,
 			);
-			path = SplashViewController;
-			sourceTree = "<group>";
-		};
-		D934C9C22C1AD6960004B1EA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9C12C1AD6960004B1EA /* SplashViewController */,
-			);
-			path = Controller;
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */ = {
@@ -198,12 +214,19 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		D934C9D52C1B0F1B0004B1EA /* Extension UIKit */ = {
+		D934C9D52C1B0F1B0004B1EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				D934C9D32C1B0F1B0004B1EA /* UIButton.swift */,
 			);
-			path = "Extension UIKit";
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D96A741C2C1C6E8D0093E893 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2FA8A42C16DD610094AAA1 /* Assets 2.xcassets in Resources */,
+				AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */,
 				D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */,
 				D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */,
 				D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */,
@@ -279,17 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D934C9E52C1B133B0004B1EA /* RPSGame.swift in Sources */,
+				D96A74202C1C7AC60093E893 /* Store.swift in Sources */,
 				D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */,
 				B9C7C52B2C1AE3BE0058F836 /* EllipticalGradientLayer.swift in Sources */,
 				B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */,
-				51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */,
 				D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */,
 				D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */,
-				AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */,
 				B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */,
 				B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */,
-				AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */,
 				D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */,
 				D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */,
 			);
@@ -434,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -462,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
