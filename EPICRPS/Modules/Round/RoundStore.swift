@@ -14,6 +14,7 @@ enum RoundEvent {
 enum RoundAction {
     case round(Int)
     case reset
+    case restart
 }
 
 final class RoundStore: Store<RoundEvent, RoundAction> {
@@ -32,6 +33,10 @@ final class RoundStore: Store<RoundEvent, RoundAction> {
             statefulCall {
                 try await self.reset()
             }
+        case .restart:
+            statefulCall {
+                try await self.restart()
+            }
         }
     }
     
@@ -42,5 +47,9 @@ final class RoundStore: Store<RoundEvent, RoundAction> {
     
     private func reset() async throws {
         try await useCase.reset()
+    }
+    
+    private func restart() async throws {
+        try await useCase.restart()
     }
 }

@@ -167,6 +167,7 @@ class RoundViewController: UIViewController {
         mHandsImage.image = UIImage(named: recent.currentImage)
         vsLabel.text = recent.text
         if recent.currentCount == 3 || recent.playerCount == 3 {
+            store.sendAction(.restart)
             let controller = FightResultViewController(recent: recent)
             self.navigationController?.pushViewController(controller, animated: true)
         } else {

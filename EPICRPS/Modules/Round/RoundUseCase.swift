@@ -10,6 +10,7 @@ import Foundation
 protocol RoundUseCaseProtocol {
     func round(_ hand: Int) async throws -> Recent
     func reset() async throws
+    func restart() async throws
 }
 
 final class RoundUseCase: RoundUseCaseProtocol {
@@ -25,5 +26,9 @@ final class RoundUseCase: RoundUseCaseProtocol {
     
     func reset() async throws {
         try await service.reset()
+    }
+    
+    func restart() async throws {
+        try await service.restart()
     }
 }

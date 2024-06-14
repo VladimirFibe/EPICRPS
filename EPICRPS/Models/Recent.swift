@@ -25,6 +25,11 @@ struct Recent: Codable, Hashable {
     var currentCount = 0
     var round = 1
     
+    mutating func restart() {
+        playerCount = 0
+        currentCount = 0
+        text = "Ваш ход"
+    }
     private mutating func win() {
         text = "Выиграл"
         currentCount += 1

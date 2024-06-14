@@ -10,6 +10,7 @@ import Foundation
 protocol RoundServiceProtocol {
     func round(_ hand: Int) async throws -> Recent
     func reset() async throws
+    func restart() async throws
 }
 
 final class RoundService: RoundServiceProtocol {
@@ -29,5 +30,9 @@ final class RoundService: RoundServiceProtocol {
     
     func reset() async throws {
         recent.reset()
+    }
+    
+    func restart() async throws {
+        recent.restart()
     }
 }
