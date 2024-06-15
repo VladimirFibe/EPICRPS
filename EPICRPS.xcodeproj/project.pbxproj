@@ -3,66 +3,56 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */; };
 		AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */; };
 		AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */; };
-		AE2FA8A42C16DD610094AAA1 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets 2.xcassets */; };
-		B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */; };
-		B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */; };
-		B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */; };
-		B9C7C52B2C1AE3BE0058F836 /* EllipticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5272C1AE3BE0058F836 /* EllipticalGradientLayer.swift */; };
-		D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9BC2C1AD6860004B1EA /* SplashView.swift */; };
-		D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C02C1AD6960004B1EA /* SplashViewController.swift */; };
-		D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */; };
-		D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */; };
-		D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */; };
-		D934C9CE2C1AD72B0004B1EA /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */; };
-		D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C72C1AD72B0004B1EA /* AppFont.swift */; };
-		D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9D32C1B0F1B0004B1EA /* UIButton.swift */; };
-		D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */; };
-		D934C9E52C1B133B0004B1EA /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9E42C1B133B0004B1EA /* RPSGame.swift */; };
+		B993D6E32C1E0B8A007AF2C9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6D12C1E0B8A007AF2C9 /* SplashViewController.swift */; };
+		B993D6E42C1E0B8A007AF2C9 /* Extension+SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6D42C1E0B8A007AF2C9 /* Extension+SplashViewController.swift */; };
+		B993D6E52C1E0B8A007AF2C9 /* EllipticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6D62C1E0B8A007AF2C9 /* EllipticalGradientLayer.swift */; };
+		B993D6E62C1E0B8A007AF2C9 /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6D72C1E0B8A007AF2C9 /* EllipticalRadialGradientView.swift */; };
+		B993D6E72C1E0B8A007AF2C9 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6D92C1E0B8A007AF2C9 /* FightResultView.swift */; };
+		B993D6E82C1E0B8A007AF2C9 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6DA2C1E0B8A007AF2C9 /* FightResultViewController.swift */; };
+		B993D6E92C1E0B8A007AF2C9 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6DC2C1E0B8A007AF2C9 /* RoundViewController.swift */; };
+		B993D6EA2C1E0B8A007AF2C9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6DE2C1E0B8A007AF2C9 /* SplashView.swift */; };
+		B993D6EB2C1E0B8A007AF2C9 /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6E12C1E0B8A007AF2C9 /* FightLoadViewController.swift */; };
+		B993D6EE2C1E0C08007AF2C9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6EC2C1E0C08007AF2C9 /* UIButton.swift */; };
+		B993D6FD2C1E0D13007AF2C9 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6F32C1E0D13007AF2C9 /* AppFont.swift */; };
+		B993D6FE2C1E0D13007AF2C9 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B993D6F42C1E0D13007AF2C9 /* Rubik-Bold.ttf */; };
+		B993D6FF2C1E0D13007AF2C9 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B993D6F52C1E0D13007AF2C9 /* Rubik-Medium.ttf */; };
+		B993D7002C1E0D13007AF2C9 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B993D6F62C1E0D13007AF2C9 /* Rubik-Regular.ttf */; };
+		B993D7012C1E0D13007AF2C9 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B993D6F82C1E0D13007AF2C9 /* Assets 2.xcassets */; };
+		B993D7022C1E0D13007AF2C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B993D6F92C1E0D13007AF2C9 /* Assets.xcassets */; };
+		B993D7032C1E0D13007AF2C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B993D6FB2C1E0D13007AF2C9 /* LaunchScreen.storyboard */; };
+		B993D7052C1E0E6F007AF2C9 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7042C1E0E6F007AF2C9 /* RoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightLoadViewController.swift; sourceTree = "<group>"; };
 		AE2FA8972C16DD600094AAA1 /* EPICRPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICRPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE2FA8A32C16DD610094AAA1 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 2.xcassets"; sourceTree = "<group>"; };
 		AE2FA8A82C16DD610094AAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
-		B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
-		B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalRadialGradientView.swift; sourceTree = "<group>"; };
-		B9C7C5272C1AE3BE0058F836 /* EllipticalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalGradientLayer.swift; sourceTree = "<group>"; };
-		D934C9BC2C1AD6860004B1EA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		D934C9C02C1AD6960004B1EA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SplashViewController.swift"; sourceTree = "<group>"; };
-		D934C9C72C1AD72B0004B1EA /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		D934C9D32C1B0F1B0004B1EA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		D934C9E02C1B104E0004B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D934C9E42C1B133B0004B1EA /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
+		B993D6D12C1E0B8A007AF2C9 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B993D6D42C1E0B8A007AF2C9 /* Extension+SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+SplashViewController.swift"; sourceTree = "<group>"; };
+		B993D6D62C1E0B8A007AF2C9 /* EllipticalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalGradientLayer.swift; sourceTree = "<group>"; };
+		B993D6D72C1E0B8A007AF2C9 /* EllipticalRadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalRadialGradientView.swift; sourceTree = "<group>"; };
+		B993D6D92C1E0B8A007AF2C9 /* FightResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
+		B993D6DA2C1E0B8A007AF2C9 /* FightResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
+		B993D6DC2C1E0B8A007AF2C9 /* RoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
+		B993D6DE2C1E0B8A007AF2C9 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		B993D6E12C1E0B8A007AF2C9 /* FightLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightLoadViewController.swift; sourceTree = "<group>"; };
+		B993D6EC2C1E0C08007AF2C9 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		B993D6F32C1E0D13007AF2C9 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		B993D6F42C1E0D13007AF2C9 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		B993D6F52C1E0D13007AF2C9 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		B993D6F62C1E0D13007AF2C9 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		B993D6F82C1E0D13007AF2C9 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 2.xcassets"; sourceTree = "<group>"; };
+		B993D6F92C1E0D13007AF2C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B993D6FA2C1E0D13007AF2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B993D7042C1E0E6F007AF2C9 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D934C9E32C1B123B0004B1EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				RoundViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D934C9E22C1B123B0004B1EA /* Round */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D934C9E32C1B123B0004B1EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Round; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE2FA8942C16DD600094AAA1 /* Frameworks */ = {
@@ -94,116 +84,125 @@
 		AE2FA8992C16DD600094AAA1 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9D52C1B0F1B0004B1EA /* Extension UIKit */,
-				B9C7C52D2C1AF3650058F836 /* Modules */,
-				B9C7C52C2C1AF3390058F836 /* Resources */,
+				B993D6ED2C1E0C08007AF2C9 /* Extension UIKit */,
+				B993D6E22C1E0B8A007AF2C9 /* Modules */,
 				AE2FA89A2C16DD600094AAA1 /* AppDelegate.swift */,
+				B993D6FC2C1E0D13007AF2C9 /* Resources */,
 				AE2FA89C2C16DD600094AAA1 /* SceneDelegate.swift */,
 				AE2FA8A82C16DD610094AAA1 /* Info.plist */,
-				D934C9E42C1B133B0004B1EA /* RPSGame.swift */,
 			);
 			path = EPICRPS;
 			sourceTree = "<group>";
 		};
-		B9C7C5222C1AE3BE0058F836 /* FightResult */ = {
+		B993D6D22C1E0B8A007AF2C9 /* SplashViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */,
-				B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */,
-				B9C7C5252C1AE3BE0058F836 /* GradientView */,
-			);
-			path = FightResult;
-			sourceTree = "<group>";
-		};
-		B9C7C5252C1AE3BE0058F836 /* GradientView */ = {
-			isa = PBXGroup;
-			children = (
-				B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */,
-				B9C7C5272C1AE3BE0058F836 /* EllipticalGradientLayer.swift */,
-			);
-			path = GradientView;
-			sourceTree = "<group>";
-		};
-		B9C7C52C2C1AF3390058F836 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */,
-				AE2FA8A32C16DD610094AAA1 /* Assets 2.xcassets */,
-				D934C9CB2C1AD72B0004B1EA /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		B9C7C52D2C1AF3650058F836 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9E22C1B123B0004B1EA /* Round */,
-				B9C7C5222C1AE3BE0058F836 /* FightResult */,
-				D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */,
-				D934C9C22C1AD6960004B1EA /* Controller */,
-				D934C9BE2C1AD6860004B1EA /* View */,
-				51B0F08F2C1830040009DD52 /* FightLoadViewController.swift */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		D934C9BD2C1AD6860004B1EA /* SplashView */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9BC2C1AD6860004B1EA /* SplashView.swift */,
-			);
-			path = SplashView;
-			sourceTree = "<group>";
-		};
-		D934C9BE2C1AD6860004B1EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9BD2C1AD6860004B1EA /* SplashView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D934C9C12C1AD6960004B1EA /* SplashViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9C02C1AD6960004B1EA /* SplashViewController.swift */,
+				B993D6D12C1E0B8A007AF2C9 /* SplashViewController.swift */,
 			);
 			path = SplashViewController;
 			sourceTree = "<group>";
 		};
-		D934C9C22C1AD6960004B1EA /* Controller */ = {
+		B993D6D32C1E0B8A007AF2C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9C12C1AD6960004B1EA /* SplashViewController */,
+				B993D6D22C1E0B8A007AF2C9 /* SplashViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */ = {
+		B993D6D52C1E0B8A007AF2C9 /* Extension+SplashViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */,
+				B993D6D42C1E0B8A007AF2C9 /* Extension+SplashViewController.swift */,
 			);
 			path = "Extension+SplashViewController";
 			sourceTree = "<group>";
 		};
-		D934C9CB2C1AD72B0004B1EA /* Fonts */ = {
+		B993D6D82C1E0B8A007AF2C9 /* GradientView */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9C72C1AD72B0004B1EA /* AppFont.swift */,
-				D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */,
-				D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */,
-				D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */,
+				B993D6D62C1E0B8A007AF2C9 /* EllipticalGradientLayer.swift */,
+				B993D6D72C1E0B8A007AF2C9 /* EllipticalRadialGradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		B993D6DB2C1E0B8A007AF2C9 /* FightResult */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6D82C1E0B8A007AF2C9 /* GradientView */,
+				B993D6D92C1E0B8A007AF2C9 /* FightResultView.swift */,
+				B993D6DA2C1E0B8A007AF2C9 /* FightResultViewController.swift */,
+			);
+			path = FightResult;
+			sourceTree = "<group>";
+		};
+		B993D6DD2C1E0B8A007AF2C9 /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6DC2C1E0B8A007AF2C9 /* RoundViewController.swift */,
+				B993D7042C1E0E6F007AF2C9 /* RoundView.swift */,
+			);
+			path = Round;
+			sourceTree = "<group>";
+		};
+		B993D6DF2C1E0B8A007AF2C9 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6DE2C1E0B8A007AF2C9 /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		B993D6E02C1E0B8A007AF2C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6DF2C1E0B8A007AF2C9 /* SplashView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B993D6E22C1E0B8A007AF2C9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6D32C1E0B8A007AF2C9 /* Controller */,
+				B993D6D52C1E0B8A007AF2C9 /* Extension+SplashViewController */,
+				B993D6DB2C1E0B8A007AF2C9 /* FightResult */,
+				B993D6DD2C1E0B8A007AF2C9 /* Round */,
+				B993D6E02C1E0B8A007AF2C9 /* View */,
+				B993D6E12C1E0B8A007AF2C9 /* FightLoadViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B993D6ED2C1E0C08007AF2C9 /* Extension UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6EC2C1E0C08007AF2C9 /* UIButton.swift */,
+			);
+			path = "Extension UIKit";
+			sourceTree = "<group>";
+		};
+		B993D6F72C1E0D13007AF2C9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B993D6F32C1E0D13007AF2C9 /* AppFont.swift */,
+				B993D6F42C1E0D13007AF2C9 /* Rubik-Bold.ttf */,
+				B993D6F52C1E0D13007AF2C9 /* Rubik-Medium.ttf */,
+				B993D6F62C1E0D13007AF2C9 /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		D934C9D52C1B0F1B0004B1EA /* Extension UIKit */ = {
+		B993D6FC2C1E0D13007AF2C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9D32C1B0F1B0004B1EA /* UIButton.swift */,
+				B993D6F72C1E0D13007AF2C9 /* Fonts */,
+				B993D6F82C1E0D13007AF2C9 /* Assets 2.xcassets */,
+				B993D6F92C1E0D13007AF2C9 /* Assets.xcassets */,
+				B993D6FB2C1E0D13007AF2C9 /* LaunchScreen.storyboard */,
 			);
-			path = "Extension UIKit";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +263,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2FA8A42C16DD610094AAA1 /* Assets 2.xcassets in Resources */,
-				D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */,
-				D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */,
-				D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */,
-				D934C9CE2C1AD72B0004B1EA /* Rubik-Bold.ttf in Resources */,
+				B993D6FE2C1E0D13007AF2C9 /* Rubik-Bold.ttf in Resources */,
+				B993D7002C1E0D13007AF2C9 /* Rubik-Regular.ttf in Resources */,
+				B993D7012C1E0D13007AF2C9 /* Assets 2.xcassets in Resources */,
+				B993D7032C1E0D13007AF2C9 /* LaunchScreen.storyboard in Resources */,
+				B993D6FF2C1E0D13007AF2C9 /* Rubik-Medium.ttf in Resources */,
+				B993D7022C1E0D13007AF2C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,29 +279,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D934C9E52C1B133B0004B1EA /* RPSGame.swift in Sources */,
-				D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */,
-				B9C7C52B2C1AE3BE0058F836 /* EllipticalGradientLayer.swift in Sources */,
-				B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */,
-				51B0F0902C1830040009DD52 /* FightLoadViewController.swift in Sources */,
-				D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */,
-				D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */,
+				B993D6E82C1E0B8A007AF2C9 /* FightResultViewController.swift in Sources */,
+				B993D7052C1E0E6F007AF2C9 /* RoundView.swift in Sources */,
+				B993D6FD2C1E0D13007AF2C9 /* AppFont.swift in Sources */,
+				B993D6EE2C1E0C08007AF2C9 /* UIButton.swift in Sources */,
+				B993D6EB2C1E0B8A007AF2C9 /* FightLoadViewController.swift in Sources */,
+				B993D6E52C1E0B8A007AF2C9 /* EllipticalGradientLayer.swift in Sources */,
+				B993D6E42C1E0B8A007AF2C9 /* Extension+SplashViewController.swift in Sources */,
+				B993D6E62C1E0B8A007AF2C9 /* EllipticalRadialGradientView.swift in Sources */,
+				B993D6E32C1E0B8A007AF2C9 /* SplashViewController.swift in Sources */,
 				AE2FA89B2C16DD600094AAA1 /* AppDelegate.swift in Sources */,
-				B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */,
-				B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */,
+				B993D6EA2C1E0B8A007AF2C9 /* SplashView.swift in Sources */,
+				B993D6E72C1E0B8A007AF2C9 /* FightResultView.swift in Sources */,
 				AE2FA89D2C16DD600094AAA1 /* SceneDelegate.swift in Sources */,
-				D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */,
-				D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */,
+				B993D6E92C1E0B8A007AF2C9 /* RoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */ = {
+		B993D6FB2C1E0D13007AF2C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D934C9E02C1B104E0004B1EA /* Base */,
+				B993D6FA2C1E0D13007AF2C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
