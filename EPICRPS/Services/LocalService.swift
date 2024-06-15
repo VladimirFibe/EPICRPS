@@ -3,6 +3,7 @@ import Foundation
 final class LocalService {
     static let shared = LocalService()
     private init() {}
+    public var currentPerson = Person(name: "Player 1")
     public var persons: [Person] = [
         .init(name: "Tony Newman"),
         .init(name: "Herman Welch"),

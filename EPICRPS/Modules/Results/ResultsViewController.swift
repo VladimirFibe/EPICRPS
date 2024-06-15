@@ -11,7 +11,7 @@ final class ResultsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Leaderboard"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = #colorLiteral(red: 0.9685857892, green: 0.9782273173, blue: 0.9844831824, alpha: 1)
         setupViews()
         setupObservers()
     }
@@ -39,6 +39,8 @@ final class ResultsViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        tableView.tableHeaderView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
         tableView.register(ResultsCell.self, forCellReuseIdentifier: ResultsCell.identifier)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

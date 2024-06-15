@@ -14,6 +14,7 @@ protocol AppFontProtocol {
 extension AppFontProtocol {
     var splashTitle: UIFont { apply(size: 30) }
     var size14: UIFont { apply(size: 14) }
+    var size16: UIFont { apply(size: 16) }
 }
 
 extension AppFontProtocol {

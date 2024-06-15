@@ -41,8 +41,7 @@ final class SplashViewController: UIViewController {
     }
     
     @objc private func navBarRightButtonAction() {
-        let controller = RulesViewController()
-        navigationController?.pushViewController(controller, animated: true)
+        
     }
 }
 

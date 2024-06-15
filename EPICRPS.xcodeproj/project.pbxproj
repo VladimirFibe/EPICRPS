@@ -22,6 +22,10 @@
 		D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9D32C1B0F1B0004B1EA /* UIButton.swift */; };
 		D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */; };
 		D96A74202C1C7AC60093E893 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A741F2C1C7AC60093E893 /* Store.swift */; };
+		D9D5E6C02C1DB00E00266F89 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6BF2C1DB00E00266F89 /* NameViewController.swift */; };
+		D9D5E6C22C1DB07A00266F89 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6C12C1DB07A00266F89 /* PopupViewController.swift */; };
+		D9D5E6C42C1DB0EC00266F89 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6C32C1DB0EC00266F89 /* PopupView.swift */; };
+		D9D5E6C62C1DB14D00266F89 /* TripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6C52C1DB14D00266F89 /* TripButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		D934C9D32C1B0F1B0004B1EA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D934C9E02C1B104E0004B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D96A741F2C1C7AC60093E893 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D9D5E6BF2C1DB00E00266F89 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		D9D5E6C12C1DB07A00266F89 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		D9D5E6C32C1DB0EC00266F89 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		D9D5E6C52C1DB14D00266F89 /* TripButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -90,6 +98,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ResultsCell.swift,
+				ResultsPersonHeader.swift,
 				ResultsService.swift,
 				ResultsStore.swift,
 				ResultsUseCase.swift,
@@ -222,6 +231,10 @@
 				D96A74412C1D193A0093E893 /* Results */,
 				D96A74532C1D42E50093E893 /* Settings */,
 				D96A745F2C1D4C650093E893 /* PersonsList */,
+				D9D5E6BF2C1DB00E00266F89 /* NameViewController.swift */,
+				D9D5E6C12C1DB07A00266F89 /* PopupViewController.swift */,
+				D9D5E6C32C1DB0EC00266F89 /* PopupView.swift */,
+				D9D5E6C52C1DB14D00266F89 /* TripButton.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -363,6 +376,10 @@
 				B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */,
 				D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */,
 				D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */,
+				D9D5E6C02C1DB00E00266F89 /* NameViewController.swift in Sources */,
+				D9D5E6C22C1DB07A00266F89 /* PopupViewController.swift in Sources */,
+				D9D5E6C62C1DB14D00266F89 /* TripButton.swift in Sources */,
+				D9D5E6C42C1DB0EC00266F89 /* PopupView.swift in Sources */,
 				B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */,
 				B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */,
 				D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */,
