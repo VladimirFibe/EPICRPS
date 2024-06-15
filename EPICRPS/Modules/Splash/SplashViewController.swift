@@ -36,11 +36,13 @@ final class SplashViewController: UIViewController {
     //MARK: - Actions
     
     @objc private func navBarLeftButtonAction() {
-        print("Tap Settings")
+        let controller = SettingsViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func navBarRightButtonAction() {
-        print("Tap Rules")
+        let controller = RulesViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -52,6 +54,7 @@ extension SplashViewController: SplashViewDelegate {
     }
     
     func resultButtonPressed() {
-        print("Result button pressed")
+        let controller = ResultsViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -66,6 +66,7 @@
 		D96A741B2C1C6E750093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Person.swift,
 				Recent.swift,
 				RPSGame.swift,
 			);
@@ -78,6 +79,50 @@
 			);
 			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
 		};
+		D96A743E2C1D14D40093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				RulesViewController.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A74422C1D193A0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ResultsCell.swift,
+				ResultsService.swift,
+				ResultsStore.swift,
+				ResultsUseCase.swift,
+				ResultsViewController.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A74462C1D28DD0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LocalService.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A74542C1D42E50093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SettingCellVeiw.swift,
+				SettingsService.swift,
+				SettingsStore.swift,
+				SettingsUseCase.swift,
+				SettingsViewController.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
+		D96A74602C1D4C650093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PersonCell.swift,
+				PersonsViewController.swift,
+			);
+			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,6 +130,11 @@
 		D96A74162C1C6D7D0093E893 /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74172C1C6D7D0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
 		D96A741A2C1C6E750093E893 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A741B2C1C6E750093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		D96A741D2C1C71F10093E893 /* FirgtLoad */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A741E2C1C71F10093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = FirgtLoad; sourceTree = "<group>"; };
+		D96A743B2C1D14BC0093E893 /* Rules */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A743E2C1D14D40093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Rules; sourceTree = "<group>"; };
+		D96A74412C1D193A0093E893 /* Results */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74422C1D193A0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Results; sourceTree = "<group>"; };
+		D96A74452C1D28DC0093E893 /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74462C1D28DD0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
+		D96A74532C1D42E50093E893 /* Settings */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74542C1D42E50093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Settings; sourceTree = "<group>"; };
+		D96A745F2C1D4C650093E893 /* PersonsList */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74602C1D4C650093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = PersonsList; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +169,7 @@
 			children = (
 				D96A74162C1C6D7D0093E893 /* App */,
 				D96A741A2C1C6E750093E893 /* Models */,
+				D96A74452C1D28DC0093E893 /* Services */,
 				D934C9D52C1B0F1B0004B1EA /* Extensions */,
 				B9C7C52D2C1AF3650058F836 /* Modules */,
 				B9C7C52C2C1AF3390058F836 /* Resources */,
@@ -162,11 +213,15 @@
 			isa = PBXGroup;
 			children = (
 				D934C9C22C1AD6960004B1EA /* Splash */,
+				D96A743B2C1D14BC0093E893 /* Rules */,
 				D96A741D2C1C71F10093E893 /* FirgtLoad */,
 				D934C9E22C1B123B0004B1EA /* Round */,
 				B9C7C5222C1AE3BE0058F836 /* FightResult */,
 				D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */,
 				D934C9BE2C1AD6860004B1EA /* View */,
+				D96A74412C1D193A0093E893 /* Results */,
+				D96A74532C1D42E50093E893 /* Settings */,
+				D96A745F2C1D4C650093E893 /* PersonsList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -454,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -482,7 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;

@@ -1,10 +1,3 @@
-//
-//  RoundStore.swift
-//  EPICRPS
-//
-//  Created by WWDC on 14.06.2024.
-//
-
 import Combine
 
 enum RoundEvent {
