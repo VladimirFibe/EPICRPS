@@ -11,6 +11,7 @@ final class SettingCellVeiw: UIView {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = .init(width: 0, height: 4)
         layer.shadowOpacity = 0.4
+        
     }
     
     required init?(coder: NSCoder) {

@@ -40,7 +40,18 @@ final class ResultsViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
-        tableView.tableHeaderView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
+        let headerView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
+        headerView.editText = {[weak self] in
+            guard let self else { return }
+            let controller = NameViewController()
+            controller.modalPresentationStyle = .overCurrentContext
+            controller.modalTransitionStyle = .crossDissolve
+            controller.doneSaving = { [weak self] in
+                print("yes")
+            }
+            self.present(controller, animated: true)
+        }
+        tableView.tableHeaderView = headerView
         tableView.register(ResultsCell.self, forCellReuseIdentifier: ResultsCell.identifier)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

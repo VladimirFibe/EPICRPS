@@ -7,9 +7,16 @@ final class NameViewController: PopupViewController {
 
     let titleTextField: UITextField = {
         $0.placeholder = "Player 1"
-
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 1))
+        $0.leftViewMode = .always
+        $0.leftView = leftView
+        $0.font = RubikFont.bold.size16
+        $0.backgroundColor = #colorLiteral(red: 0.9875637889, green: 0.9875637889, blue: 0.9875637889, alpha: 1)
         $0.autocapitalizationType = .words
-        $0.borderStyle = .roundedRect
+        $0.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        $0.layer.cornerRadius = 22.0
+        $0.layer.borderWidth = 1.0
+        $0.layer.borderColor = #colorLiteral(red: 0.9436392188, green: 0.9436392188, blue: 0.9436392188, alpha: 1).cgColor
         return $0
     }(UITextField())
 
