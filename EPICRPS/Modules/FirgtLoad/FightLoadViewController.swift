@@ -55,7 +55,7 @@ class FightLoadViewController: UIViewController {
         
         setupView()
         setupConstraints()
-        
+        navigationItem.hidesBackButton = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             let controller = RoundViewController()
             self.navigationController?.pushViewController(controller, animated: true)

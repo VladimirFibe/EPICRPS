@@ -8,7 +8,9 @@
 import UIKit
 
 final class FightResultViewController: UIViewController {
+    
     private let recent: Recent
+    
     init(recent: Recent) {
         self.recent = recent
         super.init(nibName: nil, bundle: nil)
@@ -28,10 +30,8 @@ final class FightResultViewController: UIViewController {
         
         customView.configureView(with: recent)
         customView.delegate = self
+        navigationItem.hidesBackButton = true
     }
-    
-    
-    
 }
 
 extension FightResultViewController: FightResultViewDelegate {
