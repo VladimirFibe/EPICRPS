@@ -38,6 +38,7 @@ final class ResultsViewController: UIViewController {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
         let headerView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
@@ -66,7 +67,7 @@ final class ResultsViewController: UIViewController {
     }
 }
 
-extension ResultsViewController: UITableViewDataSource {
+extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         persons.count
     }
@@ -75,5 +76,13 @@ extension ResultsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultsCell.identifier, for: indexPath) as? ResultsCell else { fatalError() }
         cell.configure(with: persons[indexPath.row], and: indexPath.row + 1)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        ResultSectionHeader()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        120
     }
 }
