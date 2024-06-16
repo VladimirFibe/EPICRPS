@@ -13,6 +13,8 @@ class RoundViewController: UIViewController {
     private lazy var store = RoundStore(useCase: useCase)
     var bag = Bag()
     
+    private let roundDuration = 30
+    
     private let timerManager = TimerManager.shared
     
     private let customView = RoundView()
@@ -28,33 +30,25 @@ class RoundViewController: UIViewController {
         
         customView.delegate = self
         setupObservers()
-        let customBackButton = UIBarButtonItem(image: UIImage(named: "Arrow"), style: .plain, target: self, action: #selector(backButtonTapped))
+        let customBackButton = UIBarButtonItem(
+            image: UIImage(named: "Arrow"),
+            style: .plain,
+            target: self,
+            action: #selector(backButtonTapped)
+        )
+        let pauseButton = UIBarButtonItem(
+            image: UIImage(named: "Pause"),
+            style: .plain,
+            target: self,
+            action: #selector(pauseButtonTapped)
+        )
         self.navigationItem.leftBarButtonItem = customBackButton
-    }
-    
-    private func startTimer() {
-        timerManager.createTimer(totalTime: 30) { [weak self] in
-            guard let manager = self?.timerManager else { return }
-            if manager.isTimeUp {
-                manager.stopTimer()
-                #warning("Засчитать проигрыш и начать новый раунд")
-            }
-            let persentage = Float(manager.secondsLeft) / Float(manager.totalTime)
-            self?.customView.updateTimer(with: persentage)
-        }
-    }
-    
-    @objc func backButtonTapped() {
-        self.navigationController?.viewControllers.forEach {
-            if $0 is SplashViewController {
-                self.navigationController?.popToViewController($0, animated: true)
-            }
-        }
+        self.navigationItem.rightBarButtonItem = pauseButton
     }
     
     override func viewWillAppear(_ animated: Bool) {
         customView.resetProgress()
-        startTimer()
+        startTimer(roundDuration)
     }
     
     private func setupObservers() {
@@ -76,14 +70,44 @@ class RoundViewController: UIViewController {
         timerManager.stopTimer()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            guard let self = self else { return }
             if recent.currentCount == 3 || recent.playerCount == 3 {
-                self?.store.sendAction(.restart)
+                self.store.sendAction(.restart)
                 let controller = FightResultViewController(recent: recent)
-                self?.navigationController?.pushViewController(controller, animated: true)
+                self.navigationController?.pushViewController(controller, animated: true)
             } else {
-                self?.customView.setBaseState()
-                self?.startTimer()
+                self.customView.setBaseState()
+                self.startTimer(self.roundDuration)
             }
+        }
+    }
+    
+    @objc private func pauseButtonTapped() {
+        timerManager.isPaused ?
+        startTimer(timerManager.secondsLeft) :
+        timerManager.stopTimer()
+    }
+    
+    @objc private func backButtonTapped() {
+        self.navigationController?.viewControllers.forEach {
+            if $0 is SplashViewController {
+                self.navigationController?.popToViewController($0, animated: true)
+            }
+        }
+    }
+    
+    private func startTimer(_ time: Int) {
+        timerManager.createTimer(totalTime: time) { [weak self] in
+            guard
+                let manager = self?.timerManager,
+                let roundDuration = self?.roundDuration
+            else { return }
+            if manager.isTimeUp {
+                manager.stopTimer()
+#warning("Засчитать проигрыш и начать новый раунд")
+            }
+            let persentage = Float(manager.secondsLeft) / Float(roundDuration)
+            self?.customView.updateTimer(with: persentage)
         }
     }
 }

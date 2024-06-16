@@ -15,7 +15,9 @@ class TimerManager {
     private var timer: Timer?
     private(set) var secondsLeft = 0
     private(set) var totalTime = 0
+    private(set) var isPaused = true
     private var completion: (() -> Void)?
+    
     
     var isTimeUp: Bool {
         secondsLeft == 0
@@ -24,6 +26,7 @@ class TimerManager {
     func createTimer(totalTime: Int, completion: @escaping () -> Void) {
         secondsLeft = totalTime
         self.totalTime = totalTime
+        
         
         stopTimer()
         timer = Timer.scheduledTimer(
@@ -34,10 +37,14 @@ class TimerManager {
             repeats: true
         )
         self.completion = completion
+        isPaused = false
+        print("createTimer secondsLeft \(secondsLeft)")
     }
     
     func stopTimer() {
+        isPaused = true
         timer?.invalidate()
+        print("stopTimer secondsLeft \(secondsLeft)")
     }
     
     @objc private func timerFired(_ timer: Timer) {
