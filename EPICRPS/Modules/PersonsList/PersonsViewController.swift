@@ -7,6 +7,9 @@ final class PersonsViewController: UITableViewController {
         navigationItem.title = "Friends"
         tableView.separatorStyle = .none
         tableView.register(PersonCell.self, forCellReuseIdentifier: PersonCell.identifier)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { _ in
+            print("add player")
+        }))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

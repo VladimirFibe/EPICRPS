@@ -3,6 +3,8 @@ import Foundation
 final class LocalService {
     static let shared = LocalService()
     private init() {}
+    var totalTime = 30
+    
     public var persons: [Person] = [
         .init(name: "Tony Newman"),
         .init(name: "Herman Welch"),
@@ -13,6 +15,10 @@ final class LocalService {
         .init(name: "Harriett Single"),
         .init(name: "Henry Padilla")
     ]
+    
+    var getTotalTime: Int {
+        totalTime
+    }
     public lazy var recent = Recent(id: friendPerson.id, name: friendPerson.name, currentId: currentPerson.id, currentName: currentPerson.name)
     private enum Keys: String {
         case currentPerson

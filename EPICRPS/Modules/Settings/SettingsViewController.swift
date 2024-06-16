@@ -1,6 +1,11 @@
 import UIKit
 
 final class SettingsViewController: UIViewController {
+    private var is30: Bool {
+        LocalService.shared.totalTime == 30
+    }
+    private lazy var tap30 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+    private lazy var tap60 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
     private let stackView = UIStackView()
     private let timeView = SettingCellVeiw()
     private let playerView = SettingCellVeiw()
@@ -22,6 +27,12 @@ final class SettingsViewController: UIViewController {
         gameFriendLabel()
         setupSwitch()
         setupMusicLabel()
+    }
+    
+    @objc private func handleTap(_ sender: UITapGestureRecognizer) {
+        LocalService.shared.totalTime = sender == tap30 ? 30 : 60
+        timeLabel30.backgroundColor = is30 ? .systemRed : UIColor(named: "ColorLabel")
+        timeLabel60.backgroundColor = is30 ? UIColor(named: "ColorLabel") : .systemRed
     }
     
     @objc private func backButtonAction() {
@@ -62,9 +73,11 @@ final class SettingsViewController: UIViewController {
         timeLabel30.textColor = .white
         timeLabel30.textAlignment = .center
         timeLabel30.font = .boldSystemFont(ofSize: 20)
-        timeLabel30.backgroundColor = UIColor(named: "ColorLabel")
+        timeLabel30.backgroundColor = is30 ? .systemRed : UIColor(named: "ColorLabel")
         timeLabel30.layer.cornerRadius = 15
         timeLabel30.clipsToBounds = true
+        timeLabel30.addGestureRecognizer(tap30)
+        timeLabel30.isUserInteractionEnabled = true
         timeLabel30.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             timeLabel30.heightAnchor.constraint(equalToConstant: 40),
@@ -73,22 +86,24 @@ final class SettingsViewController: UIViewController {
             timeLabel30.leadingAnchor.constraint(equalTo: timeView.leadingAnchor, constant: 20),
         ])
     }
-            private func setupTimeLabel60() {
-                timeView.addSubview(timeLabel60)
-                timeLabel60.text = "60 сек."
-                timeLabel60.textAlignment = .center
-                timeLabel60.textColor = .white
-                timeLabel60.font = .boldSystemFont(ofSize: 20)
-                timeLabel60.backgroundColor = UIColor(named: "ColorLabel")
-                timeLabel60.layer.cornerRadius = 15
-                timeLabel60.clipsToBounds = true
-                timeLabel60.translatesAutoresizingMaskIntoConstraints = false
-                NSLayoutConstraint.activate([
-                    timeLabel60.heightAnchor.constraint(equalToConstant: 40),
-                    timeLabel60.widthAnchor.constraint(equalToConstant: 135),
-                    timeLabel60.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 40),
-                    timeLabel60.trailingAnchor.constraint(equalTo: timeView.trailingAnchor, constant: -20),
-                ])
+    private func setupTimeLabel60() {
+        timeView.addSubview(timeLabel60)
+        timeLabel60.text = "60 сек."
+        timeLabel60.textAlignment = .center
+        timeLabel60.textColor = .white
+        timeLabel60.font = .boldSystemFont(ofSize: 20)
+        timeLabel60.backgroundColor = is30 ? UIColor(named: "ColorLabel") : .systemRed
+        timeLabel60.layer.cornerRadius = 15
+        timeLabel60.clipsToBounds = true
+        timeLabel60.addGestureRecognizer(tap60)
+        timeLabel60.isUserInteractionEnabled = true
+        timeLabel60.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            timeLabel60.heightAnchor.constraint(equalToConstant: 40),
+            timeLabel60.widthAnchor.constraint(equalToConstant: 135),
+            timeLabel60.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 40),
+            timeLabel60.trailingAnchor.constraint(equalTo: timeView.trailingAnchor, constant: -20),
+        ])
     }
     private func setupMusicLabel() {
         playerView.addSubview(musicLabel)
@@ -107,7 +122,7 @@ final class SettingsViewController: UIViewController {
             musicLabel.trailingAnchor.constraint(equalTo: playerView.trailingAnchor, constant: -20)
             
         ])
-}
+    }
     private func gameFriendLabel() {
         playerView.addSubview(friendLabel)
         friendLabel.text = "    Игра с другом"
@@ -126,7 +141,7 @@ final class SettingsViewController: UIViewController {
             friendLabel.trailingAnchor.constraint(equalTo: playerView.trailingAnchor, constant: -20)
             
         ])
-}
+    }
     
     private func setupSwitch() {
         playerView.addSubview(friendSwitch)
