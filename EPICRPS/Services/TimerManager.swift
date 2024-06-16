@@ -13,9 +13,10 @@ class TimerManager {
     private init() {}
     
     private var timer: Timer?
+    private var completion: (() -> Void)?
     private(set) var secondsLeft = 0
     private(set) var totalTime = 0
-    private var completion: (() -> Void)?
+    private(set) var isPaused = true
     
     var isTimeUp: Bool {
         secondsLeft == 0
@@ -34,15 +35,18 @@ class TimerManager {
             repeats: true
         )
         self.completion = completion
+        isPaused = false
     }
     
     func stopTimer() {
+        isPaused = true
         timer?.invalidate()
     }
     
     @objc private func timerFired(_ timer: Timer) {
-        secondsLeft -= 1
         completion?()
+        secondsLeft -= 1
+       
     }
 }
 

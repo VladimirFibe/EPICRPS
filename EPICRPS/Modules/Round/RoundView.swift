@@ -81,6 +81,14 @@ class RoundView: UIView {
         return element
     }()
     
+    private lazy var timerLabel: UILabel = {
+        let element = UILabel()
+        element.textColor = .white
+        element.font =  RubikFont.bold.apply(size: 12)
+        element.translatesAutoresizingMaskIntoConstraints = false
+        return element
+    }()
+    
     private lazy var firstPlayerProgressView: UIProgressView = {
         let element = UIProgressView()
         element.progress = .zero
@@ -139,11 +147,12 @@ class RoundView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setBaseState() {
+    func setNewRound(with roundDuration: Int) {
         wHandsImage.image = .femaleHand
         mHandsImage.image = .maleHand
         vsLabel.text = "Ваш ход"
         timerProgressView.progress = 1
+        timerLabel.text = "0:\(roundDuration)"
     }
     
     func updateUI(with recent: Recent) {
@@ -163,13 +172,14 @@ class RoundView: UIView {
         secondPlayerProgressView.progress = 0
     }
     
-    func updateTimer(with persentage: Float) {
+    func updateTimer(with persentage: Float, time: Int) {
         timerProgressView.progress = persentage
+        timerLabel.text = "0:\(time)"
     }
     
     // MARK: - Setup View
     private func setupView() {
-        [backgroundImage, gameLabel, wHandsImage, vsLabel, mHandsImage, timerProgressView,  firstPlayerProgressView, secondPlayerProgressView, stoneFigure, paperFigure, scissorsFigure, firstLogo, secondLogo, borderLabel].forEach { self.addSubview($0) }
+        [backgroundImage, gameLabel, wHandsImage, vsLabel, mHandsImage, timerProgressView,  firstPlayerProgressView, secondPlayerProgressView, stoneFigure, paperFigure, scissorsFigure, firstLogo, secondLogo, borderLabel, timerLabel].forEach { self.addSubview($0) }
         
         stoneFigure.addTarget(self, action: #selector(tapStone), for: .touchUpInside)
         paperFigure.addTarget(self, action: #selector(tapPaper), for: .touchUpInside)
@@ -214,6 +224,9 @@ class RoundView: UIView {
             timerProgressView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             timerProgressView.widthAnchor.constraint(equalToConstant: 200),
             timerProgressView.heightAnchor.constraint(equalToConstant: 10),
+            
+            timerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 108),
+            timerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
             
             borderLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             borderLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
