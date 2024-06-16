@@ -53,6 +53,7 @@
 		B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */; };
 		B993D7762C1E12C0007AF2C9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D76E2C1E12C0007AF2C9 /* Store.swift */; };
 		B993D7782C1E3655007AF2C9 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7772C1E3655007AF2C9 /* TimerManager.swift */; };
+		D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */; };
 		D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		B993D76C2C1E12C0007AF2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B993D76E2C1E12C0007AF2C9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B993D7772C1E3655007AF2C9 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,6 +339,7 @@
 			children = (
 				B993D76A2C1E12C0007AF2C9 /* Fonts */,
 				B993D76B2C1E12C0007AF2C9 /* Assets.xcassets */,
+				D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */,
 				B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */,
 				B993D76E2C1E12C0007AF2C9 /* Store.swift */,
 			);
@@ -405,6 +408,7 @@
 				B993D7732C1E12C0007AF2C9 /* Rubik-Regular.ttf in Resources */,
 				B993D7742C1E12C0007AF2C9 /* Assets.xcassets in Resources */,
 				B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */,
+				D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */,
 				B993D7722C1E12C0007AF2C9 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,7 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -628,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
