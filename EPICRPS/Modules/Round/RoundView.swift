@@ -8,9 +8,7 @@
 import UIKit
 
 protocol RoundViewDelegate: AnyObject {
-    func tapStonePressed()
-    func tapPaperPressed()
-    func tapScissorsPressed()
+    func buttonPressed(_ hand: Int)
 }
 
 private extension RoundView {
@@ -180,24 +178,17 @@ class RoundView: UIView {
     // MARK: - Setup View
     private func setupView() {
         [backgroundImage, gameLabel, wHandsImage, vsLabel, mHandsImage, timerProgressView,  firstPlayerProgressView, secondPlayerProgressView, stoneFigure, paperFigure, scissorsFigure, firstLogo, secondLogo, borderLabel, timerLabel].forEach { self.addSubview($0) }
-        
-        stoneFigure.addTarget(self, action: #selector(tapStone), for: .touchUpInside)
-        paperFigure.addTarget(self, action: #selector(tapPaper), for: .touchUpInside)
-        scissorsFigure.addTarget(self, action: #selector(tapScissors), for: .touchUpInside)
+        stoneFigure.tag = 0
+        paperFigure.tag = 1
+        scissorsFigure.tag = 2
+        stoneFigure.addTarget(self, action: #selector(buttonPressed), for: .primaryActionTriggered)
+        paperFigure.addTarget(self, action: #selector(buttonPressed), for: .primaryActionTriggered)
+        scissorsFigure.addTarget(self, action: #selector(buttonPressed), for: .primaryActionTriggered)
     }
     
-    @objc private func tapStone() {
-        delegate?.tapStonePressed()
+    @objc private func buttonPressed(_ sender: UIButton) {
+        delegate?.buttonPressed(sender.tag)
     }
-    
-    @objc private func tapPaper() {
-        delegate?.tapPaperPressed()
-    }
-    
-    @objc private func tapScissors() {
-        delegate?.tapScissorsPressed()
-    }
-    
     // MARK: - Setup Constraints
     
     private func setupConstraints() {

@@ -141,27 +141,11 @@ class RoundViewController: UIViewController {
 }
 
 extension RoundViewController: RoundViewDelegate {
-    func tapStonePressed() {
+    func buttonPressed(_ hand: Int) {
         if !buttonPressed {
             buttonPressed = true
             playSound("button")
-            store.sendAction(.round(0))
-        }
-    }
-    
-    func tapPaperPressed() {
-        if !buttonPressed {
-            buttonPressed = true
-            playSound("button")
-            store.sendAction(.round(1))
-        }
-    }
-    
-    func tapScissorsPressed() {
-        if !buttonPressed {
-            buttonPressed = true
-            playSound("button")
-            store.sendAction(.round(2))
+            store.sendAction(.round(hand))
         }
     }
 }
