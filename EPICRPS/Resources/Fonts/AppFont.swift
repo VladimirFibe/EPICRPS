@@ -1,10 +1,3 @@
-//
-//  AppFont.swift
-//  EPICRPS
-//
-//  Created by WWDC on 13.06.2024.
-//
-
 import UIKit
 
 protocol AppFontProtocol {
@@ -13,8 +6,10 @@ protocol AppFontProtocol {
 
 extension AppFontProtocol {
     var splashTitle: UIFont { apply(size: 30) }
+    var size13: UIFont { apply(size: 13) }
     var size14: UIFont { apply(size: 14) }
     var size16: UIFont { apply(size: 16) }
+    var size18: UIFont { apply(size: 18) }
 }
 
 extension AppFontProtocol {

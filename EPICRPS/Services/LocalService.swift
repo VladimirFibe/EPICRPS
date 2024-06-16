@@ -3,7 +3,6 @@ import Foundation
 final class LocalService {
     static let shared = LocalService()
     private init() {}
-    public var currentPerson = Person(name: "Player 1")
     public var persons: [Person] = [
         .init(name: "Tony Newman"),
         .init(name: "Herman Welch"),
@@ -14,4 +13,23 @@ final class LocalService {
         .init(name: "Harriett Single"),
         .init(name: "Henry Padilla")
     ]
+    
+    private enum Keys: String {
+        case currentPerson
+    }
+    
+    public var currentPerson: Person {
+        get {
+            if let data = UserDefaults.standard.data(forKey: Keys.currentPerson.rawValue),
+               let person = try? JSONDecoder().decode(Person.self, from: data) {
+                return person
+            } else {
+                return Person(name: "Player 1")
+            }
+        }
+        set {
+            guard let data = try? JSONEncoder().encode(newValue) else { return }
+            UserDefaults.standard.set(data, forKey: Keys.currentPerson.rawValue)
+        }
+    }
 }
