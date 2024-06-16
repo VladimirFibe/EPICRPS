@@ -55,6 +55,7 @@
 		B993D7782C1E3655007AF2C9 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7772C1E3655007AF2C9 /* TimerManager.swift */; };
 		D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */; };
 		D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */; };
+		D9A3B6462C1F099100F0EB76 /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B6452C1F099100F0EB76 /* button.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		B993D7772C1E3655007AF2C9 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionHeader.swift; sourceTree = "<group>"; };
+		D9A3B6452C1F099100F0EB76 /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +342,7 @@
 				B993D76A2C1E12C0007AF2C9 /* Fonts */,
 				B993D76B2C1E12C0007AF2C9 /* Assets.xcassets */,
 				D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */,
+				D9A3B6452C1F099100F0EB76 /* button.mp3 */,
 				B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */,
 				B993D76E2C1E12C0007AF2C9 /* Store.swift */,
 			);
@@ -410,6 +413,7 @@
 				B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */,
 				D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */,
 				B993D7722C1E12C0007AF2C9 /* Rubik-Medium.ttf in Resources */,
+				D9A3B6462C1F099100F0EB76 /* button.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

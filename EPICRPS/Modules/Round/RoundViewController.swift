@@ -10,6 +10,7 @@ import AVFoundation
 
 class RoundViewController: UIViewController {
     var player: AVAudioPlayer?
+    var playerButton: AVAudioPlayer?
     private lazy var useCase = RoundUseCase(service: LocalService.shared)
     private lazy var store = RoundStore(useCase: useCase)
     var bag = Bag()
@@ -43,6 +44,7 @@ class RoundViewController: UIViewController {
             target: self,
             action: #selector(pauseButtonTapped)
         )
+        playSound()
         self.navigationItem.leftBarButtonItem = customBackButton
         self.navigationItem.rightBarButtonItem = pauseButton
     }
@@ -127,6 +129,12 @@ class RoundViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    func playSound(_ title: String) {
+        guard let url = Bundle.main.url(forResource: title, withExtension: "mp3") else { return }
+        playerButton = try? AVAudioPlayer(contentsOf: url)
+        playerButton?.play()
     }
 }
 
