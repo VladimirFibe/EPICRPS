@@ -83,7 +83,6 @@ class RoundView: UIView {
     
     private lazy var timerLabel: UILabel = {
         let element = UILabel()
-        element.text = "0:0"
         element.textColor = .white
         element.font =  RubikFont.bold.apply(size: 12)
         element.translatesAutoresizingMaskIntoConstraints = false
@@ -228,7 +227,6 @@ class RoundView: UIView {
             timerProgressView.heightAnchor.constraint(equalToConstant: 10),
             
             timerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 108),
-            timerLabel.widthAnchor.constraint(equalToConstant: 27),
             timerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
             
             borderLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
