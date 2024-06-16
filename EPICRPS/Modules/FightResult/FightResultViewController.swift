@@ -9,6 +9,16 @@ import UIKit
 
 final class FightResultViewController: UIViewController {
     
+    private let recent: Recent
+    
+    init(recent: Recent) {
+        self.recent = recent
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     private let customView = FightResultView()
     
     override func loadView() {
@@ -18,21 +28,18 @@ final class FightResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customView.configureView()
+        customView.configureView(with: recent)
         customView.delegate = self
+        navigationItem.hidesBackButton = true
     }
-    
-    
-    
 }
 
 extension FightResultViewController: FightResultViewDelegate {
     func homeButtonPressed() {
-        let vc = SplashViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func repeatButtonPressed() {
-#warning("go to RoundOneVC")
+        navigationController?.popViewController(animated: true)
     }
 }
