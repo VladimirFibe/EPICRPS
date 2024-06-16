@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 
 class RoundViewController: UIViewController {
+    var buttonPressed = false
     var player: AVAudioPlayer?
     var playerButton: AVAudioPlayer?
     private lazy var useCase = RoundUseCase(service: LocalService.shared)
@@ -75,6 +76,7 @@ class RoundViewController: UIViewController {
         timerManager.stopTimer()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.buttonPressed = false
             guard let self = self else { return }
             if recent.currentCount == 3 || recent.playerCount == 3 {
                 self.store.sendAction(.restart)
@@ -140,14 +142,26 @@ class RoundViewController: UIViewController {
 
 extension RoundViewController: RoundViewDelegate {
     func tapStonePressed() {
-        store.sendAction(.round(0))
+        if !buttonPressed {
+            buttonPressed = true
+            playSound("button")
+            store.sendAction(.round(0))
+        }
     }
     
     func tapPaperPressed() {
-        store.sendAction(.round(1))
+        if !buttonPressed {
+            buttonPressed = true
+            playSound("button")
+            store.sendAction(.round(1))
+        }
     }
     
     func tapScissorsPressed() {
-        store.sendAction(.round(2))
+        if !buttonPressed {
+            buttonPressed = true
+            playSound("button")
+            store.sendAction(.round(2))
+        }
     }
 }
