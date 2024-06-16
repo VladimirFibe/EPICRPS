@@ -54,6 +54,7 @@
 		B993D7762C1E12C0007AF2C9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D76E2C1E12C0007AF2C9 /* Store.swift */; };
 		B993D7782C1E3655007AF2C9 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7772C1E3655007AF2C9 /* TimerManager.swift */; };
 		D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */; };
+		D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		B993D76E2C1E12C0007AF2C9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B993D7772C1E3655007AF2C9 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			children = (
 				B993D7192C1E1231007AF2C9 /* ResultsCell.swift */,
 				B993D71A2C1E1231007AF2C9 /* ResultsPersonHeader.swift */,
+				D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */,
 				B993D71B2C1E1231007AF2C9 /* ResultsService.swift */,
 				B993D71C2C1E1231007AF2C9 /* ResultsStore.swift */,
 				B993D71D2C1E1231007AF2C9 /* ResultsUseCase.swift */,
@@ -442,6 +445,7 @@
 				B993D7402C1E1231007AF2C9 /* FightResultViewController.swift in Sources */,
 				B993D7592C1E1231007AF2C9 /* PopupViewController.swift in Sources */,
 				B993D73F2C1E1231007AF2C9 /* FightResultView.swift in Sources */,
+				D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */,
 				B993D75C2C1E1231007AF2C9 /* Recent.swift in Sources */,
 				B993D7572C1E1231007AF2C9 /* NameViewController.swift in Sources */,
 				B993D7652C1E1276007AF2C9 /* LocalService.swift in Sources */,
