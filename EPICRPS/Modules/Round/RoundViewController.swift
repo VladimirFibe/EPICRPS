@@ -27,8 +27,9 @@ class RoundViewController: UIViewController {
         
         customView.delegate = self
         setupObservers()
-        let customBackButton = UIBarButtonItem(image: UIImage(named: "Arrow"), style: .plain, target: self, action: #selector(backButtonTapped))
-        self.navigationItem.leftBarButtonItem = customBackButton
+
+        navigationItem.leftBarButtonItem = .init(image: .arrow, style: .plain, target: self, action: #selector(backButtonTapped))
+        navigationItem.rightBarButtonItem = .init(image: .pause, style: .plain, target: self, action: #selector(pauseButtonTapped))
     }
     
     private func startTimer() {
@@ -44,11 +45,11 @@ class RoundViewController: UIViewController {
     }
     
     @objc func backButtonTapped() {
-        self.navigationController?.viewControllers.forEach {
-            if $0 is SplashViewController {
-                self.navigationController?.popToViewController($0, animated: true)
-            }
-        }
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc func pauseButtonTapped() {
+        print("Pause")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,9 +100,4 @@ extension RoundViewController: RoundViewDelegate {
     func tapScissorsPressed() {
         store.sendAction(.round(2))
     }
-}
-
-@available(iOS 17.0, *)
-#Preview {
-    RoundViewController()
 }
