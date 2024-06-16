@@ -76,7 +76,7 @@ class RoundViewController: UIViewController {
                 let controller = FightResultViewController(recent: recent)
                 self.navigationController?.pushViewController(controller, animated: true)
             } else {
-                self.customView.setBaseState()
+                self.customView.setNewRound(with: roundDuration)
                 self.startTimer(self.roundDuration)
             }
         }
@@ -106,8 +106,8 @@ class RoundViewController: UIViewController {
                 manager.stopTimer()
 #warning("Засчитать проигрыш и начать новый раунд")
             }
-            let persentage = Float(manager.secondsLeft) / Float(roundDuration)
-            self?.customView.updateTimer(with: persentage)
+            let progress = Float(manager.secondsLeft) / Float(roundDuration)
+            self?.customView.updateTimer(with: progress, time: manager.secondsLeft)
         }
     }
 }
