@@ -41,7 +41,6 @@
 		B993D75A2C1E1231007AF2C9 /* TripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7362C1E1231007AF2C9 /* TripButton.swift */; };
 		B993D75B2C1E1231007AF2C9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7382C1E1231007AF2C9 /* Person.swift */; };
 		B993D75C2C1E1231007AF2C9 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7392C1E1231007AF2C9 /* Recent.swift */; };
-		B993D75D2C1E1231007AF2C9 /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D73A2C1E1231007AF2C9 /* RPSGame.swift */; };
 		B993D7612C1E125E007AF2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D75E2C1E125E007AF2C9 /* AppDelegate.swift */; };
 		B993D7622C1E125E007AF2C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D75F2C1E125E007AF2C9 /* SceneDelegate.swift */; };
 		B993D7652C1E1276007AF2C9 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7632C1E1276007AF2C9 /* LocalService.swift */; };
@@ -95,7 +94,6 @@
 		B993D7362C1E1231007AF2C9 /* TripButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripButton.swift; sourceTree = "<group>"; };
 		B993D7382C1E1231007AF2C9 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B993D7392C1E1231007AF2C9 /* Recent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
-		B993D73A2C1E1231007AF2C9 /* RPSGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
 		B993D75E2C1E125E007AF2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B993D75F2C1E125E007AF2C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B993D7632C1E1276007AF2C9 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 			children = (
 				B993D7382C1E1231007AF2C9 /* Person.swift */,
 				B993D7392C1E1231007AF2C9 /* Recent.swift */,
-				B993D73A2C1E1231007AF2C9 /* RPSGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,7 +432,6 @@
 				B993D7412C1E1231007AF2C9 /* FightLoadViewController.swift in Sources */,
 				B993D7432C1E1231007AF2C9 /* PersonsViewController.swift in Sources */,
 				B993D7492C1E1231007AF2C9 /* ResultsViewController.swift in Sources */,
-				B993D75D2C1E1231007AF2C9 /* RPSGame.swift in Sources */,
 				B993D7552C1E1231007AF2C9 /* SplashViewController.swift in Sources */,
 				B993D7612C1E125E007AF2C9 /* AppDelegate.swift in Sources */,
 				B993D7512C1E1231007AF2C9 /* SettingsService.swift in Sources */,
