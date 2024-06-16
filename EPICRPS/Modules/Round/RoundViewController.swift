@@ -107,7 +107,7 @@ class RoundViewController: UIViewController {
             else { return }
             if manager.isTimeUp {
                 manager.stopTimer()
-#warning("Засчитать проигрыш и начать новый раунд")
+                self?.store.sendAction(.lose)
             }
             let progress = Float(manager.secondsLeft) / Float(roundDuration)
             self?.customView.updateTimer(with: progress, time: manager.secondsLeft)
@@ -142,9 +142,4 @@ extension RoundViewController: RoundViewDelegate {
     func tapScissorsPressed() {
         store.sendAction(.round(2))
     }
-}
-
-@available(iOS 17.0, *)
-#Preview {
-    RoundViewController()
 }

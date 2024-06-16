@@ -201,7 +201,6 @@ class RoundView: UIView {
     // MARK: - Setup Constraints
     
     private func setupConstraints() {
-        paperFigure.isEnabled = false
         NSLayoutConstraint.activate([
             backgroundImage.topAnchor.constraint(equalTo: self.topAnchor),
             backgroundImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
