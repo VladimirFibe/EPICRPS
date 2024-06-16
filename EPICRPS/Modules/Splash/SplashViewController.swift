@@ -1,8 +1,12 @@
 import UIKit
 
 final class SplashViewController: UIViewController {
-    
+    private var person: Person? = nil
+    private var player: Person? = nil
+    private let useCase = SplashUseCase(service: FirebaseClient.shared)
+    private lazy var store = SplashStore(useCase: useCase)
     private let customView = SplashView()
+    private var bag = Bag()
     
     override func loadView() {
         view = customView
@@ -15,12 +19,32 @@ final class SplashViewController: UIViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        store.sendAction(.login)
+    }
+    
     //MARK: - Setup views
     private func setupView() {
+        setupObservers()
         navigationItem.leftBarButtonItem = .init(image: .settings, style: .plain, target: self, action: #selector(navBarLeftButtonAction))
         navigationItem.rightBarButtonItem = .init(image: .rules, style: .plain, target: self, action: #selector(navBarRightButtonAction))
     }
     
+    private func setupObservers() {
+        
+        store
+            .events
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] event in
+                guard let self = self else { return }
+                switch event {
+                case .done(let person, let player):
+                    self.player = player
+                    self.person = person
+                }
+            }.store(in: &bag)
+    }
     //MARK: - Actions
     
     @objc private func navBarLeftButtonAction() {
@@ -37,10 +61,10 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewDelegate {
     func startButtonPressed() {
-        let fistPlayer = LocalService.shared.currentPerson
-        let secondPlayer = LocalService.shared.friendPerson
-        let controller = FightLoadViewController(firstPlayer: fistPlayer, secondPlayer: secondPlayer)
-        navigationController?.pushViewController(controller, animated: true)
+        if let person, let player {
+            let controller = FightLoadViewController(firstPlayer: person, secondPlayer: player)
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     func resultButtonPressed() {

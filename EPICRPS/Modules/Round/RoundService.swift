@@ -1,10 +1,3 @@
-//
-//  RoundService.swift
-//  EPICRPS
-//
-//  Created by WWDC on 14.06.2024.
-//
-
 import Foundation
 
 protocol RoundServiceProtocol {
@@ -14,6 +7,23 @@ protocol RoundServiceProtocol {
     func lose() async throws -> Recent
 }
 
+extension FirebaseClient: RoundServiceProtocol {
+    func round(_ hand: Int) async throws -> Recent {
+        return recent
+    }
+    
+    func reset() async throws {
+    }
+    
+    func restart() async throws {
+    }
+    
+    func lose() async throws -> Recent {
+        return recent
+    }
+    
+    
+}
 extension LocalService: RoundServiceProtocol {
     func round(_ hand: Int) async throws -> Recent {
         recent.currentHand = hand

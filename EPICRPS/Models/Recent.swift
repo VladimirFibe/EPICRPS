@@ -8,13 +8,13 @@
 import Foundation
 
 struct Recent: Codable, Hashable {
-    var id: String
-    var name: String
+    var id = "1"
+    var name = "Player 1"
     var avatar = ""
     var male = false
     var hand: Int? = nil
-    var currentId: String
-    var currentName: String
+    var currentId = "2"
+    var currentName = "Player 2"
     var currentAvatar = ""
     var currentMale = true
     var currentHand: Int? = nil

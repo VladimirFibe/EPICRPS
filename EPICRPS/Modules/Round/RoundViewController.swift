@@ -14,7 +14,7 @@ class RoundViewController: UIViewController {
     var playerButton: AVAudioPlayer?
     private lazy var useCase = RoundUseCase(service: LocalService.shared)
     private lazy var store = RoundStore(useCase: useCase)
-    var bag = Bag()
+    private var bag = Bag()
     
     private let roundDuration = LocalService.shared.totalTime
     
