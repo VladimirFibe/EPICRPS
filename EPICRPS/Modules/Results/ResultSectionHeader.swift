@@ -25,8 +25,8 @@ final class ResultSectionHeader: UIView {
         topRateImage.image = UIImage(named: "topRate")
         topRateImage.contentMode = .scaleAspectFit
         NSLayoutConstraint.activate([
-            topRateImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             topRateImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            topRateImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -35),
             topRateImage.heightAnchor.constraint(equalToConstant: 95.27),
             topRateImage.widthAnchor.constraint(equalToConstant: 164)
         ])
@@ -39,7 +39,7 @@ final class ResultSectionHeader: UIView {
         playersLabel.textColor = #colorLiteral(red: 0.8500664234, green: 0.8709563613, blue: 0.9088227749, alpha: 1)
         playersLabel.font = .systemFont(ofSize: 18, weight: .bold)
         NSLayoutConstraint.activate([
-            playersLabel.bottomAnchor.constraint(equalTo: topRateImage.bottomAnchor),
+            playersLabel.bottomAnchor.constraint(equalTo: topRateImage.bottomAnchor, constant: -10),
             playersLabel.trailingAnchor.constraint(equalTo: topRateImage.leadingAnchor, constant: -22),
         ])
     }
@@ -52,7 +52,7 @@ final class ResultSectionHeader: UIView {
         rateLabel.textColor = #colorLiteral(red: 0.8500664234, green: 0.8709563613, blue: 0.9088227749, alpha: 1)
         rateLabel.font = .systemFont(ofSize: 18, weight: .bold)
         NSLayoutConstraint.activate([
-            rateLabel.bottomAnchor.constraint(equalTo: topRateImage.bottomAnchor),
+            rateLabel.bottomAnchor.constraint(equalTo: topRateImage.bottomAnchor, constant: -10),
             rateLabel.leadingAnchor.constraint(equalTo: topRateImage.trailingAnchor, constant: 26),
         ])
     }
