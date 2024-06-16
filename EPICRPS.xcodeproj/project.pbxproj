@@ -3,148 +3,108 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */; };
-		B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */; };
-		B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */; };
-		B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */; };
-		B9C7C52B2C1AE3BE0058F836 /* EllipticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C5272C1AE3BE0058F836 /* EllipticalGradientLayer.swift */; };
-		D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9BC2C1AD6860004B1EA /* SplashView.swift */; };
-		D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C02C1AD6960004B1EA /* SplashViewController.swift */; };
-		D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */; };
-		D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */; };
-		D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */; };
-		D934C9CE2C1AD72B0004B1EA /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */; };
-		D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9C72C1AD72B0004B1EA /* AppFont.swift */; };
-		D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934C9D32C1B0F1B0004B1EA /* UIButton.swift */; };
-		D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */; };
-		D96A74202C1C7AC60093E893 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A741F2C1C7AC60093E893 /* Store.swift */; };
-		D9D5E6C02C1DB00E00266F89 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6BF2C1DB00E00266F89 /* NameViewController.swift */; };
-		D9D5E6C22C1DB07A00266F89 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6C12C1DB07A00266F89 /* PopupViewController.swift */; };
-		D9D5E6C42C1DB0EC00266F89 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6C32C1DB0EC00266F89 /* PopupView.swift */; };
-		D9D5E6C62C1DB14D00266F89 /* TripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5E6C52C1DB14D00266F89 /* TripButton.swift */; };
+		B993D6EE2C1E0C08007AF2C9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D6EC2C1E0C08007AF2C9 /* UIButton.swift */; };
+		B993D73C2C1E1231007AF2C9 /* Extension+SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D70C2C1E1231007AF2C9 /* Extension+SplashViewController.swift */; };
+		B993D73D2C1E1231007AF2C9 /* EllipticalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D70E2C1E1231007AF2C9 /* EllipticalGradientLayer.swift */; };
+		B993D73E2C1E1231007AF2C9 /* EllipticalRadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D70F2C1E1231007AF2C9 /* EllipticalRadialGradientView.swift */; };
+		B993D73F2C1E1231007AF2C9 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7112C1E1231007AF2C9 /* FightResultView.swift */; };
+		B993D7402C1E1231007AF2C9 /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7122C1E1231007AF2C9 /* FightResultViewController.swift */; };
+		B993D7412C1E1231007AF2C9 /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7142C1E1231007AF2C9 /* FightLoadViewController.swift */; };
+		B993D7422C1E1231007AF2C9 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7162C1E1231007AF2C9 /* PersonCell.swift */; };
+		B993D7432C1E1231007AF2C9 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7172C1E1231007AF2C9 /* PersonsViewController.swift */; };
+		B993D7442C1E1231007AF2C9 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7192C1E1231007AF2C9 /* ResultsCell.swift */; };
+		B993D7452C1E1231007AF2C9 /* ResultsPersonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D71A2C1E1231007AF2C9 /* ResultsPersonHeader.swift */; };
+		B993D7462C1E1231007AF2C9 /* ResultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D71B2C1E1231007AF2C9 /* ResultsService.swift */; };
+		B993D7472C1E1231007AF2C9 /* ResultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D71C2C1E1231007AF2C9 /* ResultsStore.swift */; };
+		B993D7482C1E1231007AF2C9 /* ResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D71D2C1E1231007AF2C9 /* ResultsUseCase.swift */; };
+		B993D7492C1E1231007AF2C9 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D71E2C1E1231007AF2C9 /* ResultsViewController.swift */; };
+		B993D74A2C1E1231007AF2C9 /* RoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7202C1E1231007AF2C9 /* RoundService.swift */; };
+		B993D74B2C1E1231007AF2C9 /* RoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7212C1E1231007AF2C9 /* RoundStore.swift */; };
+		B993D74C2C1E1231007AF2C9 /* RoundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7222C1E1231007AF2C9 /* RoundUseCase.swift */; };
+		B993D74D2C1E1231007AF2C9 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7232C1E1231007AF2C9 /* RoundView.swift */; };
+		B993D74E2C1E1231007AF2C9 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7242C1E1231007AF2C9 /* RoundViewController.swift */; };
+		B993D74F2C1E1231007AF2C9 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7262C1E1231007AF2C9 /* RulesViewController.swift */; };
+		B993D7502C1E1231007AF2C9 /* SettingCellVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7282C1E1231007AF2C9 /* SettingCellVeiw.swift */; };
+		B993D7512C1E1231007AF2C9 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7292C1E1231007AF2C9 /* SettingsService.swift */; };
+		B993D7522C1E1231007AF2C9 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D72A2C1E1231007AF2C9 /* SettingsStore.swift */; };
+		B993D7532C1E1231007AF2C9 /* SettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D72B2C1E1231007AF2C9 /* SettingsUseCase.swift */; };
+		B993D7542C1E1231007AF2C9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D72C2C1E1231007AF2C9 /* SettingsViewController.swift */; };
+		B993D7552C1E1231007AF2C9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D72E2C1E1231007AF2C9 /* SplashViewController.swift */; };
+		B993D7562C1E1231007AF2C9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7302C1E1231007AF2C9 /* SplashView.swift */; };
+		B993D7572C1E1231007AF2C9 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7332C1E1231007AF2C9 /* NameViewController.swift */; };
+		B993D7582C1E1231007AF2C9 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7342C1E1231007AF2C9 /* PopupView.swift */; };
+		B993D7592C1E1231007AF2C9 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7352C1E1231007AF2C9 /* PopupViewController.swift */; };
+		B993D75A2C1E1231007AF2C9 /* TripButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7362C1E1231007AF2C9 /* TripButton.swift */; };
+		B993D75B2C1E1231007AF2C9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7382C1E1231007AF2C9 /* Person.swift */; };
+		B993D75C2C1E1231007AF2C9 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7392C1E1231007AF2C9 /* Recent.swift */; };
+		B993D75D2C1E1231007AF2C9 /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D73A2C1E1231007AF2C9 /* RPSGame.swift */; };
+		B993D7612C1E125E007AF2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D75E2C1E125E007AF2C9 /* AppDelegate.swift */; };
+		B993D7622C1E125E007AF2C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D75F2C1E125E007AF2C9 /* SceneDelegate.swift */; };
+		B993D7652C1E1276007AF2C9 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7632C1E1276007AF2C9 /* LocalService.swift */; };
+		B993D7702C1E12C0007AF2C9 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7662C1E12C0007AF2C9 /* AppFont.swift */; };
+		B993D7712C1E12C0007AF2C9 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B993D7672C1E12C0007AF2C9 /* Rubik-Bold.ttf */; };
+		B993D7722C1E12C0007AF2C9 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B993D7682C1E12C0007AF2C9 /* Rubik-Medium.ttf */; };
+		B993D7732C1E12C0007AF2C9 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B993D7692C1E12C0007AF2C9 /* Rubik-Regular.ttf */; };
+		B993D7742C1E12C0007AF2C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B993D76B2C1E12C0007AF2C9 /* Assets.xcassets */; };
+		B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */; };
+		B993D7762C1E12C0007AF2C9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D76E2C1E12C0007AF2C9 /* Store.swift */; };
+		B993D7782C1E3655007AF2C9 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7772C1E3655007AF2C9 /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE2FA8972C16DD600094AAA1 /* EPICRPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICRPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE2FA8A82C16DD610094AAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
-		B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
-		B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalRadialGradientView.swift; sourceTree = "<group>"; };
-		B9C7C5272C1AE3BE0058F836 /* EllipticalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalGradientLayer.swift; sourceTree = "<group>"; };
-		D934C9BC2C1AD6860004B1EA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		D934C9C02C1AD6960004B1EA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SplashViewController.swift"; sourceTree = "<group>"; };
-		D934C9C72C1AD72B0004B1EA /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		D934C9D32C1B0F1B0004B1EA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		D934C9E02C1B104E0004B1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D96A741F2C1C7AC60093E893 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		D9D5E6BF2C1DB00E00266F89 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
-		D9D5E6C12C1DB07A00266F89 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
-		D9D5E6C32C1DB0EC00266F89 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
-		D9D5E6C52C1DB14D00266F89 /* TripButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripButton.swift; sourceTree = "<group>"; };
+		B993D6EC2C1E0C08007AF2C9 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		B993D70C2C1E1231007AF2C9 /* Extension+SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+SplashViewController.swift"; sourceTree = "<group>"; };
+		B993D70E2C1E1231007AF2C9 /* EllipticalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalGradientLayer.swift; sourceTree = "<group>"; };
+		B993D70F2C1E1231007AF2C9 /* EllipticalRadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipticalRadialGradientView.swift; sourceTree = "<group>"; };
+		B993D7112C1E1231007AF2C9 /* FightResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
+		B993D7122C1E1231007AF2C9 /* FightResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
+		B993D7142C1E1231007AF2C9 /* FightLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FightLoadViewController.swift; sourceTree = "<group>"; };
+		B993D7162C1E1231007AF2C9 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		B993D7172C1E1231007AF2C9 /* PersonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
+		B993D7192C1E1231007AF2C9 /* ResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		B993D71A2C1E1231007AF2C9 /* ResultsPersonHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsPersonHeader.swift; sourceTree = "<group>"; };
+		B993D71B2C1E1231007AF2C9 /* ResultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsService.swift; sourceTree = "<group>"; };
+		B993D71C2C1E1231007AF2C9 /* ResultsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsStore.swift; sourceTree = "<group>"; };
+		B993D71D2C1E1231007AF2C9 /* ResultsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsUseCase.swift; sourceTree = "<group>"; };
+		B993D71E2C1E1231007AF2C9 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		B993D7202C1E1231007AF2C9 /* RoundService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundService.swift; sourceTree = "<group>"; };
+		B993D7212C1E1231007AF2C9 /* RoundStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundStore.swift; sourceTree = "<group>"; };
+		B993D7222C1E1231007AF2C9 /* RoundUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundUseCase.swift; sourceTree = "<group>"; };
+		B993D7232C1E1231007AF2C9 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		B993D7242C1E1231007AF2C9 /* RoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
+		B993D7262C1E1231007AF2C9 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		B993D7282C1E1231007AF2C9 /* SettingCellVeiw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCellVeiw.swift; sourceTree = "<group>"; };
+		B993D7292C1E1231007AF2C9 /* SettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		B993D72A2C1E1231007AF2C9 /* SettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		B993D72B2C1E1231007AF2C9 /* SettingsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsUseCase.swift; sourceTree = "<group>"; };
+		B993D72C2C1E1231007AF2C9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B993D72E2C1E1231007AF2C9 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B993D7302C1E1231007AF2C9 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		B993D7332C1E1231007AF2C9 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		B993D7342C1E1231007AF2C9 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		B993D7352C1E1231007AF2C9 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		B993D7362C1E1231007AF2C9 /* TripButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripButton.swift; sourceTree = "<group>"; };
+		B993D7382C1E1231007AF2C9 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B993D7392C1E1231007AF2C9 /* Recent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
+		B993D73A2C1E1231007AF2C9 /* RPSGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
+		B993D75E2C1E125E007AF2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B993D75F2C1E125E007AF2C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B993D7632C1E1276007AF2C9 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
+		B993D7662C1E12C0007AF2C9 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		B993D7672C1E12C0007AF2C9 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		B993D7682C1E12C0007AF2C9 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		B993D7692C1E12C0007AF2C9 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		B993D76B2C1E12C0007AF2C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B993D76C2C1E12C0007AF2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B993D76E2C1E12C0007AF2C9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		B993D7772C1E3655007AF2C9 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D934C9E32C1B123B0004B1EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				RoundService.swift,
-				RoundStore.swift,
-				RoundUseCase.swift,
-				RoundViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A74172C1C6D7D0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				AppDelegate.swift,
-				SceneDelegate.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A741B2C1C6E750093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Person.swift,
-				Recent.swift,
-				RPSGame.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A741E2C1C71F10093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				FightLoadViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A743E2C1D14D40093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				RulesViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A74422C1D193A0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ResultsCell.swift,
-				ResultsPersonHeader.swift,
-				ResultsService.swift,
-				ResultsStore.swift,
-				ResultsUseCase.swift,
-				ResultsViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A74462C1D28DD0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				LocalService.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A74542C1D42E50093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				SettingCellVeiw.swift,
-				SettingsService.swift,
-				SettingsStore.swift,
-				SettingsUseCase.swift,
-				SettingsViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-		D96A74602C1D4C650093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				PersonCell.swift,
-				PersonsViewController.swift,
-			);
-			target = AE2FA8962C16DD600094AAA1 /* EPICRPS */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		D934C9E22C1B123B0004B1EA /* Round */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D934C9E32C1B123B0004B1EA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Round; sourceTree = "<group>"; };
-		D96A74162C1C6D7D0093E893 /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74172C1C6D7D0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
-		D96A741A2C1C6E750093E893 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A741B2C1C6E750093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
-		D96A741D2C1C71F10093E893 /* FirgtLoad */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A741E2C1C71F10093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = FirgtLoad; sourceTree = "<group>"; };
-		D96A743B2C1D14BC0093E893 /* Rules */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A743E2C1D14D40093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Rules; sourceTree = "<group>"; };
-		D96A74412C1D193A0093E893 /* Results */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74422C1D193A0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Results; sourceTree = "<group>"; };
-		D96A74452C1D28DC0093E893 /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74462C1D28DD0093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
-		D96A74532C1D42E50093E893 /* Settings */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74542C1D42E50093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Settings; sourceTree = "<group>"; };
-		D96A745F2C1D4C650093E893 /* PersonsList */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D96A74602C1D4C650093E893 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = PersonsList; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE2FA8942C16DD600094AAA1 /* Frameworks */ = {
@@ -176,125 +136,208 @@
 		AE2FA8992C16DD600094AAA1 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
-				D96A74162C1C6D7D0093E893 /* App */,
-				D96A741A2C1C6E750093E893 /* Models */,
-				D96A74452C1D28DC0093E893 /* Services */,
-				D934C9D52C1B0F1B0004B1EA /* Extensions */,
-				B9C7C52D2C1AF3650058F836 /* Modules */,
-				B9C7C52C2C1AF3390058F836 /* Resources */,
+				B993D76F2C1E12C0007AF2C9 /* Resources */,
+				B993D7642C1E1276007AF2C9 /* Services */,
+				B993D7602C1E125E007AF2C9 /* App */,
+				B993D6ED2C1E0C08007AF2C9 /* Extension UIKit */,
+				B993D73B2C1E1231007AF2C9 /* Models */,
+				B993D7372C1E1231007AF2C9 /* Modules */,
 				AE2FA8A82C16DD610094AAA1 /* Info.plist */,
-				D96A741C2C1C6E8D0093E893 /* Supporting Files */,
 			);
 			path = EPICRPS;
 			sourceTree = "<group>";
 		};
-		B9C7C5222C1AE3BE0058F836 /* FightResult */ = {
+		B993D6ED2C1E0C08007AF2C9 /* Extension UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				B9C7C5232C1AE3BE0058F836 /* FightResultView.swift */,
-				B9C7C5242C1AE3BE0058F836 /* FightResultViewController.swift */,
-				B9C7C5252C1AE3BE0058F836 /* GradientView */,
+				B993D6EC2C1E0C08007AF2C9 /* UIButton.swift */,
 			);
-			path = FightResult;
+			name = "Extension UIKit";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B9C7C5252C1AE3BE0058F836 /* GradientView */ = {
+		B993D70D2C1E1231007AF2C9 /* Extension+SplashViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B9C7C5262C1AE3BE0058F836 /* EllipticalRadialGradientView.swift */,
-				B9C7C5272C1AE3BE0058F836 /* EllipticalGradientLayer.swift */,
-			);
-			path = GradientView;
-			sourceTree = "<group>";
-		};
-		B9C7C52C2C1AF3390058F836 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */,
-				D96A741F2C1C7AC60093E893 /* Store.swift */,
-				AE2FA8A32C16DD610094AAA1 /* Assets.xcassets */,
-				D934C9CB2C1AD72B0004B1EA /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		B9C7C52D2C1AF3650058F836 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9C22C1AD6960004B1EA /* Splash */,
-				D96A743B2C1D14BC0093E893 /* Rules */,
-				D96A741D2C1C71F10093E893 /* FirgtLoad */,
-				D934C9E22C1B123B0004B1EA /* Round */,
-				B9C7C5222C1AE3BE0058F836 /* FightResult */,
-				D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */,
-				D934C9BE2C1AD6860004B1EA /* View */,
-				D96A74412C1D193A0093E893 /* Results */,
-				D96A74532C1D42E50093E893 /* Settings */,
-				D96A745F2C1D4C650093E893 /* PersonsList */,
-				D9D5E6BF2C1DB00E00266F89 /* NameViewController.swift */,
-				D9D5E6C12C1DB07A00266F89 /* PopupViewController.swift */,
-				D9D5E6C32C1DB0EC00266F89 /* PopupView.swift */,
-				D9D5E6C52C1DB14D00266F89 /* TripButton.swift */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		D934C9BD2C1AD6860004B1EA /* SplashView */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9BC2C1AD6860004B1EA /* SplashView.swift */,
-			);
-			path = SplashView;
-			sourceTree = "<group>";
-		};
-		D934C9BE2C1AD6860004B1EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9BD2C1AD6860004B1EA /* SplashView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		D934C9C22C1AD6960004B1EA /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9C02C1AD6960004B1EA /* SplashViewController.swift */,
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
-		D934C9C52C1AD6B20004B1EA /* Extension+SplashViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D934C9C42C1AD6B20004B1EA /* Extension+SplashViewController.swift */,
+				B993D70C2C1E1231007AF2C9 /* Extension+SplashViewController.swift */,
 			);
 			path = "Extension+SplashViewController";
 			sourceTree = "<group>";
 		};
-		D934C9CB2C1AD72B0004B1EA /* Fonts */ = {
+		B993D7102C1E1231007AF2C9 /* GradientView */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9C72C1AD72B0004B1EA /* AppFont.swift */,
-				D934C9C82C1AD72B0004B1EA /* Rubik-Bold.ttf */,
-				D934C9C92C1AD72B0004B1EA /* Rubik-Medium.ttf */,
-				D934C9CA2C1AD72B0004B1EA /* Rubik-Regular.ttf */,
+				B993D70E2C1E1231007AF2C9 /* EllipticalGradientLayer.swift */,
+				B993D70F2C1E1231007AF2C9 /* EllipticalRadialGradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		B993D7132C1E1231007AF2C9 /* FightResult */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7102C1E1231007AF2C9 /* GradientView */,
+				B993D7112C1E1231007AF2C9 /* FightResultView.swift */,
+				B993D7122C1E1231007AF2C9 /* FightResultViewController.swift */,
+			);
+			path = FightResult;
+			sourceTree = "<group>";
+		};
+		B993D7152C1E1231007AF2C9 /* FirgtLoad */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7142C1E1231007AF2C9 /* FightLoadViewController.swift */,
+			);
+			path = FirgtLoad;
+			sourceTree = "<group>";
+		};
+		B993D7182C1E1231007AF2C9 /* PersonsList */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7162C1E1231007AF2C9 /* PersonCell.swift */,
+				B993D7172C1E1231007AF2C9 /* PersonsViewController.swift */,
+			);
+			path = PersonsList;
+			sourceTree = "<group>";
+		};
+		B993D71F2C1E1231007AF2C9 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7192C1E1231007AF2C9 /* ResultsCell.swift */,
+				B993D71A2C1E1231007AF2C9 /* ResultsPersonHeader.swift */,
+				B993D71B2C1E1231007AF2C9 /* ResultsService.swift */,
+				B993D71C2C1E1231007AF2C9 /* ResultsStore.swift */,
+				B993D71D2C1E1231007AF2C9 /* ResultsUseCase.swift */,
+				B993D71E2C1E1231007AF2C9 /* ResultsViewController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		B993D7252C1E1231007AF2C9 /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7202C1E1231007AF2C9 /* RoundService.swift */,
+				B993D7212C1E1231007AF2C9 /* RoundStore.swift */,
+				B993D7222C1E1231007AF2C9 /* RoundUseCase.swift */,
+				B993D7232C1E1231007AF2C9 /* RoundView.swift */,
+				B993D7242C1E1231007AF2C9 /* RoundViewController.swift */,
+			);
+			path = Round;
+			sourceTree = "<group>";
+		};
+		B993D7272C1E1231007AF2C9 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7262C1E1231007AF2C9 /* RulesViewController.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		B993D72D2C1E1231007AF2C9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7282C1E1231007AF2C9 /* SettingCellVeiw.swift */,
+				B993D7292C1E1231007AF2C9 /* SettingsService.swift */,
+				B993D72A2C1E1231007AF2C9 /* SettingsStore.swift */,
+				B993D72B2C1E1231007AF2C9 /* SettingsUseCase.swift */,
+				B993D72C2C1E1231007AF2C9 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B993D72F2C1E1231007AF2C9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B993D72E2C1E1231007AF2C9 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B993D7312C1E1231007AF2C9 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7302C1E1231007AF2C9 /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		B993D7322C1E1231007AF2C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7312C1E1231007AF2C9 /* SplashView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B993D7372C1E1231007AF2C9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B993D70D2C1E1231007AF2C9 /* Extension+SplashViewController */,
+				B993D7132C1E1231007AF2C9 /* FightResult */,
+				B993D7152C1E1231007AF2C9 /* FirgtLoad */,
+				B993D7182C1E1231007AF2C9 /* PersonsList */,
+				B993D71F2C1E1231007AF2C9 /* Results */,
+				B993D7252C1E1231007AF2C9 /* Round */,
+				B993D7272C1E1231007AF2C9 /* Rules */,
+				B993D72D2C1E1231007AF2C9 /* Settings */,
+				B993D72F2C1E1231007AF2C9 /* Splash */,
+				B993D7322C1E1231007AF2C9 /* View */,
+				B993D7332C1E1231007AF2C9 /* NameViewController.swift */,
+				B993D7342C1E1231007AF2C9 /* PopupView.swift */,
+				B993D7352C1E1231007AF2C9 /* PopupViewController.swift */,
+				B993D7362C1E1231007AF2C9 /* TripButton.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B993D73B2C1E1231007AF2C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7382C1E1231007AF2C9 /* Person.swift */,
+				B993D7392C1E1231007AF2C9 /* Recent.swift */,
+				B993D73A2C1E1231007AF2C9 /* RPSGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B993D7602C1E125E007AF2C9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B993D75E2C1E125E007AF2C9 /* AppDelegate.swift */,
+				B993D75F2C1E125E007AF2C9 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B993D7642C1E1276007AF2C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7632C1E1276007AF2C9 /* LocalService.swift */,
+				B993D7772C1E3655007AF2C9 /* TimerManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B993D76A2C1E12C0007AF2C9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B993D7662C1E12C0007AF2C9 /* AppFont.swift */,
+				B993D7672C1E12C0007AF2C9 /* Rubik-Bold.ttf */,
+				B993D7682C1E12C0007AF2C9 /* Rubik-Medium.ttf */,
+				B993D7692C1E12C0007AF2C9 /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		D934C9D52C1B0F1B0004B1EA /* Extensions */ = {
+		B993D76F2C1E12C0007AF2C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D934C9D32C1B0F1B0004B1EA /* UIButton.swift */,
+				B993D76A2C1E12C0007AF2C9 /* Fonts */,
+				B993D76B2C1E12C0007AF2C9 /* Assets.xcassets */,
+				B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */,
+				B993D76E2C1E12C0007AF2C9 /* Store.swift */,
 			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		D96A741C2C1C6E8D0093E893 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,11 +398,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2FA8A42C16DD610094AAA1 /* Assets.xcassets in Resources */,
-				D934C9CC2C1AD72B0004B1EA /* Rubik-Medium.ttf in Resources */,
-				D934C9CD2C1AD72B0004B1EA /* Rubik-Regular.ttf in Resources */,
-				D934C9E12C1B104E0004B1EA /* LaunchScreen.storyboard in Resources */,
-				D934C9CE2C1AD72B0004B1EA /* Rubik-Bold.ttf in Resources */,
+				B993D7712C1E12C0007AF2C9 /* Rubik-Bold.ttf in Resources */,
+				B993D7732C1E12C0007AF2C9 /* Rubik-Regular.ttf in Resources */,
+				B993D7742C1E12C0007AF2C9 /* Assets.xcassets in Resources */,
+				B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */,
+				B993D7722C1E12C0007AF2C9 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,30 +413,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D96A74202C1C7AC60093E893 /* Store.swift in Sources */,
-				D934C9D82C1B0F1B0004B1EA /* UIButton.swift in Sources */,
-				B9C7C52B2C1AE3BE0058F836 /* EllipticalGradientLayer.swift in Sources */,
-				B9C7C52A2C1AE3BE0058F836 /* EllipticalRadialGradientView.swift in Sources */,
-				D934C9BF2C1AD6860004B1EA /* SplashView.swift in Sources */,
-				D934C9CF2C1AD72B0004B1EA /* AppFont.swift in Sources */,
-				D9D5E6C02C1DB00E00266F89 /* NameViewController.swift in Sources */,
-				D9D5E6C22C1DB07A00266F89 /* PopupViewController.swift in Sources */,
-				D9D5E6C62C1DB14D00266F89 /* TripButton.swift in Sources */,
-				D9D5E6C42C1DB0EC00266F89 /* PopupView.swift in Sources */,
-				B9C7C5292C1AE3BE0058F836 /* FightResultViewController.swift in Sources */,
-				B9C7C5282C1AE3BE0058F836 /* FightResultView.swift in Sources */,
-				D934C9C32C1AD6960004B1EA /* SplashViewController.swift in Sources */,
-				D934C9C62C1AD6B20004B1EA /* Extension+SplashViewController.swift in Sources */,
+				B993D7582C1E1231007AF2C9 /* PopupView.swift in Sources */,
+				B993D73D2C1E1231007AF2C9 /* EllipticalGradientLayer.swift in Sources */,
+				B993D74E2C1E1231007AF2C9 /* RoundViewController.swift in Sources */,
+				B993D7532C1E1231007AF2C9 /* SettingsUseCase.swift in Sources */,
+				B993D74D2C1E1231007AF2C9 /* RoundView.swift in Sources */,
+				B993D7482C1E1231007AF2C9 /* ResultsUseCase.swift in Sources */,
+				B993D75B2C1E1231007AF2C9 /* Person.swift in Sources */,
+				B993D7782C1E3655007AF2C9 /* TimerManager.swift in Sources */,
+				B993D7412C1E1231007AF2C9 /* FightLoadViewController.swift in Sources */,
+				B993D7432C1E1231007AF2C9 /* PersonsViewController.swift in Sources */,
+				B993D7492C1E1231007AF2C9 /* ResultsViewController.swift in Sources */,
+				B993D75D2C1E1231007AF2C9 /* RPSGame.swift in Sources */,
+				B993D7552C1E1231007AF2C9 /* SplashViewController.swift in Sources */,
+				B993D7612C1E125E007AF2C9 /* AppDelegate.swift in Sources */,
+				B993D7512C1E1231007AF2C9 /* SettingsService.swift in Sources */,
+				B993D7702C1E12C0007AF2C9 /* AppFont.swift in Sources */,
+				B993D7562C1E1231007AF2C9 /* SplashView.swift in Sources */,
+				B993D74C2C1E1231007AF2C9 /* RoundUseCase.swift in Sources */,
+				B993D6EE2C1E0C08007AF2C9 /* UIButton.swift in Sources */,
+				B993D73E2C1E1231007AF2C9 /* EllipticalRadialGradientView.swift in Sources */,
+				B993D74B2C1E1231007AF2C9 /* RoundStore.swift in Sources */,
+				B993D7462C1E1231007AF2C9 /* ResultsService.swift in Sources */,
+				B993D7402C1E1231007AF2C9 /* FightResultViewController.swift in Sources */,
+				B993D7592C1E1231007AF2C9 /* PopupViewController.swift in Sources */,
+				B993D73F2C1E1231007AF2C9 /* FightResultView.swift in Sources */,
+				B993D75C2C1E1231007AF2C9 /* Recent.swift in Sources */,
+				B993D7572C1E1231007AF2C9 /* NameViewController.swift in Sources */,
+				B993D7652C1E1276007AF2C9 /* LocalService.swift in Sources */,
+				B993D7422C1E1231007AF2C9 /* PersonCell.swift in Sources */,
+				B993D73C2C1E1231007AF2C9 /* Extension+SplashViewController.swift in Sources */,
+				B993D74A2C1E1231007AF2C9 /* RoundService.swift in Sources */,
+				B993D7472C1E1231007AF2C9 /* ResultsStore.swift in Sources */,
+				B993D7442C1E1231007AF2C9 /* ResultsCell.swift in Sources */,
+				B993D7542C1E1231007AF2C9 /* SettingsViewController.swift in Sources */,
+				B993D7522C1E1231007AF2C9 /* SettingsStore.swift in Sources */,
+				B993D7452C1E1231007AF2C9 /* ResultsPersonHeader.swift in Sources */,
+				B993D7762C1E12C0007AF2C9 /* Store.swift in Sources */,
+				B993D74F2C1E1231007AF2C9 /* RulesViewController.swift in Sources */,
+				B993D7622C1E125E007AF2C9 /* SceneDelegate.swift in Sources */,
+				B993D7502C1E1231007AF2C9 /* SettingCellVeiw.swift in Sources */,
+				B993D75A2C1E1231007AF2C9 /* TripButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D934C9DF2C1B104E0004B1EA /* LaunchScreen.storyboard */ = {
+		B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D934C9E02C1B104E0004B1EA /* Base */,
+				B993D76C2C1E12C0007AF2C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -526,7 +596,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -554,7 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
