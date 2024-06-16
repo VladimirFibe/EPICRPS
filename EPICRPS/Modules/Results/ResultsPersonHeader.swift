@@ -1,6 +1,8 @@
 import UIKit
 
 final class ResultsPersonHeader: UIView {
+    public var addImage: Callback?
+    public var editText: Callback?
     private let imageView = UIImageView()
     private let button = UIButton(type: .system)
     override init(frame: CGRect) {
@@ -44,16 +46,7 @@ final class ResultsPersonHeader: UIView {
             return outgoing
         }
         button.configuration = config
-        button.addAction(UIAction { _ in
-//            let controller = NameViewController()
-//            controller.modalPresentationStyle = .overCurrentContext
-//            controller.modalTransitionStyle = .crossDissolve
-//            controller.doneSaving = { [weak self] in
-//                print("yes")
-//            }
-//            self.present(controller, animated: true)
-        }, for: .primaryActionTriggered)
-
+        button.addAction(UIAction { _ in self.editText?()}, for: .primaryActionTriggered)
         
         NSLayoutConstraint.activate([
             button.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 7),

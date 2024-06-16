@@ -5,15 +5,10 @@ class PopupViewController: UIViewController {
 
     let titleLabel: UILabel = {
         $0.text = "Введите имя игрока"
-//        $0.font = UIFont(name: Theme.mainFontName, size: 24)
-        $0.textColor = .tintColor
+        $0.font = RubikFont.regular.size14
+        $0.textColor = #colorLiteral(red: 0.5593419671, green: 0.5592260957, blue: 0.5556153059, alpha: 1)
         return $0
     }(UILabel())
-
-    let cancelButton: TripButton = {
-        $0.setTitle("Cancel", for: [])
-        return $0
-    }(TripButton(type: .system))
 
     let saveButton: TripButton = {
         $0.setTitle("OK", for: [])
@@ -59,9 +54,7 @@ class PopupViewController: UIViewController {
         rootStackView.addArrangedSubview(bodyStackView)
         rootStackView.addArrangedSubview(buttonsStackView)
         titleStackView.addArrangedSubview(titleLabel)
-        buttonsStackView.addArrangedSubview(cancelButton)
         buttonsStackView.addArrangedSubview(saveButton)
-        cancelButton.addTarget(self, action: #selector(cancel), for: .primaryActionTriggered)
         saveButton.addTarget(self, action: #selector(save), for: .primaryActionTriggered)
     }
 

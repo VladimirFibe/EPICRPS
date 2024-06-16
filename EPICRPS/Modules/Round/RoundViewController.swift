@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RoundViewController: UIViewController {
-    private let service = RoundService(recent: Recent(id: "id", name: "Steve", currentId: "currentId", currentName: "Me"))
-    private lazy var useCase = RoundUseCase(service: service)
+    var player: AVAudioPlayer?
+    private lazy var useCase = RoundUseCase(service: LocalService.shared)
     private lazy var store = RoundStore(useCase: useCase)
     var bag = Bag()
     
@@ -110,6 +111,21 @@ class RoundViewController: UIViewController {
             }
             let progress = Float(manager.secondsLeft) / Float(roundDuration)
             self?.customView.updateTimer(with: progress, time: manager.secondsLeft)
+        }
+    }
+    
+    func playSound() {
+        guard let path = Bundle.main.path(forResource: "background", ofType:"mp3") else {
+            return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.numberOfLoops = -1
+            player?.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }

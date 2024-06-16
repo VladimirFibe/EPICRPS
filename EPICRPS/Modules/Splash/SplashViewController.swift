@@ -1,16 +1,4 @@
-//
-//  SplashViewController.swift
-//  EPICRPS
-//
-//  Created by Xcode on 10.06.2024.
-//
-
 import UIKit
-
-enum NavBarPosition {
-    case left
-    case right
-}
 
 final class SplashViewController: UIViewController {
     
@@ -41,14 +29,17 @@ final class SplashViewController: UIViewController {
     }
     
     @objc private func navBarRightButtonAction() {
-        
+        let controller = RulesViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
 
 extension SplashViewController: SplashViewDelegate {
     func startButtonPressed() {
-        let controller = FightLoadViewController()
+        let fistPlayer = LocalService.shared.currentPerson
+        let secondPlayer = LocalService.shared.friendPerson
+        let controller = FightLoadViewController(firstPlayer: fistPlayer, secondPlayer: secondPlayer)
         navigationController?.pushViewController(controller, animated: true)
     }
     

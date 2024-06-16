@@ -53,6 +53,8 @@
 		B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */; };
 		B993D7762C1E12C0007AF2C9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D76E2C1E12C0007AF2C9 /* Store.swift */; };
 		B993D7782C1E3655007AF2C9 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993D7772C1E3655007AF2C9 /* TimerManager.swift */; };
+		D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */; };
+		D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		B993D76C2C1E12C0007AF2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B993D76E2C1E12C0007AF2C9 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B993D7772C1E3655007AF2C9 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 			children = (
 				B993D7192C1E1231007AF2C9 /* ResultsCell.swift */,
 				B993D71A2C1E1231007AF2C9 /* ResultsPersonHeader.swift */,
+				D9A3B6432C1EE11C00F0EB76 /* ResultSectionHeader.swift */,
 				B993D71B2C1E1231007AF2C9 /* ResultsService.swift */,
 				B993D71C2C1E1231007AF2C9 /* ResultsStore.swift */,
 				B993D71D2C1E1231007AF2C9 /* ResultsUseCase.swift */,
@@ -272,16 +277,16 @@
 		B993D7372C1E1231007AF2C9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B993D70D2C1E1231007AF2C9 /* Extension+SplashViewController */,
-				B993D7132C1E1231007AF2C9 /* FightResult */,
+				B993D72F2C1E1231007AF2C9 /* Splash */,
 				B993D7152C1E1231007AF2C9 /* FirgtLoad */,
+				B993D7252C1E1231007AF2C9 /* Round */,
+				B993D7132C1E1231007AF2C9 /* FightResult */,
 				B993D7182C1E1231007AF2C9 /* PersonsList */,
 				B993D71F2C1E1231007AF2C9 /* Results */,
-				B993D7252C1E1231007AF2C9 /* Round */,
 				B993D7272C1E1231007AF2C9 /* Rules */,
 				B993D72D2C1E1231007AF2C9 /* Settings */,
-				B993D72F2C1E1231007AF2C9 /* Splash */,
 				B993D7322C1E1231007AF2C9 /* View */,
+				B993D70D2C1E1231007AF2C9 /* Extension+SplashViewController */,
 				B993D7332C1E1231007AF2C9 /* NameViewController.swift */,
 				B993D7342C1E1231007AF2C9 /* PopupView.swift */,
 				B993D7352C1E1231007AF2C9 /* PopupViewController.swift */,
@@ -334,6 +339,7 @@
 			children = (
 				B993D76A2C1E12C0007AF2C9 /* Fonts */,
 				B993D76B2C1E12C0007AF2C9 /* Assets.xcassets */,
+				D9A3B63F2C1EBB2E00F0EB76 /* background.mp3 */,
 				B993D76D2C1E12C0007AF2C9 /* LaunchScreen.storyboard */,
 				B993D76E2C1E12C0007AF2C9 /* Store.swift */,
 			);
@@ -402,6 +408,7 @@
 				B993D7732C1E12C0007AF2C9 /* Rubik-Regular.ttf in Resources */,
 				B993D7742C1E12C0007AF2C9 /* Assets.xcassets in Resources */,
 				B993D7752C1E12C0007AF2C9 /* LaunchScreen.storyboard in Resources */,
+				D9A3B6402C1EBB2E00F0EB76 /* background.mp3 in Resources */,
 				B993D7722C1E12C0007AF2C9 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +445,7 @@
 				B993D7402C1E1231007AF2C9 /* FightResultViewController.swift in Sources */,
 				B993D7592C1E1231007AF2C9 /* PopupViewController.swift in Sources */,
 				B993D73F2C1E1231007AF2C9 /* FightResultView.swift in Sources */,
+				D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */,
 				B993D75C2C1E1231007AF2C9 /* Recent.swift in Sources */,
 				B993D7572C1E1231007AF2C9 /* NameViewController.swift in Sources */,
 				B993D7652C1E1276007AF2C9 /* LocalService.swift in Sources */,
@@ -596,7 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -624,7 +632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;

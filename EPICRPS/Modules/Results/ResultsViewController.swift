@@ -38,9 +38,21 @@ final class ResultsViewController: UIViewController {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
-        tableView.tableHeaderView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
+        let headerView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
+        headerView.editText = {[weak self] in
+            guard let self else { return }
+            let controller = NameViewController()
+            controller.modalPresentationStyle = .overCurrentContext
+            controller.modalTransitionStyle = .crossDissolve
+            controller.doneSaving = { [weak self] in
+                print("yes")
+            }
+            self.present(controller, animated: true)
+        }
+        tableView.tableHeaderView = headerView
         tableView.register(ResultsCell.self, forCellReuseIdentifier: ResultsCell.identifier)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -55,7 +67,7 @@ final class ResultsViewController: UIViewController {
     }
 }
 
-extension ResultsViewController: UITableViewDataSource {
+extension ResultsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         persons.count
     }
@@ -64,5 +76,13 @@ extension ResultsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ResultsCell.identifier, for: indexPath) as? ResultsCell else { fatalError() }
         cell.configure(with: persons[indexPath.row], and: indexPath.row + 1)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        ResultSectionHeader()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        120
     }
 }

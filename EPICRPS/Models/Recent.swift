@@ -35,7 +35,7 @@ struct Recent: Codable, Hashable {
         currentCount += 1
     }
     
-    private mutating func lose() {
+    public mutating func lose() {
         text = "Проиграл"
         playerCount += 1
     }

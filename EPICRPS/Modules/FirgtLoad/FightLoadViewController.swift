@@ -8,7 +8,17 @@
 import UIKit
 
 class FightLoadViewController: UIViewController {
+    private let firstPlayer: Person
+    private let secondPlayer: Person
+    init(firstPlayer: Person, secondPlayer: Person) {
+        self.firstPlayer = firstPlayer
+        self.secondPlayer = secondPlayer
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     // MARK: - UI Element
     
     private lazy var backgroundImage: UIImageView = {
@@ -19,11 +29,11 @@ class FightLoadViewController: UIViewController {
         return element
     }()
     
-    private let firstPlayerAvatarImage = UIImageView(image: "firstPlayerAvatar")
+    private lazy var firstPlayerAvatarImage = UIImageView(image: firstPlayer.avatar)
     
-    private let victoriesFirstPlayerView = UIView(counterVictories: "10", colorCounterVictories: .orange, typeCounter: "Victories/")
+    private lazy var victoriesFirstPlayerView = UIView(counterVictories: firstPlayer.winLabel, colorCounterVictories: .orange, typeCounter: "Victories/")
     
-    private let loseFirstPlayerView = UIView(counterVictories: "3", colorCounterVictories: .red, typeCounter: "Lose")
+    private lazy var loseFirstPlayerView = UIView(counterVictories: firstPlayer.loseLabel, colorCounterVictories: .red, typeCounter: "Lose")
     
     
     private lazy var vsLabel: UILabel = {
@@ -35,11 +45,11 @@ class FightLoadViewController: UIViewController {
         return element
     }()
    
-    private let secondPlayerAvatarImage = UIImageView(image: "secondPlayerAvatar")
+    private lazy var secondPlayerAvatarImage = UIImageView(image: secondPlayer.avatar)
     
-    private let victoriesSecondPlayerView = UIView(counterVictories: "10", colorCounterVictories: .orange, typeCounter: "Victories/")
+    private lazy var victoriesSecondPlayerView = UIView(counterVictories: secondPlayer.winLabel, colorCounterVictories: .orange, typeCounter: "Victories/")
     
-    private let loseSecondPlayerView = UIView(counterVictories: "3", colorCounterVictories: .red, typeCounter: "Lose")
+    private lazy var loseSecondPlayerView = UIView(counterVictories: secondPlayer.loseLabel, colorCounterVictories: .red, typeCounter: "Lose")
 
     private lazy var readyLabel: UILabel = {
         let element = UILabel()
@@ -69,7 +79,6 @@ class FightLoadViewController: UIViewController {
         [
             backgroundImage, firstPlayerAvatarImage, victoriesFirstPlayerView, loseFirstPlayerView, vsLabel, secondPlayerAvatarImage, victoriesSecondPlayerView, loseSecondPlayerView, readyLabel
         ].forEach(view.addSubview)
-       
     }
 }
 

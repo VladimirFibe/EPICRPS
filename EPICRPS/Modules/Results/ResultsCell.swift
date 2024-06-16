@@ -1,16 +1,21 @@
 import UIKit
 
+
 final class ResultsCell: UITableViewCell {
     static let identifier = "ResultsCell"
     private let colorView = UIView()
     private let avatarImageView = UIImageView()
     private let nameLabel = UILabel()
+    private let scorerLabel = UILabel()
+    private let percentLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupColorView()
         setupAvatarImageView()
         setupNameLabel()
+        setupPercentLabel()
+        setupScorerLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -71,4 +76,30 @@ final class ResultsCell: UITableViewCell {
             nameLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor)
         ])
     }
+    
+    private func setupScorerLabel() {
+        colorView.addSubview(scorerLabel)
+        scorerLabel.font = RubikFont.bold.size13
+        scorerLabel.text = "15,220"
+        scorerLabel.textAlignment = .right
+        scorerLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scorerLabel.trailingAnchor.constraint(equalTo: percentLabel.leadingAnchor),
+            scorerLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor)
+        ])
+    }
+    
+    private func setupPercentLabel() {
+        colorView.addSubview(percentLabel)
+        percentLabel.font = RubikFont.bold.size18
+        percentLabel.text = "91%"
+        percentLabel.textAlignment = .right
+        percentLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            percentLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
+            percentLabel.trailingAnchor.constraint(equalTo: colorView.trailingAnchor, constant: -27.5),
+            percentLabel.widthAnchor.constraint(equalToConstant: 54)
+        ])
+    }
 }
+
