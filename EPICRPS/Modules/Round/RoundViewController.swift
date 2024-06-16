@@ -13,7 +13,7 @@ class RoundViewController: UIViewController {
     private lazy var store = RoundStore(useCase: useCase)
     var bag = Bag()
     
-    private let roundDuration = 30
+    private let roundDuration = LocalService.shared.totalTime
     
     private let timerManager = TimerManager.shared
     
@@ -48,6 +48,8 @@ class RoundViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         customView.resetProgress()
+        let progress = Float(roundDuration) / Float(roundDuration)
+        customView.updateTimer(with: progress, time: roundDuration)
         startTimer(roundDuration)
     }
     

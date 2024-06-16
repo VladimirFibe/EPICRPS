@@ -170,8 +170,6 @@ class RoundView: UIView {
     func resetProgress() {
         firstPlayerProgressView.progress = 0
         secondPlayerProgressView.progress = 0
-        timerProgressView.progress = 1
-        timerLabel.text = "0:0"
     }
     
     func updateTimer(with persentage: Float, time: Int) {
