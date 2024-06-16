@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RoundViewController: UIViewController {
+    var player: AVAudioPlayer?
     private lazy var useCase = RoundUseCase(service: LocalService.shared)
     private lazy var store = RoundStore(useCase: useCase)
     var bag = Bag()
@@ -29,6 +31,7 @@ class RoundViewController: UIViewController {
         setupObservers()
         let customBackButton = UIBarButtonItem(image: UIImage(named: "Arrow"), style: .plain, target: self, action: #selector(backButtonTapped))
         self.navigationItem.leftBarButtonItem = customBackButton
+        playSound()
     }
     
     private func startTimer() {
@@ -83,6 +86,21 @@ class RoundViewController: UIViewController {
                 self?.customView.setBaseState()
                 self?.startTimer()
             }
+        }
+    }
+    
+    func playSound() {
+        guard let path = Bundle.main.path(forResource: "background", ofType:"mp3") else {
+            return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.numberOfLoops = -1
+            player?.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
