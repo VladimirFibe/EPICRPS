@@ -8,8 +8,7 @@
 import UIKit
 
 class RoundViewController: UIViewController {
-    private let service = RoundService(recent: Recent(id: "id", name: "Steve", currentId: "currentId", currentName: "Me"))
-    private lazy var useCase = RoundUseCase(service: service)
+    private lazy var useCase = RoundUseCase(service: LocalService.shared)
     private lazy var store = RoundStore(useCase: useCase)
     var bag = Bag()
     
@@ -37,7 +36,7 @@ class RoundViewController: UIViewController {
             guard let manager = self?.timerManager else { return }
             if manager.isTimeUp {
                 manager.stopTimer()
-                #warning("Засчитать проигрыш и начать новый раунд")
+                self?.store.sendAction(.lose)
             }
             let persentage = Float(manager.secondsLeft) / Float(manager.totalTime)
             self?.customView.updateTimer(with: persentage)

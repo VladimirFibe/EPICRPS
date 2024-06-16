@@ -11,15 +11,10 @@ protocol RoundServiceProtocol {
     func round(_ hand: Int) async throws -> Recent
     func reset() async throws
     func restart() async throws
+    func lose() async throws -> Recent
 }
 
-final class RoundService: RoundServiceProtocol {
-    var recent: Recent
-    
-    init(recent: Recent) {
-        self.recent = recent
-    }
-    
+extension LocalService: RoundServiceProtocol {
     func round(_ hand: Int) async throws -> Recent {
         recent.currentHand = hand
         let random = Int.random(in: 0..<3)
@@ -33,6 +28,21 @@ final class RoundService: RoundServiceProtocol {
     }
     
     func restart() async throws {
+        var current = currentPerson
+        current.win += recent.currentCount
+        current.lose += recent.playerCount
+        currentPerson = current
+        var friend = friendPerson
+        friend.win += recent.playerCount
+        friend.lose += recent.currentCount
+        friendPerson = friend
         recent.restart()
     }
+    
+    func lose() async throws -> Recent {
+        recent.lose()
+        return recent
+    }
+    
+    
 }

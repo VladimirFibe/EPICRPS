@@ -13,9 +13,25 @@ final class LocalService {
         .init(name: "Harriett Single"),
         .init(name: "Henry Padilla")
     ]
-    
+    public lazy var recent = Recent(id: friendPerson.id, name: friendPerson.name, currentId: currentPerson.id, currentName: currentPerson.name)
     private enum Keys: String {
         case currentPerson
+        case friendPerson
+    }
+    
+    public var friendPerson: Person {
+        get {
+            if let data = UserDefaults.standard.data(forKey: Keys.friendPerson.rawValue),
+               let person = try? JSONDecoder().decode(Person.self, from: data) {
+                return person
+            } else {
+                return Person(name: "Player 2")
+            }
+        }
+        set {
+            guard let data = try? JSONEncoder().encode(newValue) else { return }
+            UserDefaults.standard.set(data, forKey: Keys.friendPerson.rawValue)
+        }
     }
     
     public var currentPerson: Person {
