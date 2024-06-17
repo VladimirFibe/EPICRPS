@@ -20,15 +20,42 @@ struct Recent: Codable, Hashable {
     var currentHand: Int? = nil
     var text = "Ваш ход"
     var date = Date()
-    var completed = true
+    var completed = false
     var playerCount = 0
     var currentCount = 0
-    var round = 1
+    var round = 0
+    
+    static func create(from recent: Recent) -> Recent {
+        var result = Recent()
+        result.id = recent.currentId
+        result.name = recent.currentName
+        result.avatar = recent.currentAvatar
+        result.male = recent.currentMale
+        result.hand = recent.currentHand
+        result.currentId = recent.id
+        result.currentName = recent.name
+        result.currentAvatar = recent.avatar
+        result.currentMale = recent.male
+        result.currentHand = recent.hand
+        result.date = recent.date
+        result.completed = recent.completed
+        result.playerCount = recent.currentCount
+        result.currentCount = recent.playerCount
+        result.round = recent.round
+        switch recent.text {
+        case "Выиграл": result.text = "Проиграл"
+        case "Проиграл": result.text = "Выиграл"
+        case "Ждем": result.text = "Ваш ход"
+        default: result.text = recent.text
+        }
+        return result
+    }
     
     mutating func restart() {
         playerCount = 0
         currentCount = 0
-        text = "Ваш ход"
+        round = 0
+        reset()
     }
     private mutating func win() {
         text = "Выиграл"
@@ -44,6 +71,12 @@ struct Recent: Codable, Hashable {
         text = "Ничья"
     }
     
+    public mutating func playRound() {
+        text = "Ждем"
+        guard let player = hand, let current = currentHand else { return }
+        playRound(player: player, current: current)
+    }
+    
     public mutating func playRound(player: Int, current: Int) {
         if current == player { draw()
         } else if current == 2 {
@@ -56,6 +89,7 @@ struct Recent: Codable, Hashable {
             if player == 2 {  win()
             } else {  lose()  }
         }
+        completed = true
         round += 1
     }
     
@@ -86,6 +120,7 @@ struct Recent: Codable, Hashable {
     mutating func reset() {
         hand = nil
         currentHand = nil
+        completed = false
         text = "Ваш ход"
     }
 }

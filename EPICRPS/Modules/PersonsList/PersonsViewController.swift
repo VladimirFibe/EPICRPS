@@ -1,15 +1,26 @@
 import UIKit
 
 final class PersonsViewController: UITableViewController {
-    private var persons = LocalService.shared.persons
+    private var bag = Bag()
+    private let store = PersonStrore()
+    private var persons: [Person] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Friends"
         tableView.separatorStyle = .none
         tableView.register(PersonCell.self, forCellReuseIdentifier: PersonCell.identifier)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { _ in
-            print("add player")
-        }))
+        setupObservers()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(backButtonAction)
+        )
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        store.sendAction(.fetch)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,6 +35,30 @@ final class PersonsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        dismiss(animated: true)
+        FirebaseClient.shared.friend = persons[indexPath.row]
+        if let person = FirebaseClient.shared.person {
+            store.sendAction(.createRecent(person, persons[indexPath.row]))
+            let controller = FightLoadViewController(firstPlayer: person, secondPlayer: persons[indexPath.row])
+            navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+
+    @objc private func backButtonAction() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func setupObservers() {
+        store
+            .events
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] event in
+                guard let self else { return }
+                switch event {
+                case .done(let persons):
+                    self.persons = persons
+                    self.tableView.reloadData()
+                }
+            }
+            .store(in: &bag)
     }
 }

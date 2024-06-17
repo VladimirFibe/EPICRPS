@@ -46,7 +46,6 @@ class TimerManager {
     @objc private func timerFired(_ timer: Timer) {
         completion?()
         secondsLeft -= 1
-       
     }
 }
 

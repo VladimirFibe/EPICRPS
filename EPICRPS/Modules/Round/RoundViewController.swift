@@ -9,14 +9,12 @@ import UIKit
 import AVFoundation
 
 class RoundViewController: UIViewController {
-    var buttonPressed = false
     var player: AVAudioPlayer?
     var playerButton: AVAudioPlayer?
-    private lazy var useCase = RoundUseCase(service: LocalService.shared)
+    private lazy var useCase = RoundUseCase(service: FirebaseClient.shared)
     private lazy var store = RoundStore(useCase: useCase)
     private var bag = Bag()
-    
-    private let roundDuration = LocalService.shared.totalTime
+    private let roundDuration = 30 // LocalService.shared.totalTime
     
     private let timerManager = TimerManager.shared
     
@@ -48,6 +46,9 @@ class RoundViewController: UIViewController {
         playSound()
         self.navigationItem.leftBarButtonItem = customBackButton
         self.navigationItem.rightBarButtonItem = pauseButton
+        FirebaseClient.shared.createRecentObserver { recent in
+            self.updateUI(with: recent)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,16 +58,20 @@ class RoundViewController: UIViewController {
         startTimer(roundDuration)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.stop()
+    }
+    
     private func setupObservers() {
-        
         store
             .events
             .receive(on: DispatchQueue.main)
             .sink { [weak self] event in
                 guard let self = self else { return }
                 switch event {
-                case .done(let recent):
-                    self.updateUI(with: recent)
+                case .done:
+                    break
                 }
             }.store(in: &bag)
     }
@@ -74,18 +79,10 @@ class RoundViewController: UIViewController {
     private func updateUI(with recent: Recent) {
         customView.updateUI(with: recent)
         timerManager.stopTimer()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            self?.buttonPressed = false
             guard let self = self else { return }
-            if recent.currentCount == 3 || recent.playerCount == 3 {
-                self.store.sendAction(.restart)
-                let controller = FightResultViewController(recent: recent)
-                self.navigationController?.pushViewController(controller, animated: true)
-            } else {
-                self.customView.setNewRound(with: roundDuration)
-                self.startTimer(self.roundDuration)
-            }
+            self.customView.setNewRound(with: roundDuration)
+            self.startTimer(self.roundDuration)
         }
     }
     
@@ -142,10 +139,7 @@ class RoundViewController: UIViewController {
 
 extension RoundViewController: RoundViewDelegate {
     func buttonPressed(_ hand: Int) {
-        if !buttonPressed {
-            buttonPressed = true
-            playSound("button")
-            store.sendAction(.round(hand))
-        }
+        playSound("button")
+        store.sendAction(.round(hand))
     }
 }

@@ -2,12 +2,10 @@ import UIKit
 
 final class SplashViewController: UIViewController {
     private var person: Person? = nil
-    private var player: Person? = nil
     private let useCase = SplashUseCase(service: FirebaseClient.shared)
     private lazy var store = SplashStore(useCase: useCase)
     private let customView = SplashView()
     private var bag = Bag()
-    
     override func loadView() {
         view = customView
     }
@@ -39,8 +37,7 @@ final class SplashViewController: UIViewController {
             .sink { [weak self] event in
                 guard let self = self else { return }
                 switch event {
-                case .done(let person, let player):
-                    self.player = player
+                case .done(let person):
                     self.person = person
                 }
             }.store(in: &bag)
@@ -61,9 +58,15 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewDelegate {
     func startButtonPressed() {
-        if let person, let player {
-            let controller = FightLoadViewController(firstPlayer: person, secondPlayer: player)
-            navigationController?.pushViewController(controller, animated: true)
+        if let person {
+            if let player = FirebaseClient.shared.friend {
+                store.sendAction(.start(person, player))
+                let controller = FightLoadViewController(firstPlayer: person, secondPlayer: player)
+                navigationController?.pushViewController(controller, animated: true)
+            } else {
+                let controller = PersonsViewController()
+                navigationController?.pushViewController(controller, animated: true)
+            }
         }
     }
     

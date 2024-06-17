@@ -1,11 +1,12 @@
 import Combine
 
 enum SplashEvent {
-    case done(Person?, Person)
+    case done(Person?)
 }
 
 enum SplashAction {
     case login
+    case start(Person, Person)
 }
 
 final class SplashStore: Store<SplashEvent, SplashAction> {
@@ -20,13 +21,20 @@ final class SplashStore: Store<SplashEvent, SplashAction> {
             statefulCall {
                 try await self.login()
             }
+        case .start(let current, let player):
+            statefulCall {
+                try await self.start(with: current, and: player)
+            }
         }
     }
     
     private func login() async throws {
         let person = try await useCase.login()
-        let player = Person(name: "Player")
-        sendEvent(.done(person, player))
+        sendEvent(.done(person))
+    }
+    
+    private func start(with current: Person, and player: Person) async throws {
+        try await useCase.start(with: current, and: player)
     }
 }
 
