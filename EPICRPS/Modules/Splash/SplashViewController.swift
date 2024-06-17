@@ -58,7 +58,7 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewDelegate {
     func startButtonPressed() {
-        if let person {
+        if let person = FirebaseClient.shared.person {
             if let player = FirebaseClient.shared.friend {
                 store.sendAction(.start(person, player))
                 let controller = FightLoadViewController(firstPlayer: person, secondPlayer: player)

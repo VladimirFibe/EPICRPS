@@ -11,13 +11,13 @@ struct Recent: Codable, Hashable {
     var id = "1"
     var name = "Player 1"
     var avatar = ""
-    var male = false
-    var hand: Int? = nil
+    var male = true
+    var hand = 0
     var currentId = "2"
     var currentName = "Player 2"
     var currentAvatar = ""
-    var currentMale = true
-    var currentHand: Int? = nil
+    var currentMale = false
+    var currentHand = 0
     var text = "Ваш ход"
     var date = Date()
     var completed = false
@@ -73,53 +73,35 @@ struct Recent: Codable, Hashable {
     
     public mutating func playRound() {
         text = "Ждем"
-        guard let player = hand, let current = currentHand else { return }
-        playRound(player: player, current: current)
-    }
-    
-    public mutating func playRound(player: Int, current: Int) {
-        if current == player { draw()
-        } else if current == 2 {
-            if player == 1 { win()
+        guard hand != 0, currentHand != 0 else { return }
+        if hand == currentHand { draw()
+        } else if currentHand == 3 {
+            if hand == 2 { win()
             } else { lose() }
-        } else if current == 1 {
-            if player == 0 { win()
+        } else if currentHand == 2 {
+            if hand == 1 { win()
             } else { lose() }
         } else {
-            if player == 2 {  win()
+            if hand == 3 {  win()
             } else {  lose()  }
         }
         completed = true
         round += 1
     }
     
-    var playerImage: String {
-        if let value = hand, currentHand != nil {
-            switch value {
-            case 0: return "femaleRock"
-            case 1: return "femalePaper"
-            default: return "femaleScissors"
-            }
-        } else {
-            return "femaleHand"
-        }
+    var upImage: String {
+        currentHand == 0 
+        ? "\(male ? "m" : "f")uhand0"
+        : "\(male ? "m" : "f")uhand\(hand)"
     }
     
-    var currentImage: String {
-        if let value = currentHand {
-            switch value {
-            case 0: return "maleRock"
-            case 1: return "malePaper"
-            default: return "maleScissors"
-            }
-        } else {
-            return "maleHand"
-        }
+    var downImage: String {
+        "\(currentMale ? "m" : "f")dhand\(currentHand)"
     }
     
     mutating func reset() {
-        hand = nil
-        currentHand = nil
+        hand = 0
+        currentHand = 0
         completed = false
         text = "Ваш ход"
     }

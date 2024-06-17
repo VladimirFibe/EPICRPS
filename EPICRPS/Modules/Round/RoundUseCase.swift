@@ -3,6 +3,8 @@ import Foundation
 protocol RoundUseCaseProtocol {
     func round(_ hand: Int) async throws
     func lose() async throws
+    func flip() async throws
+    func round() async throws
 }
 
 final class RoundUseCase: RoundUseCaseProtocol {
@@ -18,5 +20,13 @@ final class RoundUseCase: RoundUseCaseProtocol {
     
     func lose() async throws {
         try await service.lose()
+    }
+    
+    func flip() async throws {
+        try await service.flip()
+    }
+    
+    func round() async throws {
+        try await service.round()
     }
 }

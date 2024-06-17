@@ -154,8 +154,8 @@ class RoundView: UIView {
     }
     
     func updateUI(with recent: Recent) {
-        wHandsImage.image = UIImage(named: recent.playerImage)
-        mHandsImage.image = UIImage(named: recent.currentImage)
+//        wHandsImage.image = UIImage(named: recent.playerImage)
+//        mHandsImage.image = UIImage(named: recent.currentImage)
         
         let currentProgress = Float(recent.currentCount) / Float(3)
         let playerProgress = Float(recent.playerCount) / Float(3)
