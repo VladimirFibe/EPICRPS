@@ -1,48 +1,66 @@
-//
-//  RoundService.swift
-//  EPICRPS
-//
-//  Created by WWDC on 14.06.2024.
-//
-
 import Foundation
 
 protocol RoundServiceProtocol {
-    func round(_ hand: Int) async throws -> Recent
-    func reset() async throws
-    func restart() async throws
-    func lose() async throws -> Recent
+    func round(_ hand: Int) async throws
+    func lose() async throws
+    func flip() async throws
+    func round() async throws
 }
 
-extension LocalService: RoundServiceProtocol {
-    func round(_ hand: Int) async throws -> Recent {
+extension FirebaseClient: RoundServiceProtocol {
+    func flip() async throws {
+        if recent.currentCount == 3 || recent.playerCount == 3 {
+            person = try await fetchPerson(with: recent.currentId)
+            friend = try await fetchPerson(with: recent.id)
+            guard var person = self.person, var friend = self.friend else { return }
+            person.lose += recent.playerCount
+            person.win += recent.currentCount
+            person.round += recent.round
+            updatePerson(person)
+            friend.lose += recent.currentCount
+            friend.win += recent.playerCount
+            friend.round = recent.round
+            updatePerson(friend)
+            recent.restart()
+        } else {
+            recent.reset()
+        }
+        self.saveRecent(recent)
+    }
+    
+    func round() async throws {
+        if let updatedRecent = try await updateRecent(recent) {
+            recent = updatedRecent
+        }
+        guard recent.hand == 0, recent.currentHand != 0 else { return }
+        recent.hand = Int.random(in: 1...3)
+        recent.playRound()
+        saveRecent(recent)
+    }
+    
+    func round(_ hand: Int) async throws {
+        if let updatedRecent = try await updateRecent(recent) {
+            recent = updatedRecent
+        }
+        guard recent.currentHand == 0 else { return }
         recent.currentHand = hand
-        let random = Int.random(in: 0..<3)
-        recent.hand = random
-        recent.playRound(player: random, current: hand)
-        return recent
+        recent.playRound()
+        saveRecent(recent)
     }
     
     func reset() async throws {
         recent.reset()
+        saveRecent(recent)
     }
     
     func restart() async throws {
-        var current = currentPerson
-        current.win += recent.currentCount
-        current.lose += recent.playerCount
-        currentPerson = current
-        var friend = friendPerson
-        friend.win += recent.playerCount
-        friend.lose += recent.currentCount
-        friendPerson = friend
         recent.restart()
+        saveRecent(recent)
     }
     
-    func lose() async throws -> Recent {
+    func lose() async throws {
         recent.lose()
-        return recent
+        saveRecent(recent)
     }
-    
-    
 }
+

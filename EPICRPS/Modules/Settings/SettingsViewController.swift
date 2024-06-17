@@ -2,7 +2,7 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
     private var is30: Bool {
-        LocalService.shared.totalTime == 30
+        true // LocalService.shared.totalTime == 30
     }
     private lazy var tap30 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
     private lazy var tap60 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -19,7 +19,18 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationItem.title = "Settings"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(backButtonAction)
+        )
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "person.circle.fill"),
+            style: .plain,
+            target: self,
+            action: #selector(personHandle)
+        )
         setupStackView()
         setupTitleLabel()
         setupTimeLabel30()
@@ -29,8 +40,13 @@ final class SettingsViewController: UIViewController {
         setupMusicLabel()
     }
     
+    @objc private func personHandle() {
+        let controller = EditProfileViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     @objc private func handleTap(_ sender: UITapGestureRecognizer) {
-        LocalService.shared.totalTime = sender == tap30 ? 30 : 60
+//        LocalService.shared.totalTime = sender == tap30 ? 30 : 60
         timeLabel30.backgroundColor = is30 ? .systemRed : UIColor(named: "ColorLabel")
         timeLabel60.backgroundColor = is30 ? UIColor(named: "ColorLabel") : .systemRed
     }
@@ -155,9 +171,6 @@ final class SettingsViewController: UIViewController {
     }
     
     @objc private func switchGameMode(_ sender: UISwitch) {
-        if sender.isOn {
-            let controller = UINavigationController(rootViewController: PersonsViewController())
-            present(controller, animated: true)
-        }
+        
     }
 }

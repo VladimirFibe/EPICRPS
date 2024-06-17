@@ -1,14 +1,14 @@
 import Combine
 
 enum RoundEvent {
-    case done(Recent)
+    case done
 }
 
 enum RoundAction {
     case round(Int)
-    case reset
-    case restart
+    case flip
     case lose
+    case random
 }
 
 final class RoundStore: Store<RoundEvent, RoundAction> {
@@ -23,36 +23,36 @@ final class RoundStore: Store<RoundEvent, RoundAction> {
             statefulCall {
                 try await self.round(hand)
             }
-        case .reset:
-            statefulCall {
-                try await self.reset()
-            }
-        case .restart:
-            statefulCall {
-                try await self.restart()
-            }
         case .lose:
             statefulCall {
                 try await self.lose()
             }
+        case .flip:
+            statefulCall {
+                try await self.flip()
+            }
+        case .random:
+            statefulCall {
+                try await self.random()
+            }
         }
     }
     
+    private func flip() async throws {
+        try await useCase.flip()
+    }
     private func round(_ hand: Int) async throws {
-        let recent = try await useCase.round(hand)
-        sendEvent(.done(recent))
-    }
-    
-    private func reset() async throws {
-        try await useCase.reset()
-    }
-    
-    private func restart() async throws {
-        try await useCase.restart()
+        try await useCase.round(hand)
+        sendEvent(.done)
     }
     
     private func lose() async throws {
-        let recent = try await useCase.lose()
-        sendEvent(.done(recent))
+        try await useCase.lose()
+        sendEvent(.done)
+    }
+    
+    private func random() async throws {
+        try await useCase.round()
+        sendEvent(.done)
     }
 }

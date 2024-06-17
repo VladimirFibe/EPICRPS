@@ -4,8 +4,14 @@ protocol ResultsServiceProtocol {
     func getPersons() async throws -> [Person]
 }
 
-extension LocalService: ResultsServiceProtocol {
+//extension LocalService: ResultsServiceProtocol {
+//    func getPersons() async throws -> [Person] {
+//        persons
+//    }
+//}
+
+extension FirebaseClient: ResultsServiceProtocol {
     func getPersons() async throws -> [Person] {
-        persons
+        try await fetchPersons()
     }
 }

@@ -1,7 +1,7 @@
 import UIKit
 
 final class ResultsViewController: UIViewController {
-    private let userCase = ResultsUseCase(service: LocalService.shared)
+    private let userCase = ResultsUseCase(service: FirebaseClient.shared)
     private lazy var store = ResultsStore(useCase: userCase)
     private var bag = Bag()
     private var persons: [Person] = [] { didSet { self.tableView.reloadData() }}
@@ -47,9 +47,7 @@ final class ResultsViewController: UIViewController {
             let controller = NameViewController()
             controller.modalPresentationStyle = .overCurrentContext
             controller.modalTransitionStyle = .crossDissolve
-            controller.doneSaving = { [weak self] in
-                print("yes")
-            }
+            controller.doneSaving = {}
             self.present(controller, animated: true)
         }
         tableView.tableHeaderView = headerView
