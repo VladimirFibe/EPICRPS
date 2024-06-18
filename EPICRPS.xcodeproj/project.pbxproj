@@ -65,6 +65,8 @@
 		D9A3B65E2C1F202000F0EB76 /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B65D2C1F202000F0EB76 /* SplashService.swift */; };
 		D9A3B6602C1F202900F0EB76 /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B65F2C1F202900F0EB76 /* SplashUseCase.swift */; };
 		D9A3B6622C1F203100F0EB76 /* SplashStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B6612C1F203100F0EB76 /* SplashStore.swift */; };
+		D9E7FE5B2C21548000ECD3C3 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */; };
+		D9E7FE5E2C21587F00ECD3C3 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */; };
 		D9EC09E82C1FC522002A2742 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC09E72C1FC522002A2742 /* FileStorage.swift */; };
 		D9EC09EA2C1FC869002A2742 /* PersonsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC09E92C1FC869002A2742 /* PersonsUseCase.swift */; };
 		D9EC09EC2C1FC87A002A2742 /* PersonsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC09EB2C1FC87A002A2742 /* PersonsService.swift */; };
@@ -133,6 +135,8 @@
 		D9A3B65D2C1F202000F0EB76 /* SplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashService.swift; sourceTree = "<group>"; };
 		D9A3B65F2C1F202900F0EB76 /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
 		D9A3B6612C1F203100F0EB76 /* SplashStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStore.swift; sourceTree = "<group>"; };
+		D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
+		D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		D9EC09E72C1FC522002A2742 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		D9EC09E92C1FC869002A2742 /* PersonsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsUseCase.swift; sourceTree = "<group>"; };
 		D9EC09EB2C1FC87A002A2742 /* PersonsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsService.swift; sourceTree = "<group>"; };
@@ -339,6 +343,7 @@
 				B993D7342C1E1231007AF2C9 /* PopupView.swift */,
 				B993D7352C1E1231007AF2C9 /* PopupViewController.swift */,
 				B993D7362C1E1231007AF2C9 /* TripButton.swift */,
+				D9E7FE5C2C21585700ECD3C3 /* Recents */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -393,6 +398,15 @@
 				D9EC09E72C1FC522002A2742 /* FileStorage.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9E7FE5C2C21585700ECD3C3 /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */,
+				D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */,
+			);
+			path = Recents;
 			sourceTree = "<group>";
 		};
 		D9EC09F12C1FCC22002A2742 /* EditProfile */ = {
@@ -522,9 +536,11 @@
 				B993D7552C1E1231007AF2C9 /* SplashViewController.swift in Sources */,
 				B993D7612C1E125E007AF2C9 /* AppDelegate.swift in Sources */,
 				B993D7512C1E1231007AF2C9 /* SettingsService.swift in Sources */,
+				D9E7FE5E2C21587F00ECD3C3 /* RecentCell.swift in Sources */,
 				B993D7702C1E12C0007AF2C9 /* AppFont.swift in Sources */,
 				B993D7562C1E1231007AF2C9 /* SplashView.swift in Sources */,
 				B993D74C2C1E1231007AF2C9 /* RoundUseCase.swift in Sources */,
+				D9E7FE5B2C21548000ECD3C3 /* RecentsViewController.swift in Sources */,
 				B993D6EE2C1E0C08007AF2C9 /* UIButton.swift in Sources */,
 				D9EC09F92C1FD70C002A2742 /* FightLoadView.swift in Sources */,
 				B993D73E2C1E1231007AF2C9 /* EllipticalRadialGradientView.swift in Sources */,
@@ -697,7 +713,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -705,6 +721,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -733,6 +750,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

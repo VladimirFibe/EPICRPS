@@ -2,6 +2,7 @@ import Foundation
 
 enum PersonsEvent {
     case done([Person])
+    case push
 }
 
 enum PersonsAction {
@@ -32,5 +33,6 @@ final class PersonStrore: Store<PersonsEvent, PersonsAction> {
     
     private func createRecent(with person: Person, and player: Person) async throws {
         FirebaseClient.shared.recent = try await FirebaseClient.shared.createRecent(with: person, and: player)
+        sendEvent(.push)
     }
 }

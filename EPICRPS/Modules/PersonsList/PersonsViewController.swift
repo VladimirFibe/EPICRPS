@@ -38,8 +38,6 @@ final class PersonsViewController: UITableViewController {
         FirebaseClient.shared.friend = persons[indexPath.row]
         if let person = FirebaseClient.shared.person {
             store.sendAction(.createRecent(person, persons[indexPath.row]))
-            let controller = FightLoadViewController(firstPlayer: person, secondPlayer: persons[indexPath.row])
-            navigationController?.pushViewController(controller, animated: true)
         }
     }
 
@@ -57,8 +55,16 @@ final class PersonsViewController: UITableViewController {
                 case .done(let persons):
                     self.persons = persons
                     self.tableView.reloadData()
+                case .push:
+                    self.pushFightLoad()
                 }
             }
             .store(in: &bag)
+    }
+    
+    private func pushFightLoad() {
+        guard let firstPlayer = FirebaseClient.shared.person, let secondPlayer = FirebaseClient.shared.friend else { return }
+        let controller = FightLoadViewController(firstPlayer: firstPlayer, secondPlayer: secondPlayer)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
