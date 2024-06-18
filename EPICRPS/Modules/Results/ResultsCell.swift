@@ -8,14 +8,18 @@ final class ResultsCell: UITableViewCell {
     private let nameLabel = UILabel()
     private let scorerLabel = UILabel()
     private let percentLabel = UILabel()
+    private let circleImage = UIImageView()
+    private let indexLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupColorView()
+        setupCircleImage()
         setupAvatarImageView()
         setupNameLabel()
         setupPercentLabel()
         setupScorerLabel()
+        setupIndexLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -25,20 +29,36 @@ final class ResultsCell: UITableViewCell {
     public func configure(with person: Person, and index: Int) {
         avatarImageView.image = UIImage(named: person.avatar)
         nameLabel.text = person.name
+        percentLabel.text = person.percentString
+        scorerLabel.text = person.score
         switch index {
         case 1:
-            colorView.backgroundColor = #colorLiteral(red: 0.9900563359, green: 0.8548592925, blue: 0.2871716619, alpha: 0.44)
-            nameLabel.textColor = #colorLiteral(red: 0.9947773814, green: 0.7810302377, blue: 0.06198632717, alpha: 1)
+            colorView.backgroundColor = .resultsFirstBackground
+            nameLabel.textColor = .resultsFirstText
+            circleImage.image = .circle0
         case 2:
-            colorView.backgroundColor = #colorLiteral(red: 0.9656174779, green: 0.9691664577, blue: 0.9813721776, alpha: 1)
-            nameLabel.textColor = #colorLiteral(red: 0.8076738119, green: 0.8117451072, blue: 0.8342165351, alpha: 1)
+            colorView.backgroundColor = .resultsSecondBackground
+            nameLabel.textColor = .resultsSecondText
+            circleImage.image = .circle1
         case 3:
-            colorView.backgroundColor = #colorLiteral(red: 0.969327867, green: 0.9463194013, blue: 0.918114841, alpha: 1)
-            nameLabel.textColor = #colorLiteral(red: 0.8539622426, green: 0.6938371062, blue: 0.6280935407, alpha: 1)
+            colorView.backgroundColor = .resultsThirdBackground
+            nameLabel.textColor = .resultsThirdText
+            circleImage.image = .circle2
             
         default:
             colorView.backgroundColor = .clear
-            nameLabel.textColor = #colorLiteral(red: 0.72959131, green: 0.7586519718, blue: 0.8079240918, alpha: 1)
+            indexLabel.textColor = .resultsIndexText
+            nameLabel.textColor = .resultsGreaterText
+            circleImage.isHidden = true
+            indexLabel.text = String(index)
+        }
+        
+        FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
+            if let image {
+                self.avatarImageView.image = image.circleMasked
+            } else {
+                self.avatarImageView.image = .avatar
+            }
         }
     }
     
@@ -80,25 +100,44 @@ final class ResultsCell: UITableViewCell {
     private func setupScorerLabel() {
         colorView.addSubview(scorerLabel)
         scorerLabel.font = RubikFont.bold.size13
-        scorerLabel.text = "15,220"
         scorerLabel.textAlignment = .right
         scorerLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             scorerLabel.trailingAnchor.constraint(equalTo: percentLabel.leadingAnchor),
-            scorerLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor)
+            scorerLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
+            scorerLabel.widthAnchor.constraint(equalToConstant: 70),
+            scorerLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 8)
         ])
     }
     
     private func setupPercentLabel() {
         colorView.addSubview(percentLabel)
         percentLabel.font = RubikFont.bold.size18
-        percentLabel.text = "91%"
         percentLabel.textAlignment = .right
         percentLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             percentLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
             percentLabel.trailingAnchor.constraint(equalTo: colorView.trailingAnchor, constant: -27.5),
             percentLabel.widthAnchor.constraint(equalToConstant: 54)
+        ])
+    }
+    
+    private func setupIndexLabel() {
+        colorView.addSubview(indexLabel)
+        indexLabel.font = RubikFont.bold.size9
+        indexLabel.textAlignment = .left
+        indexLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            indexLabel.centerYAnchor.constraint(equalTo: colorView.centerYAnchor),
+            indexLabel.leadingAnchor.constraint(equalTo: colorView.leadingAnchor)
+        ])
+    }
+    private func setupCircleImage() {
+        contentView.addSubview(circleImage)
+        circleImage.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            circleImage.centerXAnchor.constraint(equalTo: colorView.trailingAnchor),
+            circleImage.centerYAnchor.constraint(equalTo: colorView.centerYAnchor)
         ])
     }
 }
