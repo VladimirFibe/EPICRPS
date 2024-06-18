@@ -29,8 +29,7 @@ final class ResultsViewController: UIViewController {
                 guard let self = self else { return }
                 switch event {
                 case .done(let persons):
-                    var top = persons.sorted(by: { $0.percent > $1.percent})
-                    self.persons = top.count > 10 ? Array(top[0...9]): top
+                    self.persons = Array(persons.sorted(by: { $1 < $0}).prefix(10))
                 }
             }.store(in: &bag)
     }

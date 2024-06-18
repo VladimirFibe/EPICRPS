@@ -1,6 +1,8 @@
 import Foundation
 
-struct Person: Identifiable, Hashable, Codable {
+struct Person: Identifiable, Hashable, Codable, Comparable {
+    
+    
     var id = UUID().uuidString
     var name: String
     var avatar = "firstPlayer"
@@ -20,5 +22,9 @@ struct Person: Identifiable, Hashable, Codable {
     
     var score: String {
         (500 * win).formatted()
+    }
+    
+    static func < (lhs: Person, rhs: Person) -> Bool {
+        lhs.percent < rhs.percent
     }
 }
