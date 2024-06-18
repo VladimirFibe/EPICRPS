@@ -60,7 +60,7 @@ extension PhotoTableViewCell {
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 55),
+            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             photoImageView.widthAnchor.constraint(equalToConstant: 60),
             photoImageView.heightAnchor.constraint(equalTo: photoImageView.widthAnchor),
@@ -70,7 +70,7 @@ extension PhotoTableViewCell {
             editButton.heightAnchor.constraint(equalToConstant: 22),
             editButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
             
-            titleLabel.centerXAnchor.constraint(equalTo: photoImageView.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: photoImageView.centerYAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
         ])
