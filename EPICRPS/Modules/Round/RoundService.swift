@@ -33,7 +33,7 @@ extension FirebaseClient: RoundServiceProtocol {
     
     func round() async throws {
         if let updatedRecent = try await updateRecent(recent) {
-            recent = updatedRecent
+            recent.hand = updatedRecent.hand
         }
         guard recent.hand == 0, recent.currentHand != 0 else { return }
         recent.hand = Int.random(in: 1...3)

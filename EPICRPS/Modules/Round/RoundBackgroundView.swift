@@ -20,7 +20,7 @@ final class RoundBackgroundView: UIView {
     public func configure(with recent: Recent) {
         upHandImage.image = UIImage(named: recent.upImage)
         downHandImage.image = UIImage(named: recent.downImage)
-        titleLabel.text = "\(recent.playerCount) : \(recent.currentCount)"
+        titleLabel.text = recent.status.title
     }
 }
 // MARK: - Setup Views
@@ -60,7 +60,7 @@ extension RoundBackgroundView {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = RubikFont.bold.splashTitle
-        titleLabel.textColor = .white
+        titleLabel.textColor = .winText
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)

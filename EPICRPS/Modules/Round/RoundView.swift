@@ -158,7 +158,6 @@ class RoundView: UIView {
         secondPlayerProgressView.setProgress(currentProgress, animated: true)
         firstPlayerProgressView.setProgress(playerProgress, animated: true)
         
-        vsLabel.text = recent.text
     }
     
     func resetProgress() {

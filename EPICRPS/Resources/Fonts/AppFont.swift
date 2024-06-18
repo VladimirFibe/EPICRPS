@@ -13,6 +13,7 @@ extension AppFontProtocol {
     var size21: UIFont { apply(size: 21) }
     var splashTitle: UIFont { apply(size: 30) }
     var size41: UIFont { apply(size: 41) }
+    var size56: UIFont { apply(size: 56)}
 }
 
 extension AppFontProtocol {

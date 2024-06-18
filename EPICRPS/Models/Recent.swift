@@ -64,11 +64,11 @@ struct Recent: Codable, Hashable {
     }
     
     private mutating func draw() {
+        print(#function)
         status = .draw
     }
     
     public mutating func playRound() {
-        status = .draw
         guard hand != 0, currentHand != 0 else { return }
         if hand == currentHand { draw()
         } else if currentHand == 3 {
@@ -107,5 +107,14 @@ struct Recent: Codable, Hashable {
         case draw
         case win
         case lose
+        
+        var title: String {
+            switch self {
+            case .wait: return "FIGHT"
+            case .draw: return "DRAW"
+            case .win: return "WIN"
+            case .lose: return "LOSE"
+            }
+        }
     }
 }
