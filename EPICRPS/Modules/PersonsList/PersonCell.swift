@@ -4,7 +4,6 @@ final class PersonCell: UITableViewCell {
     static let identifier = "PersonCell"
 
     private let avatarImageView: UIImageView = {
-        $0.image = .firstPlayer
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIImageView())

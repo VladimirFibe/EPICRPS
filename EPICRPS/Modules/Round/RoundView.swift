@@ -46,7 +46,6 @@ class RoundView: UIView {
     
     private lazy var wHandsImage: UIImageView = {
         let element = UIImageView()
-        element.image = .whand
         element.contentMode = .scaleAspectFit
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
@@ -63,7 +62,6 @@ class RoundView: UIView {
     
     private lazy var mHandsImage: UIImageView = {
         let element = UIImageView()
-        element.image = .mhand
         element.contentMode = .scaleAspectFit
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
@@ -82,7 +80,7 @@ class RoundView: UIView {
     private lazy var timerLabel: UILabel = {
         let element = UILabel()
         element.textColor = .white
-        element.font =  RubikFont.bold.apply(size: 12)
+        element.font =  RubikFont.bold.size12
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
     }()
@@ -146,8 +144,6 @@ class RoundView: UIView {
     }
     
     func setNewRound(with roundDuration: Int) {
-        wHandsImage.image = .femaleHand
-        mHandsImage.image = .maleHand
         vsLabel.text = "Ваш ход"
         timerProgressView.progress = 1
         timerLabel.text = "0:\(roundDuration)"

@@ -17,7 +17,6 @@ final class ResultsPersonHeader: UIView {
     
     private func setupImageView() {
         addSubview(imageView)
-        imageView.image = .firstPlayer
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 17),

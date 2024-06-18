@@ -76,6 +76,8 @@ class RoundViewController: UIViewController {
                 switch event {
                 case .done:
                     self.canFlip = true
+                case .push(let recent):
+                    self.pushFightResult(recent: recent)
                 }
             }.store(in: &bag)
     }
@@ -102,5 +104,10 @@ class RoundViewController: UIViewController {
     
     @objc private func backButtonTapped() {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    private func pushFightResult(recent: Recent) {
+        let controller = FightResultViewController(recent: recent)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

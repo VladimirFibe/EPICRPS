@@ -3,29 +3,32 @@ import Foundation
 protocol RoundServiceProtocol {
     func round(_ hand: Int) async throws
     func lose() async throws
-    func flip() async throws
+    func flip() async throws -> Recent?
     func round() async throws
 }
 
 extension FirebaseClient: RoundServiceProtocol {
-    func flip() async throws {
+    func flip() async throws -> Recent? {
+        var result: Recent? = nil
         if recent.currentCount == 3 || recent.playerCount == 3 {
+            result = recent
             person = try await fetchPerson(with: recent.currentId)
             friend = try await fetchPerson(with: recent.id)
-            guard var person = self.person, var friend = self.friend else { return }
+            guard var person = self.person, var friend = self.friend else { return nil }
             person.lose += recent.playerCount
             person.win += recent.currentCount
             person.round += recent.round
             updatePerson(person)
             friend.lose += recent.currentCount
             friend.win += recent.playerCount
-            friend.round = recent.round
+            friend.round += recent.round
             updatePerson(friend)
             recent.restart()
         } else {
             recent.reset()
         }
         self.saveRecent(recent)
+        return result
     }
     
     func round() async throws {
