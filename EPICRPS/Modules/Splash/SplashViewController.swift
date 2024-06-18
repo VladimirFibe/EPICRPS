@@ -58,15 +58,9 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController: SplashViewDelegate {
     func startButtonPressed() {
-        if let person = FirebaseClient.shared.person {
-            if let player = FirebaseClient.shared.friend {
-                store.sendAction(.start(person, player))
-                let controller = FightLoadViewController(firstPlayer: person, secondPlayer: player)
-                navigationController?.pushViewController(controller, animated: true)
-            } else {
-                let controller = PersonsViewController()
-                navigationController?.pushViewController(controller, animated: true)
-            }
+        if person != nil {
+            let controller = RecentsViewController()
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
     

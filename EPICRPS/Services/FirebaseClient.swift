@@ -171,4 +171,16 @@ extension FirebaseClient {
                 }
             }
     }
+    
+    func downloadRecentChatsFromFireStore(completion: @escaping ([Recent]) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("messages")
+            .document(uid)
+            .collection("recents")
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else { return }
+                let recents = documents.compactMap {  try? $0.data(as: Recent.self)}
+                completion(recents)
+            }
+    }
 }
