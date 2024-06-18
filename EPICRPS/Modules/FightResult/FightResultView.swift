@@ -142,7 +142,7 @@ final class FightResultView: UIView {
         
         resultLabel.textColor = isVictory ? .winText : .loseText
         
-        scoreLabel.text = "\(recent.currentCount) - \(recent.playerCount)"
+        scoreLabel.text = "\(recent.playerCount) - \(recent.currentCount)"
     }
     
     private func setBackgroundView(withGradient innerColor: CGColor, _ outsideColor: CGColor) {

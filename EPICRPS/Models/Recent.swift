@@ -1,10 +1,3 @@
-//
-//  Recent.swift
-//  EPICRPS
-//
-//  Created by WWDC on 14.06.2024.
-//
-
 import Foundation
 
 struct Recent: Codable, Hashable {
@@ -18,12 +11,12 @@ struct Recent: Codable, Hashable {
     var currentAvatar = ""
     var currentMale = false
     var currentHand = 0
-    var text = "Ваш ход"
     var date = Date()
     var completed = false
     var playerCount = 0
     var currentCount = 0
     var round = 0
+    var status: Status = .wait
     
     static func create(from recent: Recent) -> Recent {
         var result = Recent()
@@ -37,16 +30,18 @@ struct Recent: Codable, Hashable {
         result.currentAvatar = recent.avatar
         result.currentMale = recent.male
         result.currentHand = recent.hand
-        result.date = recent.date
+        result.date = Date()
         result.completed = recent.completed
         result.playerCount = recent.currentCount
         result.currentCount = recent.playerCount
         result.round = recent.round
-        switch recent.text {
-        case "Выиграл": result.text = "Проиграл"
-        case "Проиграл": result.text = "Выиграл"
-        case "Ждем": result.text = "Ваш ход"
-        default: result.text = recent.text
+        switch recent.status {
+        case .win:
+            result.status = .lose
+        case .lose:
+            result.status = .win
+        default:
+            result.status = recent.status
         }
         return result
     }
@@ -57,22 +52,23 @@ struct Recent: Codable, Hashable {
         round = 0
         reset()
     }
+    
     private mutating func win() {
-        text = "Выиграл"
+        status = .win
         currentCount += 1
     }
     
     public mutating func lose() {
-        text = "Проиграл"
+        status = .lose
         playerCount += 1
     }
     
     private mutating func draw() {
-        text = "Ничья"
+        print(#function)
+        status = .draw
     }
     
     public mutating func playRound() {
-        text = "Ждем"
         guard hand != 0, currentHand != 0 else { return }
         if hand == currentHand { draw()
         } else if currentHand == 3 {
@@ -103,6 +99,22 @@ struct Recent: Codable, Hashable {
         hand = 0
         currentHand = 0
         completed = false
-        text = "Ваш ход"
+        status = .wait
+    }
+    
+    enum Status: Int, Codable {
+        case wait
+        case draw
+        case win
+        case lose
+        
+        var title: String {
+            switch self {
+            case .wait: return "FIGHT"
+            case .draw: return "DRAW"
+            case .win: return "WIN"
+            case .lose: return "LOSE"
+            }
+        }
     }
 }

@@ -165,9 +165,7 @@ extension FirebaseClient {
             .document(recent.id)
             .addSnapshotListener { snapshot, _ in
                 if let snapshot,
-                    let result = try? snapshot.data(as: Recent.self),
-                    result.hand != nil,
-                    result.currentHand != nil {
+                    let result = try? snapshot.data(as: Recent.self) {
                     self.recent = result
                     completion(result)
                 }
