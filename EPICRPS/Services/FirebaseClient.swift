@@ -19,17 +19,15 @@ extension FirebaseClient {
         } else {
             try await fetchPerson()
         }
-//        if let uid = person?.id {
-//            if uid == "hnxweZx9k9PwRtVQubku8Fwton02" {
-//                friend = try await fetchPerson(with: "GnZToxxrwAgzhUjqd9txhdmZDF33")
-//            } else {
-//                friend = try await fetchPerson(with: "hnxweZx9k9PwRtVQubku8Fwton02")
-//            }
-//        }
     }
 }
 // MARK: - Person
 extension FirebaseClient {
+    func login() async throws -> Person? {
+        try await createUser()
+        return person
+    }
+
     func createPerson(with uid: String) async throws -> Person {
         let person = Person(id: uid, name: uid)
         try Firestore.firestore().collection("persons").document(uid).setData(from: person)
@@ -92,6 +90,10 @@ extension FirebaseClient {
 }
 // MARK: - Recent
 extension FirebaseClient {
+    func start(with current: Person, and player: Person) async throws {
+        self.recent = try await createRecent(with: current, and: player)
+    }
+    
     func createRecent(with current: Person, and player: Person) async throws -> Recent {
         if let recent = try await fetchRecent(with: player.id) {
             return recent

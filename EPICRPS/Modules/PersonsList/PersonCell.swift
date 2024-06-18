@@ -24,8 +24,12 @@ final class PersonCell: UITableViewCell {
     public func configure(with person: Person) {
         usernameLabel.text = person.name
         statusLabel.text = "На связи"
-        FileStorage.downloadImage(id: person.id, link: person.avatar) {
-            self.avatarImageView.image = $0?.circleMasked
+        FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
+            if let image {
+                self.avatarImageView.image = image.circleMasked
+            } else {
+                self.avatarImageView.image = .avatar
+            }
         }
     }
 
@@ -49,7 +53,7 @@ extension PersonCell {
         NSLayoutConstraint.activate([
             avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            avatarImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
+            avatarImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             avatarImageView.widthAnchor.constraint(equalToConstant: 52),
             avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
             

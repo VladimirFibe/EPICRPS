@@ -7,7 +7,18 @@ struct Person: Identifiable, Hashable, Codable {
     var male = true
     var win = 0
     var lose = 0
-    var round = 1
+    var round = 0
     var winLabel: String { String(win)}
     var loseLabel: String { String(lose)}
+    
+    var percent: Double {
+        100.0 * (Double(win) / Double(max(1, round)))
+    }
+    var percentString: String {
+        String(format: "%.0f", percent) + "%"
+    }
+    
+    var score: String {
+        (500 * win).formatted()
+    }
 }

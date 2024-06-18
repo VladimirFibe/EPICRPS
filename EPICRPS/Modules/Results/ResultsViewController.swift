@@ -11,7 +11,7 @@ final class ResultsViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Leaderboard"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
-        view.backgroundColor = #colorLiteral(red: 0.9685857892, green: 0.9782273173, blue: 0.9844831824, alpha: 1)
+        view.backgroundColor = .resultsBackground
         setupViews()
         setupObservers()
     }
@@ -29,7 +29,8 @@ final class ResultsViewController: UIViewController {
                 guard let self = self else { return }
                 switch event {
                 case .done(let persons):
-                    self.persons = persons
+                    var top = persons.sorted(by: { $0.percent > $1.percent})
+                    self.persons = top.count > 10 ? Array(top[0...9]): top
                 }
             }.store(in: &bag)
     }
@@ -42,6 +43,9 @@ final class ResultsViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
         let headerView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
+        if let person = FirebaseClient.shared.person {
+            headerView.configure(with: person)
+        }
         headerView.editText = {[weak self] in
             guard let self else { return }
             let controller = NameViewController()

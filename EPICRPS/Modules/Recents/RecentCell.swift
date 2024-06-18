@@ -31,7 +31,7 @@ final class RecentCell: UITableViewCell {
 
     public func configure(with recent: Recent) {
         usernameLabel.text = recent.name
-        lastMessageLabel.text = "Не тормози! Сникерсни"
+        lastMessageLabel.text = recent.status.title
         dateLabel.text = recent.date.timeElapsed
         unreadCounterLabel.text = "1"
         unreadCounterLabel.isHidden = recent.hand == 0

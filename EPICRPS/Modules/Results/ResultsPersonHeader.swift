@@ -4,10 +4,12 @@ final class ResultsPersonHeader: UIView {
     public var addImage: Callback?
     public var editText: Callback?
     private let imageView = UIImageView()
-    private let button = UIButton(type: .system)
+    private let textFieldBackground = UIView()
+    private let label = UILabel()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupImageView()
+        setupTextFieldBackground()
         setupLabel()
     }
     
@@ -18,6 +20,11 @@ final class ResultsPersonHeader: UIView {
     private func setupImageView() {
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = .white
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.borderWidth = 4
+        imageView.layer.cornerRadius = 23
+        imageView.layer.masksToBounds = true
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 17),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -26,30 +33,43 @@ final class ResultsPersonHeader: UIView {
         ])
     }
     
-    private func setupLabel() {
-        addSubview(button)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        var config = UIButton.Configuration.filled()
-        config.buttonSize = .large
-        config.baseForegroundColor = #colorLiteral(red: 0.3593698144, green: 0.4734569788, blue: 0.6506641507, alpha: 1)
-        config.background.backgroundColor = .white
-        config.background.strokeColor = #colorLiteral(red: 0.9436392188, green: 0.9436392188, blue: 0.9436392188, alpha: 1)
-        config.background.strokeWidth = 1
-        config.contentInsets = .init(top: 14, leading: 16, bottom: 14, trailing: 16)
-        config.titleAlignment = .leading
-        config.title = "Player 1"
-        config.cornerStyle = .capsule
-        config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
-            var outgoing = incoming
-            outgoing.font = RubikFont.bold.size16
-            return outgoing
-        }
-        button.configuration = config
-        button.addAction(UIAction { _ in self.editText?()}, for: .primaryActionTriggered)
-        
+    private func setupTextFieldBackground() {
+        addSubview(textFieldBackground)
+        textFieldBackground.backgroundColor = .resultsHeaderFieldBackground
+        textFieldBackground.translatesAutoresizingMaskIntoConstraints = false
+        textFieldBackground.layer.cornerRadius = 20
+        textFieldBackground.layer.borderWidth = 1
+        textFieldBackground.layer.borderColor = UIColor.resultsHeaderBorder.cgColor
         NSLayoutConstraint.activate([
-            button.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 7),
-            button.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
+            textFieldBackground.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 7),
+            textFieldBackground.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -58),
+            textFieldBackground.heightAnchor.constraint(equalToConstant: 46),
+            textFieldBackground.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
         ])
     }
+    
+    private func setupLabel() {
+        addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .resultsHeaderText
+        label.font = RubikFont.bold.size16
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: textFieldBackground.leadingAnchor, constant: 16),
+            label.centerYAnchor.constraint(equalTo: textFieldBackground.centerYAnchor),
+            label.trailingAnchor.constraint(equalTo: textFieldBackground.trailingAnchor, constant: -16)
+        ])
+    }
+    
+    public func configure(with person: Person) {
+        label.text = person.name
+        FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
+            if let image {
+                self.imageView.image = image
+            } else {
+                self.imageView.image = .avatar
+            }
+        }
+    }
 }
+
+

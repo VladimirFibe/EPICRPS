@@ -64,7 +64,6 @@ struct Recent: Codable, Hashable {
     }
     
     private mutating func draw() {
-        print(#function)
         status = .draw
     }
     

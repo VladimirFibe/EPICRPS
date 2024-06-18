@@ -34,7 +34,6 @@ class RoundViewController: UIViewController {
             action: #selector(pauseButtonTapped)
         )
         FirebaseClient.shared.createRecentObserver { recent in
-            print(recent.hand, recent.currentHand)
             self.updateUI(with: recent)
         }
     }

@@ -5,6 +5,7 @@ protocol AppFontProtocol {
 }
 
 extension AppFontProtocol {
+    var size9: UIFont { apply(size: 9) }
     var size12: UIFont { apply(size: 12) }
     var size13: UIFont { apply(size: 13) }
     var size14: UIFont { apply(size: 14) }
