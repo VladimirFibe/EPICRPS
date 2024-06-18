@@ -2,6 +2,7 @@ import Combine
 
 enum RoundEvent {
     case done
+    case push(Recent)
 }
 
 enum RoundAction {
@@ -39,7 +40,10 @@ final class RoundStore: Store<RoundEvent, RoundAction> {
     }
     
     private func flip() async throws {
-        try await useCase.flip()
+        if let recent = try await useCase.flip() {
+            sendEvent(.push(recent))
+        }
+        
     }
     private func round(_ hand: Int) async throws {
         try await useCase.round(hand)

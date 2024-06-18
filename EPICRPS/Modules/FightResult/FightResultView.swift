@@ -16,25 +16,23 @@ final class FightResultView: UIView {
 
     weak var delegate: FightResultViewDelegate?
     
-    private let appearance = Appearance()
-    
     private let avatarImageView = UIImageView()
     
     private lazy var avatarBackgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = appearance.avatarBackgroundColor
+        view.backgroundColor = .avatarBackground
         return view
     }()
     
     private let resultLabel: UILabel = {
         let label = UILabel()
-        label.font = RubikFont.bold.apply(size: 21)
+        label.font = RubikFont.bold.size21
         return label
     }()
     
     private let scoreLabel: UILabel = {
         let label = UILabel()
-        label.font = RubikFont.bold.apply(size: 41)
+        label.font = RubikFont.bold.size41
         label.textColor = .white
         return label
     }()
@@ -90,31 +88,31 @@ final class FightResultView: UIView {
     }
     
     private func makeConstraints() {
-        [avatarImageView, avatarBackgroundView, resultLabel, scoreLabel, buttonsStackView, homeButton, repeatButton].forEach { $0.translatesAutoresizingMaskIntoConstraints = false
-        }
+        [avatarImageView, avatarBackgroundView, resultLabel, scoreLabel, buttonsStackView]
+            .forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
         NSLayoutConstraint.activate([
             avatarBackgroundView.widthAnchor.constraint(equalToConstant: 176),
-            avatarBackgroundView.heightAnchor.constraint(equalToConstant: 176),
-            avatarBackgroundView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            avatarBackgroundView.bottomAnchor.constraint(equalTo: self.centerYAnchor),
+            avatarBackgroundView.heightAnchor.constraint(equalTo: avatarBackgroundView.widthAnchor),
+            avatarBackgroundView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            avatarBackgroundView.bottomAnchor.constraint(equalTo: centerYAnchor),
             
-            avatarImageView.widthAnchor.constraint(equalToConstant: 67),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 78),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 78),
+            avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
             avatarImageView.centerXAnchor.constraint(equalTo: avatarBackgroundView.centerXAnchor),
             avatarImageView.centerYAnchor.constraint(equalTo: avatarBackgroundView.centerYAnchor),
             
-            resultLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            resultLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             resultLabel.topAnchor.constraint(equalTo: avatarBackgroundView.bottomAnchor, constant: 26),
             
-            scoreLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            scoreLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             scoreLabel.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 6),
             
             homeButton.widthAnchor.constraint(equalToConstant: 67),
             homeButton.heightAnchor.constraint(equalToConstant: 52),
             repeatButton.widthAnchor.constraint(equalToConstant: 67),
             repeatButton.heightAnchor.constraint(equalToConstant: 52),
-            buttonsStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            buttonsStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             buttonsStackView.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 34)
         ])
     }
@@ -129,29 +127,20 @@ final class FightResultView: UIView {
     func configureView(with recent: Recent) {
         
         let isVictory = recent.currentCount > recent.playerCount
-        let isFirstPlayer = isVictory
         
-        let innerColor = isVictory
-        ? appearance.winInnerColor
-        : appearance.looseInnerColor
+        let innerColor: UIColor = isVictory ? .winInner : .looseInner
         
-        let outsideColor = isVictory
-        ? appearance.winOutsideColor
-        : appearance.looseOutsideColor
+        let outsideColor: UIColor = isVictory ? .winOutside : .looseOutside
         
-        setBackgroundView(withGradient: innerColor, outsideColor)
+        setBackgroundView(withGradient: innerColor.cgColor, outsideColor.cgColor)
         
-        avatarImageView.image = isFirstPlayer
-        ? UIImage(named: "firstPlayerAvatar")
-        : UIImage(named: "secondPlayerAvatar")
+        FileStorage.downloadImage(id: recent.currentId, link: recent.currentAvatar) { image in
+            self.avatarImageView.image = image?.circleMasked
+        }
         
-        resultLabel.text = isVictory
-        ? "You Win"
-        : "You Lose"
+        resultLabel.text = isVictory ? "You Win" : "You Lose"
         
-        resultLabel.textColor = isVictory 
-        ? appearance.winTextColor
-        : appearance.loseTextColor
+        resultLabel.textColor = isVictory ? .winText : .loseText
         
         scoreLabel.text = "\(recent.currentCount) - \(recent.playerCount)"
     }
@@ -161,27 +150,11 @@ final class FightResultView: UIView {
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         insertSubview(backgroundView, at: .zero)
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            backgroundView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
-    }
-}
-
-
-private extension FightResultView {
-    struct Appearance {
-        let winTextColor = UIColor(red: 255/255, green: 178/255, blue: 76/255, alpha: 1)
-        let loseTextColor = UIColor(red: 27/255, green: 18/255, blue: 46/255, alpha: 1)
-        
-        let avatarBackgroundColor = UIColor(red: 43/255, green: 40/255, blue: 112/255, alpha: 1)
-        
-        let looseInnerColor = UIColor(red: 255/255, green: 182/255, blue: 0/255, alpha: 1).cgColor
-        let looseOutsideColor = UIColor(red: 238/255, green: 65/255, blue: 60/255, alpha: 1).cgColor
-        
-        let winInnerColor = UIColor(red: 45/255, green: 37/255, blue: 153/255, alpha: 1).cgColor
-        let winOutsideColor = UIColor(red: 101/255, green: 109/255, blue: 244/255, alpha: 1).cgColor
     }
 }
 
