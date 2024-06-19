@@ -7,7 +7,7 @@ final class SettingsViewController: UITableViewController {
     private let userInfoCell = SettingsNameTableViewCell()
     private let footerLabel: UILabel = {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
-        $0.text = "WhatsApp from Facebook\nApp version \(appVersion)"
+        $0.text = "EPIC RPS from FibeApp\nApp version \(appVersion)"
         $0.textAlignment = .center
         $0.numberOfLines = 2
         $0.font = .systemFont(ofSize: 12)
@@ -27,6 +27,7 @@ final class SettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
+        navigationItem.title = "Settings"
         setupObservers()
         tableView.register(
             SettingsNameTableViewCell.self,

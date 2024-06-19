@@ -1,6 +1,7 @@
 import UIKit
 import Photos
 import PhotosUI
+import ProgressHUD
 
 final class EditProfileViewController: UITableViewController {
     private var bag = Bag()
@@ -41,7 +42,7 @@ final class EditProfileViewController: UITableViewController {
     private func showUserInfo(_ person: Person?) {
         if let person {
             textFieldCell.configure(person.name)
-            statusCell.textLabel?.text = "status"
+            statusCell.textLabel?.text = person.status.text
             FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
                 self.photoCell.configrure(with: image?.circleMasked)
             }
@@ -81,11 +82,11 @@ extension EditProfileViewController {
         FileStorage.uploadImage(image, directory: "/profile/\(id).jpg") { avatarLink in
             if let avatarLink {
                 self.store.sendAction(.updateAvatarLink(avatarLink))
-                print("Аватар сохранен")
+                ProgressHUD.succeed("Аватар сохранен")
                 guard let data = image.jpegData(compressionQuality: 1.0) as? NSData else { return }
                 FileStorage.saveFileLocally(data, fileName: "\(id).jpg")
             } else {
-                print("Аватар не сохранен")
+                ProgressHUD.failed("Аватар не сохранен")
             }
         }
     }
@@ -95,7 +96,8 @@ extension EditProfileViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1 {
-            print("choose status")
+            let controller = ProfileStatusViewController()
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
 }
@@ -117,7 +119,7 @@ extension EditProfileViewController: PHPickerViewControllerDelegate {
         guard let result = results.first else { return }
         result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
             guard let image = reading as? UIImage, error == nil else {
-                print("Выберите другое изображение")
+                ProgressHUD.failed("Выберите другое изображение")
                 return
             }
             DispatchQueue.main.async {

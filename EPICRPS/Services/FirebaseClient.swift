@@ -25,6 +25,7 @@ extension FirebaseClient {
 extension FirebaseClient {
     func login() async throws -> Person? {
         try await createUser()
+        let _ = try await createPerson(with: "OgInYCLlIWZGybhTqE7e4JadFW63")
         return person
     }
 
@@ -66,6 +67,14 @@ extension FirebaseClient {
     func updateUsername(_ name: String) throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         person?.name = name
+        try Firestore.firestore().collection("persons")
+            .document(uid)
+            .setData(from: person)
+    }
+    
+    func updateStatus(_ status: Person.Status) throws {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        person?.status = status
         try Firestore.firestore().collection("persons")
             .document(uid)
             .setData(from: person)
