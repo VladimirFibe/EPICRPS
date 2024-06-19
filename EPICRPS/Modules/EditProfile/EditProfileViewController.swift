@@ -12,6 +12,7 @@ final class EditProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservers()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +46,10 @@ final class EditProfileViewController: UITableViewController {
                 self.photoCell.configrure(with: image?.circleMasked)
             }
         }
+    }
+    
+    @objc private func backButtonAction() {
+        navigationController?.popViewController(animated: true)
     }
 }
 // MARK: - UITableViewDataSource

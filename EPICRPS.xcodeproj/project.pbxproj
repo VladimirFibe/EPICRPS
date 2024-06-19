@@ -65,6 +65,7 @@
 		D9A3B65E2C1F202000F0EB76 /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B65D2C1F202000F0EB76 /* SplashService.swift */; };
 		D9A3B6602C1F202900F0EB76 /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B65F2C1F202900F0EB76 /* SplashUseCase.swift */; };
 		D9A3B6622C1F203100F0EB76 /* SplashStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3B6612C1F203100F0EB76 /* SplashStore.swift */; };
+		D9B1A5062C228D1100E75854 /* SettingsNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1A5052C228D1100E75854 /* SettingsNameTableViewCell.swift */; };
 		D9E7FE5B2C21548000ECD3C3 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */; };
 		D9E7FE5E2C21587F00ECD3C3 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */; };
 		D9EC09E82C1FC522002A2742 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC09E72C1FC522002A2742 /* FileStorage.swift */; };
@@ -135,6 +136,7 @@
 		D9A3B65D2C1F202000F0EB76 /* SplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashService.swift; sourceTree = "<group>"; };
 		D9A3B65F2C1F202900F0EB76 /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
 		D9A3B6612C1F203100F0EB76 /* SplashStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStore.swift; sourceTree = "<group>"; };
+		D9B1A5052C228D1100E75854 /* SettingsNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNameTableViewCell.swift; sourceTree = "<group>"; };
 		D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
 		D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		D9EC09E72C1FC522002A2742 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				B993D72A2C1E1231007AF2C9 /* SettingsStore.swift */,
 				B993D72B2C1E1231007AF2C9 /* SettingsUseCase.swift */,
 				B993D72C2C1E1231007AF2C9 /* SettingsViewController.swift */,
+				D9B1A5052C228D1100E75854 /* SettingsNameTableViewCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				D9EC09F72C1FCF42002A2742 /* TextFieldTableViewCell.swift in Sources */,
 				B993D74B2C1E1231007AF2C9 /* RoundStore.swift in Sources */,
 				B993D7462C1E1231007AF2C9 /* ResultsService.swift in Sources */,
+				D9B1A5062C228D1100E75854 /* SettingsNameTableViewCell.swift in Sources */,
 				B993D7402C1E1231007AF2C9 /* FightResultViewController.swift in Sources */,
 				B993D7592C1E1231007AF2C9 /* PopupViewController.swift in Sources */,
 				D9EC09EA2C1FC869002A2742 /* PersonsUseCase.swift in Sources */,

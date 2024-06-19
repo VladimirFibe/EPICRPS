@@ -1,176 +1,94 @@
 import UIKit
 
-final class SettingsViewController: UIViewController {
-    private var is30: Bool {
-        true // LocalService.shared.totalTime == 30
+final class SettingsViewController: UITableViewController {
+    private var callback: Callback?
+    private let store = SettingsStore()
+    private var bag = Bag()
+    private let userInfoCell = SettingsNameTableViewCell()
+    private let footerLabel: UILabel = {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        $0.text = "WhatsApp from Facebook\nApp version \(appVersion)"
+        $0.textAlignment = .center
+        $0.numberOfLines = 2
+        $0.font = .systemFont(ofSize: 12)
+        $0.textColor = .secondaryLabel
+        return $0
+    }(UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 60)))
+
+    init(callback: Callback? = nil) {
+        self.callback = callback
+        super.init(nibName: nil, bundle: nil)
     }
-    private lazy var tap30 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-    private lazy var tap60 = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-    private let stackView = UIStackView()
-    private let timeView = SettingCellVeiw()
-    private let playerView = SettingCellVeiw()
-    private let titleLabel = UILabel()
-    private let timeLabel30 = UILabel()
-    private let timeLabel60 = UILabel()
-    private let friendLabel = UILabel()
-    private let friendSwitch = UISwitch()
-    private let musicLabel = UILabel()
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        navigationItem.title = "Settings"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "chevron.left"),
-            style: .plain,
-            target: self,
-            action: #selector(backButtonAction)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
+        setupObservers()
+        tableView.register(
+            SettingsNameTableViewCell.self,
+            forCellReuseIdentifier: SettingsNameTableViewCell.identifier
         )
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "person.circle.fill"),
-            style: .plain,
-            target: self,
-            action: #selector(personHandle)
-        )
-        setupStackView()
-        setupTitleLabel()
-        setupTimeLabel30()
-        setupTimeLabel60()
-        gameFriendLabel()
-        setupSwitch()
-        setupMusicLabel()
+        tableView.tableFooterView = footerLabel
+        if let person = FirebaseClient.shared.person {
+            showUserInfo(person)
+        }
     }
-    
-    @objc private func personHandle() {
-        let controller = EditProfileViewController()
-        navigationController?.pushViewController(controller, animated: true)
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        store.sendAction(.fetch)
     }
-    
-    @objc private func handleTap(_ sender: UITapGestureRecognizer) {
-//        LocalService.shared.totalTime = sender == tap30 ? 30 : 60
-        timeLabel30.backgroundColor = is30 ? .systemRed : UIColor(named: "ColorLabel")
-        timeLabel60.backgroundColor = is30 ? UIColor(named: "ColorLabel") : .systemRed
+
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        userInfoCell
     }
     
     @objc private func backButtonAction() {
         navigationController?.popViewController(animated: true)
     }
-    
-    private func setupStackView() {
-        view.addSubview(stackView)
-        stackView.axis = .vertical
-        stackView.spacing = 22
-        stackView.alignment = .fill
-        stackView.distribution = .equalSpacing
-        stackView.addArrangedSubview(timeView)
-        stackView.addArrangedSubview(playerView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-        ])
+}
+
+extension SettingsViewController {
+    private func setupObservers() {
+        store
+            .events
+            .receive(on: DispatchQueue.main)
+            .sink {[weak self] event in
+                switch event {
+                case .done: self?.showUserInfo(FirebaseClient.shared.person)
+                case .signOut: self?.callback?()
+                }
+            }.store(in: &bag)
     }
-    
-    private func setupTitleLabel() {
-        timeView.addSubview(titleLabel)
-        titleLabel.text = "ВРЕМЯ ИГРЫ"
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: timeView.topAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: timeView.leadingAnchor, constant: 30),
-            titleLabel.trailingAnchor.constraint(equalTo: timeView.trailingAnchor, constant: -20),
-            titleLabel.bottomAnchor.constraint(equalTo: timeView.bottomAnchor, constant: -80)
-        ])
+
+    private func showUserInfo(_ person: Person?) {
+        if let person {
+            userInfoCell.configure(with: person)
+            FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
+                self.userInfoCell.configure(with: image?.circleMasked)
+            }
+        }
     }
-    
-    private func setupTimeLabel30() {
-        timeView.addSubview(timeLabel30)
-        timeLabel30.text = "30 сек."
-        timeLabel30.textColor = .white
-        timeLabel30.textAlignment = .center
-        timeLabel30.font = .boldSystemFont(ofSize: 20)
-        timeLabel30.backgroundColor = is30 ? .systemRed : UIColor(named: "ColorLabel")
-        timeLabel30.layer.cornerRadius = 15
-        timeLabel30.clipsToBounds = true
-        timeLabel30.addGestureRecognizer(tap30)
-        timeLabel30.isUserInteractionEnabled = true
-        timeLabel30.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            timeLabel30.heightAnchor.constraint(equalToConstant: 40),
-            timeLabel30.widthAnchor.constraint(equalToConstant: 135),
-            timeLabel30.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 40),
-            timeLabel30.leadingAnchor.constraint(equalTo: timeView.leadingAnchor, constant: 20),
-        ])
-    }
-    private func setupTimeLabel60() {
-        timeView.addSubview(timeLabel60)
-        timeLabel60.text = "60 сек."
-        timeLabel60.textAlignment = .center
-        timeLabel60.textColor = .white
-        timeLabel60.font = .boldSystemFont(ofSize: 20)
-        timeLabel60.backgroundColor = is30 ? UIColor(named: "ColorLabel") : .systemRed
-        timeLabel60.layer.cornerRadius = 15
-        timeLabel60.clipsToBounds = true
-        timeLabel60.addGestureRecognizer(tap60)
-        timeLabel60.isUserInteractionEnabled = true
-        timeLabel60.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            timeLabel60.heightAnchor.constraint(equalToConstant: 40),
-            timeLabel60.widthAnchor.constraint(equalToConstant: 135),
-            timeLabel60.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 40),
-            timeLabel60.trailingAnchor.constraint(equalTo: timeView.trailingAnchor, constant: -20),
-        ])
-    }
-    private func setupMusicLabel() {
-        playerView.addSubview(musicLabel)
-        musicLabel.text = "    Фоновая музыка"
-        musicLabel.textAlignment = .left
-        musicLabel.textColor = .white
-        musicLabel.font = .boldSystemFont(ofSize: 20)
-        musicLabel.backgroundColor = UIColor(named: "ColorLabel")
-        musicLabel.layer.cornerRadius = 18
-        musicLabel.clipsToBounds = true
-        musicLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            musicLabel.heightAnchor.constraint(equalToConstant: 60),
-            musicLabel.topAnchor.constraint(equalTo: playerView.topAnchor, constant: 20),
-            musicLabel.leadingAnchor.constraint(equalTo: playerView.leadingAnchor, constant: 20),
-            musicLabel.trailingAnchor.constraint(equalTo: playerView.trailingAnchor, constant: -20)
-            
-        ])
-    }
-    private func gameFriendLabel() {
-        playerView.addSubview(friendLabel)
-        friendLabel.text = "    Игра с другом"
-        friendLabel.textAlignment = .left
-        friendLabel.textColor = .white
-        friendLabel.font = .boldSystemFont(ofSize: 20)
-        friendLabel.backgroundColor = UIColor(named: "ColorLabel")
-        friendLabel.layer.cornerRadius = 18
-        friendLabel.clipsToBounds = true
-        friendLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            friendLabel.heightAnchor.constraint(equalToConstant: 60),
-            friendLabel.topAnchor.constraint(equalTo: playerView.topAnchor, constant: 100),
-            friendLabel.bottomAnchor.constraint(equalTo: playerView.bottomAnchor, constant: -20),
-            friendLabel.leadingAnchor.constraint(equalTo: playerView.leadingAnchor, constant: 20),
-            friendLabel.trailingAnchor.constraint(equalTo: playerView.trailingAnchor, constant: -20)
-            
-        ])
-    }
-    
-    private func setupSwitch() {
-        playerView.addSubview(friendSwitch)
-        friendSwitch.translatesAutoresizingMaskIntoConstraints = false
-        friendSwitch.addTarget(self, action: #selector(switchGameMode), for: .valueChanged)
-        NSLayoutConstraint.activate([
-            friendSwitch.topAnchor.constraint(equalTo: playerView.topAnchor, constant: 115),
-            friendSwitch.trailingAnchor.constraint(equalTo: playerView.trailingAnchor, constant: -45),
-            friendSwitch.bottomAnchor.constraint(equalTo: playerView.bottomAnchor, constant: -20)
-        ])
-    }
-    
-    @objc private func switchGameMode(_ sender: UISwitch) {
-        
+}
+
+extension SettingsViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let controller = EditProfileViewController(style: .grouped)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
