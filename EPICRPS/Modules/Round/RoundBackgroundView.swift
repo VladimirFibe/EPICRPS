@@ -1,15 +1,17 @@
 import UIKit
 
 final class RoundBackgroundView: UIView {
-    private let timerWidth = 166.0
     private let backgroundImage = UIImageView()
     private let upHandImage = UIImageView()
     private let downHandImage = UIImageView()
     private let titleLabel = UILabel()
-    private let roundLabel = UILabel()
-    private let progressLabel = UILabel()
     private let timerProgressView = UIProgressView()
     private let timerLabel = UILabel()
+    private let topImageView = UIImageView()
+    private let topProgressView = UIProgressView()
+    private let borderView = UIView()
+    private let bottomProgressView = UIProgressView()
+    private let bottomImageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,10 +19,9 @@ final class RoundBackgroundView: UIView {
         setupUpHandImage()
         setupDownHandImage()
         setupTitleLabel()
-        setupRoundLabel()
-        setupProgressLabel()
         setupTimerProgressView()
         setupTimerLabel()
+        setupProgressView()
     }
     
     required init?(coder: NSCoder) {
@@ -30,15 +31,19 @@ final class RoundBackgroundView: UIView {
     public func configure(with recent: Recent) {
         upHandImage.image = UIImage(named: recent.upImage)
         downHandImage.image = UIImage(named: recent.downImage)
-        if recent.currentCount == 3 {
-            roundLabel.text = "You Win!!!"
-        } else if recent.playerCount == 3 {
-            roundLabel.text = "You Lose"
-        } else {
-            roundLabel.text = String(recent.round + 1)
-        }
         titleLabel.text = recent.status.title
-        progressLabel.text = "\(recent.playerCount) - \(recent.currentCount)"
+        topProgressView.setProgress(Float(recent.playerCount) / 3.0, animated: true)
+        bottomProgressView.setProgress(Float(recent.currentCount) / 3.0, animated: true)
+        FileStorage.downloadImage(id: recent.id, link: recent.avatar) { image in
+            if let image {
+                self.topImageView.image = image.circleMasked
+            }
+        }
+        FileStorage.downloadImage(id: recent.currentId, link: recent.currentAvatar) { image in
+            if let image {
+                self.bottomImageView.image = image.circleMasked
+            }
+        }
     }
 }
 // MARK: - Setup Views
@@ -84,59 +89,83 @@ extension RoundBackgroundView {
             titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
-    
-    private func setupRoundLabel() {
-        addSubview(roundLabel)
-        roundLabel.translatesAutoresizingMaskIntoConstraints = false
-        roundLabel.font = RubikFont.bold.splashTitle
-        roundLabel.textColor = .white
-        NSLayoutConstraint.activate([
-            roundLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            roundLabel.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -10)
-        ])
-    }
-    
-    private func setupProgressLabel() {
-        addSubview(progressLabel)
-        progressLabel.translatesAutoresizingMaskIntoConstraints = false
-        progressLabel.font = RubikFont.bold.splashTitle
-        progressLabel.textColor = .white
-        NSLayoutConstraint.activate([
-            progressLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            progressLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10)
-        ])
-    }
-    
+        
     private func setupTimerProgressView() {
         addSubview(timerProgressView)
-        timerProgressView.setProgress(0.75, animated: true)
+        timerProgressView.layer.cornerRadius = 5
+        timerProgressView.layer.masksToBounds = true
+        timerProgressView.progress = 0.25
         timerProgressView.progressTintColor = .timerProgressTint
         timerProgressView.trackTintColor = .progressTrackTint
         timerProgressView.transform = CGAffineTransform(rotationAngle: .pi / -2)
         timerProgressView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            timerProgressView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            timerProgressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16 - timerWidth / 2),
-            timerProgressView.widthAnchor.constraint(equalToConstant: timerWidth),
-            timerProgressView.heightAnchor.constraint(equalToConstant: 10)
-        ])
     }
     
     private func setupTimerLabel() {
+        let timerWidth = 166.0
+        let offset = 30.0
         addSubview(timerLabel)
-        timerLabel.text = "30"
+        timerLabel.text = "0:00"
         timerLabel.textColor = .white
         timerLabel.font =  RubikFont.bold.size12
         timerLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            timerLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            timerLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: timerWidth / 2 + 16)
-        
+            timerProgressView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            timerProgressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: offset - timerWidth / 2),
+            timerProgressView.widthAnchor.constraint(equalToConstant: timerWidth),
+            timerProgressView.heightAnchor.constraint(equalToConstant: 10),
+            timerLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: offset),
+            timerLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: timerWidth / 2 + 8)
+        ])
+    }
+    
+    private func setupProgressView() {
+        [topProgressView, bottomProgressView, borderView, topImageView, bottomImageView].forEach {
+            addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        let width = 180.0
+        let radius = 20.0
+        topProgressView.progress = 0.0
+        bottomProgressView.progress = 0.0
+        topProgressView.transform = CGAffineTransform(rotationAngle: .pi / 2)
+        bottomProgressView.transform = CGAffineTransform(rotationAngle: .pi / -2)
+        bottomProgressView.progressTintColor = .winText
+        bottomProgressView.trackTintColor = .progressTrackTint
+        topProgressView.progressTintColor = .winText
+        topProgressView.trackTintColor = .progressTrackTint
+        borderView.backgroundColor = .white
+        topImageView.backgroundColor = .white
+        topImageView.layer.cornerRadius = radius
+        bottomImageView.backgroundColor = .white
+        bottomImageView.layer.cornerRadius = radius
+        NSLayoutConstraint.activate([
+            borderView.widthAnchor.constraint(equalToConstant: 18),
+            borderView.heightAnchor.constraint(equalToConstant: 1),
+            borderView.centerXAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            borderView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            topProgressView.centerXAnchor.constraint(equalTo: borderView.centerXAnchor),
+            topProgressView.widthAnchor.constraint(equalToConstant: width),
+            topProgressView.heightAnchor.constraint(equalToConstant: 10),
+            topProgressView.centerYAnchor.constraint(equalTo: borderView.centerYAnchor, constant: -width / 2),
+            bottomProgressView.centerXAnchor.constraint(equalTo: borderView.centerXAnchor),
+            bottomProgressView.widthAnchor.constraint(equalToConstant: width),
+            bottomProgressView.heightAnchor.constraint(equalTo: topProgressView.heightAnchor),
+            bottomProgressView.centerYAnchor.constraint(equalTo: borderView.centerYAnchor, constant: width / 2),
+            topImageView.centerXAnchor.constraint(equalTo: borderView.centerXAnchor),
+            topImageView.centerYAnchor.constraint(equalTo: borderView.centerYAnchor, constant: -width),
+            topImageView.widthAnchor.constraint(equalToConstant: 2 * radius),
+            topImageView.heightAnchor.constraint(equalTo: topImageView.widthAnchor),
+            bottomImageView.centerXAnchor.constraint(equalTo: borderView.centerXAnchor),
+            bottomImageView.centerYAnchor.constraint(equalTo: borderView.centerYAnchor, constant: width),
+            bottomImageView.widthAnchor.constraint(equalToConstant: 2 * radius),
+            bottomImageView.heightAnchor.constraint(equalTo: topImageView.widthAnchor),
+            
         ])
     }
 }
 
-@available(iOS 17.0, *)
-#Preview {
-    RoundBackgroundView()
-}
+//@available(iOS 17.0, *)
+//#Preview {
+//    RoundBackgroundView()
+//}
