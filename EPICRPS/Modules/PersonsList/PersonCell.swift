@@ -23,7 +23,8 @@ final class PersonCell: UITableViewCell {
 
     public func configure(with person: Person) {
         usernameLabel.text = person.name
-        statusLabel.text = "На связи"
+        statusLabel.text = person.bot ? "Bot" : person.status.text
+        
         FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
             if let image {
                 self.avatarImageView.image = image.circleMasked

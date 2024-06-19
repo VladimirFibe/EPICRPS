@@ -46,6 +46,9 @@ extension FirebaseClient: RoundServiceProtocol {
             recent = updatedRecent
         }
         guard recent.currentHand == 0 else { return }
+        if recent.hand == 0, let friend, friend.bot {
+            recent.hand = Int.random(in: 1...3)
+        }
         recent.currentHand = hand
         recent.playRound()
         saveRecent(recent)

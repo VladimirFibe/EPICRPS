@@ -9,6 +9,7 @@ final class RulesViewController: UIViewController {
         view.addSubview(imageView)
         view.backgroundColor = .systemBackground
         imageView.image = .rulesView
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

@@ -3,7 +3,7 @@ import UIKit
 final class PersonsViewController: UITableViewController {
     private var bag = Bag()
     private let store = PersonStrore()
-    private var persons: [Person] = []
+    private var persons: [Person] = [] { didSet { self.tableView.reloadData() }}
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Friends"
@@ -52,11 +52,8 @@ final class PersonsViewController: UITableViewController {
             .sink { [weak self] event in
                 guard let self else { return }
                 switch event {
-                case .done(let persons):
-                    self.persons = persons
-                    self.tableView.reloadData()
-                case .push:
-                    self.pushFightLoad()
+                case .done(let persons): self.persons = persons
+                case .push: self.pushFightLoad()
                 }
             }
             .store(in: &bag)
