@@ -8,6 +8,8 @@ final class EditProfileViewController: UITableViewController {
     private let store = EditProfileStore()
     private let photoCell = PhotoTableViewCell()
     private let textFieldCell = TextFieldTableViewCell()
+    private let botCell = EditProfileBotCell()
+    private let sexCell = EditProfileBotCell()
     private let statusCell =  UITableViewCell()
 
     override func viewDidLoad() {
@@ -42,6 +44,8 @@ final class EditProfileViewController: UITableViewController {
     private func showUserInfo(_ person: Person?) {
         if let person {
             textFieldCell.configure(person.name)
+            botCell.configure(with: person.bot ? "Bot enabled" : "Bot disabled")
+            sexCell.configure(with: person.male ? "Male" : "Famele")
             statusCell.textLabel?.text = person.status.text
             FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
                 self.photoCell.configrure(with: image?.circleMasked)
@@ -60,15 +64,16 @@ extension EditProfileViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        section == 0 ? 2 : 1
+        section == 0 ? 4 : 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                return photoCell
-            } else {
-                return textFieldCell
+            switch indexPath.row {
+            case 0: return photoCell
+            case 1: return textFieldCell
+            case 2: return botCell
+            default: return sexCell
             }
         } else {
             return statusCell
@@ -98,6 +103,12 @@ extension EditProfileViewController {
         if indexPath.section == 1 {
             let controller = ProfileStatusViewController()
             navigationController?.pushViewController(controller, animated: true)
+        } else {
+            if indexPath.row == 2 {
+                store.handleActions(action: .updateBot)
+            } else if indexPath.row == 3 {
+                store.handleActions(action: .updateSex)
+            }
         }
     }
 }

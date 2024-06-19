@@ -69,6 +69,7 @@
 		D9B1A5092C22971900E75854 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D9B1A5082C22971900E75854 /* ProgressHUD */; };
 		D9B1A50B2C22988800E75854 /* ProfileStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1A50A2C22988700E75854 /* ProfileStatusViewController.swift */; };
 		D9B1A50D2C2298B000E75854 /* ProfileStatusStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1A50C2C2298B000E75854 /* ProfileStatusStore.swift */; };
+		D9B1A50F2C22A4A800E75854 /* EditProfileBotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1A50E2C22A4A800E75854 /* EditProfileBotCell.swift */; };
 		D9E7FE5B2C21548000ECD3C3 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */; };
 		D9E7FE5E2C21587F00ECD3C3 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */; };
 		D9EC09E82C1FC522002A2742 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC09E72C1FC522002A2742 /* FileStorage.swift */; };
@@ -142,6 +143,7 @@
 		D9B1A5052C228D1100E75854 /* SettingsNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNameTableViewCell.swift; sourceTree = "<group>"; };
 		D9B1A50A2C22988700E75854 /* ProfileStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatusViewController.swift; sourceTree = "<group>"; };
 		D9B1A50C2C2298B000E75854 /* ProfileStatusStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatusStore.swift; sourceTree = "<group>"; };
+		D9B1A50E2C22A4A800E75854 /* EditProfileBotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileBotCell.swift; sourceTree = "<group>"; };
 		D9E7FE5A2C21548000ECD3C3 /* RecentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
 		D9E7FE5D2C21587F00ECD3C3 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
 		D9EC09E72C1FC522002A2742 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				D9EC09F22C1FCC46002A2742 /* EditProfileStore.swift */,
 				D9EC09F42C1FCDB8002A2742 /* PhotoTableViewCell.swift */,
 				D9EC09F62C1FCF42002A2742 /* TextFieldTableViewCell.swift */,
+				D9B1A50E2C22A4A800E75854 /* EditProfileBotCell.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				B993D7592C1E1231007AF2C9 /* PopupViewController.swift in Sources */,
 				D9EC09EA2C1FC869002A2742 /* PersonsUseCase.swift in Sources */,
 				B993D73F2C1E1231007AF2C9 /* FightResultView.swift in Sources */,
+				D9B1A50F2C22A4A800E75854 /* EditProfileBotCell.swift in Sources */,
 				D9A3B6442C1EE11C00F0EB76 /* ResultSectionHeader.swift in Sources */,
 				B993D75C2C1E1231007AF2C9 /* Recent.swift in Sources */,
 				B993D7572C1E1231007AF2C9 /* NameViewController.swift in Sources */,
@@ -729,7 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;
@@ -759,7 +763,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EPICRPS/Info.plist;

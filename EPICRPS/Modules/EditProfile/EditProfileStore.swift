@@ -8,6 +8,8 @@ enum EditProfileAction {
     case updateUsername(String)
     case uploadImage(UIImage)
     case updateAvatarLink(String)
+    case updateBot
+    case updateSex
     case fetch
 }
 
@@ -32,7 +34,25 @@ final class EditProfileStore: Store<EditProfileEvent, EditProfileAction> {
             statefulCall { [weak self] in
                 try await self?.fetchPerson()
             }
+        case .updateBot:
+            statefulCall { [weak self] in
+                try self?.updateBot()
+            }
+        case .updateSex:
+            statefulCall { [weak self] in
+                try self?.updateSex()
+            }
         }
+    }
+    
+    private func updateBot() throws {
+        try useCase.updateBot()
+        sendEvent(.done)
+    }
+    
+    private func updateSex() throws {
+        try useCase.updateSex()
+        sendEvent(.done)
     }
 
     private func updateAvatarLink(_ link: String) throws {
