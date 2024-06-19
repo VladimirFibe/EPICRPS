@@ -1,13 +1,16 @@
 import UIKit
 
 final class RoundBackgroundView: UIView {
+    private let timerWidth = 166.0
     private let backgroundImage = UIImageView()
     private let upHandImage = UIImageView()
     private let downHandImage = UIImageView()
     private let titleLabel = UILabel()
     private let roundLabel = UILabel()
     private let progressLabel = UILabel()
-    
+    private let timerProgressView = UIProgressView()
+    private let timerLabel = UILabel()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupBackgroundImage()
@@ -16,6 +19,8 @@ final class RoundBackgroundView: UIView {
         setupTitleLabel()
         setupRoundLabel()
         setupProgressLabel()
+        setupTimerProgressView()
+        setupTimerLabel()
     }
     
     required init?(coder: NSCoder) {
@@ -101,4 +106,37 @@ extension RoundBackgroundView {
             progressLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10)
         ])
     }
+    
+    private func setupTimerProgressView() {
+        addSubview(timerProgressView)
+        timerProgressView.setProgress(0.75, animated: true)
+        timerProgressView.progressTintColor = .timerProgressTint
+        timerProgressView.trackTintColor = .progressTrackTint
+        timerProgressView.transform = CGAffineTransform(rotationAngle: .pi / -2)
+        timerProgressView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            timerProgressView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            timerProgressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16 - timerWidth / 2),
+            timerProgressView.widthAnchor.constraint(equalToConstant: timerWidth),
+            timerProgressView.heightAnchor.constraint(equalToConstant: 10)
+        ])
+    }
+    
+    private func setupTimerLabel() {
+        addSubview(timerLabel)
+        timerLabel.text = "30"
+        timerLabel.textColor = .white
+        timerLabel.font =  RubikFont.bold.size12
+        timerLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            timerLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            timerLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: timerWidth / 2 + 16)
+        
+        ])
+    }
+}
+
+@available(iOS 17.0, *)
+#Preview {
+    RoundBackgroundView()
 }
