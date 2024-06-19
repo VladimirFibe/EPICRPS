@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC122C234FF500250FF8 /* AppDelegate.swift */; };
 		D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC142C234FF500250FF8 /* SceneDelegate.swift */; };
-		D95AEC172C234FF500250FF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC162C234FF500250FF8 /* ViewController.swift */; };
 		D95AEC1D2C234FF500250FF8 /* EPICRPS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */; };
 		D95AEC1F2C234FF600250FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC1E2C234FF600250FF8 /* Assets.xcassets */; };
 		D95AEC222C234FF600250FF8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC212C234FF600250FF8 /* Base */; };
+		D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC292C235B2B00250FF8 /* SplashViewController.swift */; };
+		D95AEC2D2C23623500250FF8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC2C2C23623500250FF8 /* FirebaseAuth */; };
+		D95AEC2F2C23623500250FF8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC2E2C23623500250FF8 /* FirebaseFirestore */; };
+		D95AEC312C23623500250FF8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC302C23623500250FF8 /* FirebaseFirestoreSwift */; };
+		D95AEC332C23623500250FF8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC322C23623500250FF8 /* FirebaseStorage */; };
+		D95AEC352C2362BE00250FF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D95AEC0F2C234FF500250FF8 /* EPICRPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPICRPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95AEC122C234FF500250FF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95AEC142C234FF500250FF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D95AEC162C234FF500250FF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D95AEC1C2C234FF500250FF8 /* EPICRPS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EPICRPS.xcdatamodel; sourceTree = "<group>"; };
 		D95AEC1E2C234FF600250FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95AEC212C234FF600250FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95AEC232C234FF600250FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95AEC292C235B2B00250FF8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D95AEC392C23639300250FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AEC2D2C23623500250FF8 /* FirebaseAuth in Frameworks */,
+				D95AEC332C23623500250FF8 /* FirebaseStorage in Frameworks */,
+				D95AEC2F2C23623500250FF8 /* FirebaseFirestore in Frameworks */,
+				D95AEC312C23623500250FF8 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,7 @@
 		D95AEC062C234FF500250FF8 = {
 			isa = PBXGroup;
 			children = (
+				D95AEC392C23639300250FF8 /* README.md */,
 				D95AEC112C234FF500250FF8 /* EPICRPS */,
 				D95AEC102C234FF500250FF8 /* Products */,
 			);
@@ -56,15 +68,40 @@
 		D95AEC112C234FF500250FF8 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
-				D95AEC122C234FF500250FF8 /* AppDelegate.swift */,
-				D95AEC142C234FF500250FF8 /* SceneDelegate.swift */,
-				D95AEC162C234FF500250FF8 /* ViewController.swift */,
+				D95AEC362C23632A00250FF8 /* App */,
+				D95AEC372C23633F00250FF8 /* Modules */,
 				D95AEC1E2C234FF600250FF8 /* Assets.xcassets */,
 				D95AEC202C234FF600250FF8 /* LaunchScreen.storyboard */,
 				D95AEC232C234FF600250FF8 /* Info.plist */,
+				D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */,
 				D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */,
 			);
 			path = EPICRPS;
+			sourceTree = "<group>";
+		};
+		D95AEC362C23632A00250FF8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC122C234FF500250FF8 /* AppDelegate.swift */,
+				D95AEC142C234FF500250FF8 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D95AEC372C23633F00250FF8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC382C23634C00250FF8 /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D95AEC382C23634C00250FF8 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC292C235B2B00250FF8 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,12 @@
 			dependencies = (
 			);
 			name = EPICRPS;
+			packageProductDependencies = (
+				D95AEC2C2C23623500250FF8 /* FirebaseAuth */,
+				D95AEC2E2C23623500250FF8 /* FirebaseFirestore */,
+				D95AEC302C23623500250FF8 /* FirebaseFirestoreSwift */,
+				D95AEC322C23623500250FF8 /* FirebaseStorage */,
+			);
 			productName = EPICRPS;
 			productReference = D95AEC0F2C234FF500250FF8 /* EPICRPS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = D95AEC062C234FF500250FF8;
+			packageReferences = (
+				D95AEC2B2C23623500250FF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D95AEC102C234FF500250FF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +173,7 @@
 			files = (
 				D95AEC1F2C234FF600250FF8 /* Assets.xcassets in Resources */,
 				D95AEC222C234FF600250FF8 /* Base in Resources */,
+				D95AEC352C2362BE00250FF8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95AEC172C234FF500250FF8 /* ViewController.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
 				D95AEC1D2C234FF500250FF8 /* EPICRPS.xcdatamodeld in Sources */,
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
+				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +412,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D95AEC2B2C23623500250FF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D95AEC2C2C23623500250FF8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D95AEC2B2C23623500250FF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D95AEC2E2C23623500250FF8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D95AEC2B2C23623500250FF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D95AEC302C23623500250FF8 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D95AEC2B2C23623500250FF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		D95AEC322C23623500250FF8 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D95AEC2B2C23623500250FF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */ = {
