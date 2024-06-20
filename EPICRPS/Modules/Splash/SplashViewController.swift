@@ -1,8 +1,12 @@
 import UIKit
 
 final class SplashViewController: UITableViewController {
-    private var recents: [Recent] = [] { didSet { tableView.reloadData() }}
+    private var recents: [Recent] = [] { didSet {
+        footerView.configure(with: recents.isEmpty)
+        tableView.reloadData()
+    }}
     private let splashView = SplashView()
+    private let footerView = SplashFooterView()
     private let store: SplashStore
     private var bag = Bag()
     
@@ -26,9 +30,9 @@ extension SplashViewController {
         store.sendAction(.login)
         view.backgroundColor = .xFDFEFF
         setupNavigationBar()
-        splashView.configure(with: self, startAction: #selector(startAction), resultsAction: #selector(resultsAction))
         setupObservers()
         tableView.register(RecentCell.self, forCellReuseIdentifier: RecentCell.identifier)
+        footerView.configure(with: self, startAction: #selector(startAction), resultsAction: #selector(resultsAction))
     }
     
     private func setupNavigationBar() {
@@ -63,17 +67,17 @@ extension SplashViewController {
 // MARK: - Navigation
 extension SplashViewController {
     @objc private func navBarLeftButtonAction() {
-        let controller = UIViewController()
+        let controller = SettingsViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func navBarRightButtonAction() {
-        let controller = UIViewController()
+        let controller = RulesViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func startAction() {
-        let controller = UIViewController()
+        let controller = PersonsViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -92,13 +96,20 @@ extension SplashViewController {
 // MARK: - Tableview
 extension SplashViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        recents.isEmpty ? view.safeAreaLayoutGuide.layoutFrame.height : 0
+        recents.isEmpty ? 500 : 0
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         splashView
     }
     
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        90
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        footerView
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         recents.count
     }

@@ -8,7 +8,7 @@ final class FightResultView: UIView {
     private let radius = 39.0
     private let borderWidth = 50.0
     private var cornerRadius: Double { radius + borderWidth }
-
+    private lazy var backgroundView = EllipticalRadialGradientView(isVictory)
     private let mainStackView = UIStackView()
     private let buttonStackView = UIStackView()
     private let avatarImageView = UIImageView()
@@ -22,21 +22,14 @@ final class FightResultView: UIView {
         self.score = score
         self.avatar = avatar
         super.init(frame: .zero)
+        setupBackgroundView(with: isVictory)
         setupMainStackView()
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: 0, width: 800, height: 1000)
-        gradient.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
-        layer.insertSublayer(gradient, at: 0)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-    }
     public func configure(with target: Any?, homeAction: Selector, repeatAction: Selector) {
         homeButton.addTarget(target, action: homeAction, for: .primaryActionTriggered)
         repeatButton.addTarget(target, action: repeatAction, for: .primaryActionTriggered)
@@ -44,6 +37,18 @@ final class FightResultView: UIView {
 }
 // MARK: Setup Views
 extension FightResultView {
+    
+    private func setupBackgroundView(with isVictory: Bool) {
+        addSubview(backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+    }
+    
     private func setupMainStackView() {
         addSubview(mainStackView)
         mainStackView.axis = .vertical
@@ -88,6 +93,7 @@ extension FightResultView {
     
     private func setupScoreLabel() {
         mainStackView.addArrangedSubview(scoreLabel)
+        scoreLabel.textColor = .systemBackground
         scoreLabel.text = score
         scoreLabel.font = RubikFont.medium.size41
     }
@@ -112,5 +118,108 @@ extension FightResultView {
 
 @available(iOS 17.0, *)
 #Preview {
-    FightResultView(isVictory: true, score: "3 - 1", avatar: .avatar)
+    FightResultView(isVictory: false, score: "3 - 1", avatar: .avatar)
 }
+
+final class EllipticalRadialGradientView: UIView {
+    
+    private var isGradientDrawn = false
+    
+    private var gradientLayer: EllipticalGradientLayer?
+    
+    init(_ isVictory: Bool) {
+        super.init(frame: .zero)
+        if isVictory {
+            gradientLayer = EllipticalGradientLayer(
+                innerColor: UIColor.x2D2599.cgColor,
+                outsideColor: UIColor.x656DF4.cgColor
+            )
+        } else {
+            gradientLayer = EllipticalGradientLayer(
+                innerColor: UIColor.xFFB600.cgColor,
+                outsideColor: UIColor.xEE413C.cgColor
+            )
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if !isGradientDrawn && bounds != .zero {
+            makeGradient()
+        }
+    }
+    
+    private func makeGradient() {
+        isGradientDrawn = true
+        guard let gradientLayer else { return }
+        layer.addSublayer(gradientLayer)
+        gradientLayer.frame = self.bounds
+        gradientLayer.setNeedsDisplay()
+    }
+}
+
+final class EllipticalGradientLayer: CALayer {
+    
+    private var innerColor: CGColor?
+    private var outsideColor: CGColor?
+    
+    init(innerColor: CGColor, outsideColor: CGColor) {
+        super.init()
+        
+        self.innerColor = innerColor
+        self.outsideColor = outsideColor
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    override func draw(in ctx: CGContext) {
+        
+        let colors = [innerColor, outsideColor]
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let colorLocations: [CGFloat] = [0.0, 1.0]
+        
+        /// CGGradient — это Core Graphics объект, который описывает градиент. Градиент определяется набором цветов и их расположениями.
+        /// - colorsSpace:  цветовое пространство, в котором будут интерполироваться цвета градиента. По дефолту стандартное цветового пространства устройства
+        /// - colors — массив, содержащий цвета градиента.
+        /// - locations — массив значений, указывающих расположение каждого цвета в градиенте. Значения в массиве должны быть в диапазоне от 0.0 до 1.0, где 0.0 представляет начало градиента, а 1.0 — конец градиента.
+        guard
+            let gradient = CGGradient(
+                colorsSpace: colorSpace,
+                colors: colors as CFArray,
+                locations: colorLocations
+            )
+        else { return }
+        
+        let center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
+        
+        // startRadius и endRadius определяют размер innerColor
+        let startRadius: CGFloat = 0
+        let endRadius: CGFloat = max(bounds.size.width, bounds.size.height) / 2
+        
+        ctx.saveGState()
+        ctx.translateBy(x: center.x, y: center.y)
+        ctx.scaleBy(x: bounds.size.width / bounds.size.height, y: 1.0)
+        ctx.translateBy(x: -center.x, y: -center.y)
+        
+        /// drawRadialGradient — это метод CGContext, который рисует радиальный градиент, используя указанные параметры.
+        /// - gradient - определяет цвета и расположения градиента.
+        /// - startCenter -  начальная точка центра градиента.
+        /// - startRadius -  радиус начальной окружности градиента. Обычно 0, чтобы градиент начинался из центра.
+        /// - endCenter  - конечная точка центра градиента. Для радиального градиента, который мы рисуем, начальная и конечная точки центра обычно совпадают
+        /// - endRadius -  радиус конечной окружности градиента. Он определяет, где градиент закончится.
+        ctx.drawRadialGradient(gradient,
+                               startCenter: center, startRadius: startRadius,
+                               endCenter: center, endRadius: endRadius,
+                               options: .drawsAfterEndLocation)
+        ctx.restoreGState()
+    }
+}
+

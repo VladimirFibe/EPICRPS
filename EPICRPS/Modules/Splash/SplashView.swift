@@ -4,25 +4,16 @@ final class SplashView: UIView {
     private let titleLabel = UILabel()
     private let maleHandView = UIImageView()
     private let femaleHandView = UIImageView()
-    private let startButton = UIButton(type: .system)
-    private let resultsButton = UIButton(type: .system)
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupTitleLabel()
         setupMaleHandView()
         setupFemaleHandView()
-        setupStartButton()
-        setupResultsButton()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    public func configure(with target: Any?, startAction: Selector, resultsAction: Selector) {
-        startButton.addTarget(target, action: startAction, for: .primaryActionTriggered)
-        resultsButton.addTarget(target, action: resultsAction, for: .primaryActionTriggered)
     }
 }
 // MARK: Setup Views
@@ -62,26 +53,6 @@ extension SplashView {
             femaleHandView.heightAnchor.constraint(equalToConstant: 83.03),
             femaleHandView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: -24),
             femaleHandView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 55)
-        ])
-    }
-    
-    private func setupStartButton() {
-        addSubview(startButton)
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        startButton.setImage(.start, for: [])
-        NSLayoutConstraint.activate([
-            startButton.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
-        ])
-    }
-    
-    private func setupResultsButton() {
-        addSubview(resultsButton)
-        resultsButton.translatesAutoresizingMaskIntoConstraints = false
-        resultsButton.setImage(.results, for: [])
-        NSLayoutConstraint.activate([
-            startButton.bottomAnchor.constraint(equalTo: resultsButton.topAnchor, constant: -11),
-            resultsButton.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor),
-            resultsButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -73)
         ])
     }
 }

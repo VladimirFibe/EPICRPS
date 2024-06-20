@@ -58,6 +58,21 @@
 		D95AEC8C2C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */; };
 		D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */; };
 		D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */; };
+		D97400232C24A0C000843670 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400222C24A0C000843670 /* PersonCell.swift */; };
+		D97400262C24A0EC00843670 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400252C24A0EC00843670 /* PersonsViewController.swift */; };
+		D97400282C24A10A00843670 /* PersonStrore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400272C24A10A00843670 /* PersonStrore.swift */; };
+		D974002A2C24A2FB00843670 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400292C24A2FB00843670 /* RulesViewController.swift */; };
+		D974002D2C24A3D500843670 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974002C2C24A3D500843670 /* SettingsViewController.swift */; };
+		D97400312C24A41F00843670 /* SettingsNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400302C24A41F00843670 /* SettingsNameTableViewCell.swift */; };
+		D97400332C24A45500843670 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400322C24A45500843670 /* SettingsStore.swift */; };
+		D97400352C24A52300843670 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400342C24A52300843670 /* EditProfileViewController.swift */; };
+		D97400382C24A54D00843670 /* EditProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400372C24A54D00843670 /* EditProfileStore.swift */; };
+		D974003A2C24A56200843670 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400392C24A56200843670 /* PhotoTableViewCell.swift */; };
+		D974003C2C24A57800843670 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974003B2C24A57800843670 /* TextFieldTableViewCell.swift */; };
+		D974003E2C24A59F00843670 /* EditProfileBotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974003D2C24A59F00843670 /* EditProfileBotCell.swift */; };
+		D97400402C24A62600843670 /* ProfileStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974003F2C24A62600843670 /* ProfileStatusViewController.swift */; };
+		D97400432C24A64E00843670 /* ProfileStatusStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400422C24A64E00843670 /* ProfileStatusStore.swift */; };
+		D97400452C24A6FB00843670 /* SplashFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97400442C24A6FB00843670 /* SplashFooterView.swift */; };
 		D98CB4192C2434F1001F8A9A /* FightLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB4182C2434F1001F8A9A /* FightLoadView.swift */; };
 		D98CB41C2C243581001F8A9A /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB41B2C243581001F8A9A /* FightLoadViewController.swift */; };
 		D98CB41E2C24389A001F8A9A /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB41D2C24389A001F8A9A /* FightResultView.swift */; };
@@ -122,6 +137,21 @@
 		D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+SquareCircuitSnake.swift"; sourceTree = "<group>"; };
 		D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+TriangleDotShift.swift"; sourceTree = "<group>"; };
 		D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		D97400222C24A0C000843670 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		D97400252C24A0EC00843670 /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
+		D97400272C24A10A00843670 /* PersonStrore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonStrore.swift; sourceTree = "<group>"; };
+		D97400292C24A2FB00843670 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		D974002C2C24A3D500843670 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D97400302C24A41F00843670 /* SettingsNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNameTableViewCell.swift; sourceTree = "<group>"; };
+		D97400322C24A45500843670 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		D97400342C24A52300843670 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		D97400372C24A54D00843670 /* EditProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileStore.swift; sourceTree = "<group>"; };
+		D97400392C24A56200843670 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		D974003B2C24A57800843670 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		D974003D2C24A59F00843670 /* EditProfileBotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileBotCell.swift; sourceTree = "<group>"; };
+		D974003F2C24A62600843670 /* ProfileStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatusViewController.swift; sourceTree = "<group>"; };
+		D97400422C24A64E00843670 /* ProfileStatusStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatusStore.swift; sourceTree = "<group>"; };
+		D97400442C24A6FB00843670 /* SplashFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFooterView.swift; sourceTree = "<group>"; };
 		D98CB4182C2434F1001F8A9A /* FightLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadView.swift; sourceTree = "<group>"; };
 		D98CB41B2C243581001F8A9A /* FightLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadViewController.swift; sourceTree = "<group>"; };
 		D98CB41D2C24389A001F8A9A /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
@@ -170,8 +200,8 @@
 		D95AEC112C234FF500250FF8 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
-				D95AEC4E2C23B74700250FF8 /* Services */,
 				D95AEC362C23632A00250FF8 /* App */,
+				D95AEC4E2C23B74700250FF8 /* Services */,
 				D95AEC462C23B48400250FF8 /* Models */,
 				D95AEC372C23633F00250FF8 /* Modules */,
 				D95AEC4B2C23B5BA00250FF8 /* Base */,
@@ -196,6 +226,9 @@
 				D99656532C241E49006A2343 /* Round */,
 				D98CB41A2C2434F6001F8A9A /* FightLoad */,
 				D98CB41F2C2438A3001F8A9A /* FightResult */,
+				D97400242C24A0D700843670 /* Persons */,
+				D974002B2C24A32A00843670 /* Rules */,
+				D974002F2C24A3EE00843670 /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -204,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D95AEC292C235B2B00250FF8 /* SplashViewController.swift */,
+				D97400442C24A6FB00843670 /* SplashFooterView.swift */,
 				D95AEC3A2C236F2D00250FF8 /* SplashView.swift */,
 				D95AEC512C23B7DF00250FF8 /* SplashStore.swift */,
 				D996564F2C241906006A2343 /* SplashUseCase.swift */,
@@ -305,6 +339,65 @@
 				D95AEC5A2C23BCE700250FF8 /* ProgressView.swift */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		D97400242C24A0D700843670 /* Persons */ = {
+			isa = PBXGroup;
+			children = (
+				D97400222C24A0C000843670 /* PersonCell.swift */,
+				D97400252C24A0EC00843670 /* PersonsViewController.swift */,
+				D97400272C24A10A00843670 /* PersonStrore.swift */,
+			);
+			path = Persons;
+			sourceTree = "<group>";
+		};
+		D974002B2C24A32A00843670 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				D97400292C24A2FB00843670 /* RulesViewController.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		D974002E2C24A3DB00843670 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				D974002C2C24A3D500843670 /* SettingsViewController.swift */,
+				D97400302C24A41F00843670 /* SettingsNameTableViewCell.swift */,
+				D97400322C24A45500843670 /* SettingsStore.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		D974002F2C24A3EE00843670 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D974002E2C24A3DB00843670 /* SettingsView */,
+				D97400362C24A52900843670 /* EditProfile */,
+				D97400412C24A63A00843670 /* ProfileStatus */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D97400362C24A52900843670 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				D97400342C24A52300843670 /* EditProfileViewController.swift */,
+				D97400372C24A54D00843670 /* EditProfileStore.swift */,
+				D97400392C24A56200843670 /* PhotoTableViewCell.swift */,
+				D974003B2C24A57800843670 /* TextFieldTableViewCell.swift */,
+				D974003D2C24A59F00843670 /* EditProfileBotCell.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		D97400412C24A63A00843670 /* ProfileStatus */ = {
+			isa = PBXGroup;
+			children = (
+				D974003F2C24A62600843670 /* ProfileStatusViewController.swift */,
+				D97400422C24A64E00843670 /* ProfileStatusStore.swift */,
+			);
+			path = ProfileStatus;
 			sourceTree = "<group>";
 		};
 		D98CB41A2C2434F6001F8A9A /* FightLoad */ = {
@@ -425,14 +518,21 @@
 				D99656502C241906006A2343 /* SplashUseCase.swift in Sources */,
 				D99656552C241E6D006A2343 /* RoundViewController.swift in Sources */,
 				D95AEC852C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift in Sources */,
+				D97400312C24A41F00843670 /* SettingsNameTableViewCell.swift in Sources */,
+				D974002D2C24A3D500843670 /* SettingsViewController.swift in Sources */,
 				D99656522C24190F006A2343 /* SplashService.swift in Sources */,
+				D97400352C24A52300843670 /* EditProfileViewController.swift in Sources */,
 				D95AEC7E2C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift in Sources */,
+				D97400402C24A62600843670 /* ProfileStatusViewController.swift in Sources */,
 				D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */,
 				D95AEC7C2C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift in Sources */,
+				D97400262C24A0EC00843670 /* PersonsViewController.swift in Sources */,
 				D98CB41E2C24389A001F8A9A /* FightResultView.swift in Sources */,
+				D97400432C24A64E00843670 /* ProfileStatusStore.swift in Sources */,
 				D99656572C241EDB006A2343 /* RoundService.swift in Sources */,
 				D996565B2C241F42006A2343 /* RoundStore.swift in Sources */,
 				D95AEC622C23BCE700250FF8 /* ProgressHUD+Banner.swift in Sources */,
+				D974002A2C24A2FB00843670 /* RulesViewController.swift in Sources */,
 				D95AEC872C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift in Sources */,
 				D95AEC8C2C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift in Sources */,
 				D95AEC4A2C23B4B900250FF8 /* Recent.swift in Sources */,
@@ -442,6 +542,7 @@
 				D95AEC5D2C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift in Sources */,
 				D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */,
 				D95AEC5F2C23BCE700250FF8 /* ProgressHUD+Public.swift in Sources */,
+				D97400452C24A6FB00843670 /* SplashFooterView.swift in Sources */,
 				D98CB41C2C243581001F8A9A /* FightLoadViewController.swift in Sources */,
 				D95AEC802C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
@@ -457,19 +558,26 @@
 				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
 				D95AEC482C23B48F00250FF8 /* Person.swift in Sources */,
 				D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */,
+				D97400382C24A54D00843670 /* EditProfileStore.swift in Sources */,
+				D97400232C24A0C000843670 /* PersonCell.swift in Sources */,
 				D95AEC502C23B76100250FF8 /* FirebaseClient.swift in Sources */,
 				D95AEC7F2C23BCFA00250FF8 /* ProgressHUD+CirclePulseMultiple.swift in Sources */,
 				D95AEC522C23B7DF00250FF8 /* SplashStore.swift in Sources */,
+				D974003E2C24A59F00843670 /* EditProfileBotCell.swift in Sources */,
 				D95AEC8A2C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift in Sources */,
+				D974003A2C24A56200843670 /* PhotoTableViewCell.swift in Sources */,
 				D95AEC8B2C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift in Sources */,
 				D95AEC792C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift in Sources */,
+				D974003C2C24A57800843670 /* TextFieldTableViewCell.swift in Sources */,
 				D99656592C241F28006A2343 /* RoundUseCase.swift in Sources */,
+				D97400282C24A10A00843670 /* PersonStrore.swift in Sources */,
 				D95AEC812C23BCFA00250FF8 /* ProgressHUD+CircleRippleMultiple.swift in Sources */,
 				D95AEC822C23BCFA00250FF8 /* ProgressHUD+CircleRippleSingle.swift in Sources */,
 				D95AEC832C23BCFA00250FF8 /* ProgressHUD+CircleRotateChase.swift in Sources */,
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
 				D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */,
 				D95AEC7B2C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift in Sources */,
+				D97400332C24A45500843670 /* SettingsStore.swift in Sources */,
 				D98CB4212C245118001F8A9A /* FightResultViewController.swift in Sources */,
 				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,
 			);
