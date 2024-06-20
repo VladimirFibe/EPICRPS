@@ -1,11 +1,10 @@
 import UIKit
 
 final class FightResultViewController: UIViewController {
-    private let recent: Recent
-    private let fightResultView = FightResultView()
+    private let fightResultView: FightResultView
     
-    init(recent: Recent) {
-        self.recent = recent
+    init(isVictory: Bool, score: String, avatar: UIImage) {
+        fightResultView = FightResultView(isVictory: isVictory, score: score, avatar: avatar)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -19,7 +18,15 @@ final class FightResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fightResultView.configure(with: recent)
         navigationItem.hidesBackButton = true
+        fightResultView.configure(with: self, homeAction: #selector(homeAction), repeatAction: #selector(repeatAction))
+    }
+    
+    @objc private func homeAction() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc private func repeatAction() {
+        navigationController?.popViewController(animated: true)
     }
 }

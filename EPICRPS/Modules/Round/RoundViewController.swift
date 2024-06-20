@@ -119,8 +119,13 @@ extension RoundViewController {
     }
     
     private func pushFightResult(recent: Recent) {
-        let controller = FightResultViewController(recent: recent)
-        navigationController?.pushViewController(controller, animated: true)
+        FileStorage.downloadImage(id: recent.currentId, link: recent.currentAvatar) { image in
+            let avatar = image?.circleMasked ?? .avatar
+            let isVictory = recent.currentCount > recent.playerCount
+            let score = "\(recent.playerCount) - \(recent.currentCount)"
+            let controller = FightResultViewController(isVictory: isVictory, score: score, avatar: avatar)
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     private func runFightLoad() {

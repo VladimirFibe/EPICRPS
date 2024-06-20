@@ -1,6 +1,10 @@
 import UIKit
 
 final class FightResultView: UIView {
+    private let isVictory: Bool
+    private let score: String
+    private let avatar: UIImage
+    
     private let radius = 39.0
     private let borderWidth = 50.0
     private var cornerRadius: Double { radius + borderWidth }
@@ -12,24 +16,30 @@ final class FightResultView: UIView {
     private let scoreLabel = UILabel()
     private let homeButton = UIButton(type: .system)
     private let repeatButton = UIButton(type: .system)
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    init(isVictory: Bool, score: String, avatar: UIImage) {
+        self.isVictory = isVictory
+        self.score = score
+        self.avatar = avatar
+        super.init(frame: .zero)
         setupMainStackView()
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: 0, width: 800, height: 1000)
+        gradient.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
+        layer.insertSublayer(gradient, at: 0)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(with recent: Recent) {
-        let isVictory = recent.currentCount > recent.playerCount
-        FileStorage.downloadImage(id: recent.currentId, link: recent.currentAvatar) { image in
-            self.avatarImageView.image = image?.circleMasked
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
-        resultLabel.text = isVictory ? "You Win" : "You Lose"
-        resultLabel.textColor = isVictory ? .xFFB24C : .x1B122E
-        scoreLabel.text = "\(recent.playerCount) - \(recent.currentCount)"
+    }
+    public func configure(with target: Any?, homeAction: Selector, repeatAction: Selector) {
+        homeButton.addTarget(target, action: homeAction, for: .primaryActionTriggered)
+        repeatButton.addTarget(target, action: repeatAction, for: .primaryActionTriggered)
     }
 }
 // MARK: Setup Views
@@ -71,13 +81,14 @@ extension FightResultView {
     
     private func setupResultLabel() {
         mainStackView.addArrangedSubview(resultLabel)
-        resultLabel.text = "You win"
+        resultLabel.text = isVictory ? "You Win" : "You Lose"
+        resultLabel.textColor = isVictory ? .xFFB24C : .x1B122E
         resultLabel.font = RubikFont.bold.size21
     }
     
     private func setupScoreLabel() {
         mainStackView.addArrangedSubview(scoreLabel)
-        scoreLabel.text = "0 - 3"
+        scoreLabel.text = score
         scoreLabel.font = RubikFont.medium.size41
     }
     
@@ -101,5 +112,5 @@ extension FightResultView {
 
 @available(iOS 17.0, *)
 #Preview {
-    FightResultView()
+    FightResultView(isVictory: true, score: "3 - 1", avatar: .avatar)
 }
