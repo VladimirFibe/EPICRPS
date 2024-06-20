@@ -113,7 +113,7 @@ extension SplashViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        FirebaseClient.shared.recent = recents[indexPath.row]
+        FirebaseClient.shared.recent = recents[indexPath.row]
         runRound()
     }
 }

@@ -5,7 +5,6 @@ class RoundViewController: UIViewController {
     private var canFlip = false
     var player: AVAudioPlayer?
     var playerButton: AVAudioPlayer?
-    private lazy var useCase = RoundUseCase(service: FirebaseClient.shared)
     private let store: RoundStore
     private var bag = Bag()
     private var buttons: [UIButton] = []
@@ -27,6 +26,7 @@ class RoundViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .systemBackground
         super.viewDidLoad()
+        runFightLoad()
         backgroundView.configure(with: FirebaseClient.shared.recent)
         setupButtons()
         setupObservers()
@@ -111,12 +111,22 @@ class RoundViewController: UIViewController {
     
     @objc private func pauseButtonTapped() {}
     
+}
+// MARK: - Navigation
+extension RoundViewController {
     @objc private func backButtonTapped() {
         navigationController?.popToRootViewController(animated: true)
     }
     
     private func pushFightResult(recent: Recent) {
-//        let controller = FightResultViewController(recent: recent)
-//        navigationController?.pushViewController(controller, animated: true)
+        let controller = FightResultViewController(recent: recent)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func runFightLoad() {
+        guard let person = FirebaseClient.shared.person, let friend = FirebaseClient.shared.friend else { return }
+        let controller = FightLoadViewController(firstPlayer: person, secondPlayer: friend)
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
     }
 }

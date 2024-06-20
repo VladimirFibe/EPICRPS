@@ -58,6 +58,10 @@
 		D95AEC8C2C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */; };
 		D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */; };
 		D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */; };
+		D98CB4192C2434F1001F8A9A /* FightLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB4182C2434F1001F8A9A /* FightLoadView.swift */; };
+		D98CB41C2C243581001F8A9A /* FightLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB41B2C243581001F8A9A /* FightLoadViewController.swift */; };
+		D98CB41E2C24389A001F8A9A /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB41D2C24389A001F8A9A /* FightResultView.swift */; };
+		D98CB4212C245118001F8A9A /* FightResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98CB4202C245118001F8A9A /* FightResultViewController.swift */; };
 		D99656502C241906006A2343 /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996564F2C241906006A2343 /* SplashUseCase.swift */; };
 		D99656522C24190F006A2343 /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656512C24190F006A2343 /* SplashService.swift */; };
 		D99656552C241E6D006A2343 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656542C241E6D006A2343 /* RoundViewController.swift */; };
@@ -118,6 +122,10 @@
 		D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+SquareCircuitSnake.swift"; sourceTree = "<group>"; };
 		D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+TriangleDotShift.swift"; sourceTree = "<group>"; };
 		D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		D98CB4182C2434F1001F8A9A /* FightLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadView.swift; sourceTree = "<group>"; };
+		D98CB41B2C243581001F8A9A /* FightLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadViewController.swift; sourceTree = "<group>"; };
+		D98CB41D2C24389A001F8A9A /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
+		D98CB4202C245118001F8A9A /* FightResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewController.swift; sourceTree = "<group>"; };
 		D996564F2C241906006A2343 /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
 		D99656512C24190F006A2343 /* SplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashService.swift; sourceTree = "<group>"; };
 		D99656542C241E6D006A2343 /* RoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +194,8 @@
 			children = (
 				D95AEC382C23634C00250FF8 /* Splash */,
 				D99656532C241E49006A2343 /* Round */,
+				D98CB41A2C2434F6001F8A9A /* FightLoad */,
+				D98CB41F2C2438A3001F8A9A /* FightResult */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -297,6 +307,24 @@
 			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
+		D98CB41A2C2434F6001F8A9A /* FightLoad */ = {
+			isa = PBXGroup;
+			children = (
+				D98CB4182C2434F1001F8A9A /* FightLoadView.swift */,
+				D98CB41B2C243581001F8A9A /* FightLoadViewController.swift */,
+			);
+			path = FightLoad;
+			sourceTree = "<group>";
+		};
+		D98CB41F2C2438A3001F8A9A /* FightResult */ = {
+			isa = PBXGroup;
+			children = (
+				D98CB41D2C24389A001F8A9A /* FightResultView.swift */,
+				D98CB4202C245118001F8A9A /* FightResultViewController.swift */,
+			);
+			path = FightResult;
+			sourceTree = "<group>";
+		};
 		D99656532C241E49006A2343 /* Round */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +429,7 @@
 				D95AEC7E2C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift in Sources */,
 				D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */,
 				D95AEC7C2C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift in Sources */,
+				D98CB41E2C24389A001F8A9A /* FightResultView.swift in Sources */,
 				D99656572C241EDB006A2343 /* RoundService.swift in Sources */,
 				D996565B2C241F42006A2343 /* RoundStore.swift in Sources */,
 				D95AEC622C23BCE700250FF8 /* ProgressHUD+Banner.swift in Sources */,
@@ -413,6 +442,7 @@
 				D95AEC5D2C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift in Sources */,
 				D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */,
 				D95AEC5F2C23BCE700250FF8 /* ProgressHUD+Public.swift in Sources */,
+				D98CB41C2C243581001F8A9A /* FightLoadViewController.swift in Sources */,
 				D95AEC802C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
 				D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */,
@@ -423,6 +453,7 @@
 				D95AEC882C23BCFA00250FF8 /* ProgressHUD+PacmanProgress.swift in Sources */,
 				D95AEC7A2C23BCFA00250FF8 /* ProgressHUD+BallVerticalBounce.swift in Sources */,
 				D95AEC5E2C23BCE700250FF8 /* ProgressHUD.swift in Sources */,
+				D98CB4192C2434F1001F8A9A /* FightLoadView.swift in Sources */,
 				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
 				D95AEC482C23B48F00250FF8 /* Person.swift in Sources */,
 				D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */,
@@ -439,6 +470,7 @@
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
 				D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */,
 				D95AEC7B2C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift in Sources */,
+				D98CB4212C245118001F8A9A /* FightResultViewController.swift in Sources */,
 				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
