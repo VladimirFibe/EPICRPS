@@ -7,9 +7,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let controller = SplashViewController()
-        window?.rootViewController = UINavigationController(rootViewController: controller)
+        window?.rootViewController = UINavigationController(rootViewController: makeSplashController())
         window?.makeKeyAndVisible()
+    }
+    
+    private func makeSplashController() -> UIViewController {
+        let useCase = SplashUseCase(service: FirebaseClient.shared)
+        let store = SplashStore(useCase: useCase)
+        return SplashViewController(store: store)
     }
 }
 

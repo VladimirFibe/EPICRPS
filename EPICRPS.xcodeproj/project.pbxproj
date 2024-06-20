@@ -26,6 +26,45 @@
 		D95AEC482C23B48F00250FF8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC472C23B48F00250FF8 /* Person.swift */; };
 		D95AEC4A2C23B4B900250FF8 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC492C23B4B900250FF8 /* Recent.swift */; };
 		D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC4C2C23B6B600250FF8 /* Store.swift */; };
+		D95AEC502C23B76100250FF8 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC4F2C23B76100250FF8 /* FirebaseClient.swift */; };
+		D95AEC522C23B7DF00250FF8 /* SplashStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC512C23B7DF00250FF8 /* SplashStore.swift */; };
+		D95AEC542C23BBBB00250FF8 /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC532C23BBBB00250FF8 /* RecentCell.swift */; };
+		D95AEC562C23BC5B00250FF8 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC552C23BC5B00250FF8 /* FileStorage.swift */; };
+		D95AEC5D2C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC572C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift */; };
+		D95AEC5E2C23BCE700250FF8 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC582C23BCE700250FF8 /* ProgressHUD.swift */; };
+		D95AEC5F2C23BCE700250FF8 /* ProgressHUD+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC592C23BCE700250FF8 /* ProgressHUD+Public.swift */; };
+		D95AEC602C23BCE700250FF8 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC5A2C23BCE700250FF8 /* ProgressView.swift */; };
+		D95AEC612C23BCE700250FF8 /* ProgressHUD+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC5B2C23BCE700250FF8 /* ProgressHUD+Enums.swift */; };
+		D95AEC622C23BCE700250FF8 /* ProgressHUD+Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC5C2C23BCE700250FF8 /* ProgressHUD+Banner.swift */; };
+		D95AEC792C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC632C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift */; };
+		D95AEC7A2C23BCFA00250FF8 /* ProgressHUD+BallVerticalBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC642C23BCFA00250FF8 /* ProgressHUD+BallVerticalBounce.swift */; };
+		D95AEC7B2C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC652C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift */; };
+		D95AEC7C2C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC662C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift */; };
+		D95AEC7D2C23BCFA00250FF8 /* ProgressHUD+CircleBarSpinFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC672C23BCFA00250FF8 /* ProgressHUD+CircleBarSpinFade.swift */; };
+		D95AEC7E2C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC682C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift */; };
+		D95AEC7F2C23BCFA00250FF8 /* ProgressHUD+CirclePulseMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC692C23BCFA00250FF8 /* ProgressHUD+CirclePulseMultiple.swift */; };
+		D95AEC802C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC6A2C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift */; };
+		D95AEC812C23BCFA00250FF8 /* ProgressHUD+CircleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC6B2C23BCFA00250FF8 /* ProgressHUD+CircleRippleMultiple.swift */; };
+		D95AEC822C23BCFA00250FF8 /* ProgressHUD+CircleRippleSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC6C2C23BCFA00250FF8 /* ProgressHUD+CircleRippleSingle.swift */; };
+		D95AEC832C23BCFA00250FF8 /* ProgressHUD+CircleRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC6D2C23BCFA00250FF8 /* ProgressHUD+CircleRotateChase.swift */; };
+		D95AEC842C23BCFA00250FF8 /* ProgressHUD+CircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC6E2C23BCFA00250FF8 /* ProgressHUD+CircleStrokeSpin.swift */; };
+		D95AEC852C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC6F2C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift */; };
+		D95AEC862C23BCFA00250FF8 /* ProgressHUD+HorizontalBarScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC702C23BCFA00250FF8 /* ProgressHUD+HorizontalBarScaling.swift */; };
+		D95AEC872C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC712C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift */; };
+		D95AEC882C23BCFA00250FF8 /* ProgressHUD+PacmanProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC722C23BCFA00250FF8 /* ProgressHUD+PacmanProgress.swift */; };
+		D95AEC892C23BCFA00250FF8 /* ProgressHUD+QuintupleDotDance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC732C23BCFA00250FF8 /* ProgressHUD+QuintupleDotDance.swift */; };
+		D95AEC8A2C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC742C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift */; };
+		D95AEC8B2C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC752C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift */; };
+		D95AEC8C2C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */; };
+		D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */; };
+		D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */; };
+		D99656502C241906006A2343 /* SplashUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996564F2C241906006A2343 /* SplashUseCase.swift */; };
+		D99656522C24190F006A2343 /* SplashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656512C24190F006A2343 /* SplashService.swift */; };
+		D99656552C241E6D006A2343 /* RoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656542C241E6D006A2343 /* RoundViewController.swift */; };
+		D99656572C241EDB006A2343 /* RoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656562C241EDB006A2343 /* RoundService.swift */; };
+		D99656592C241F28006A2343 /* RoundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656582C241F28006A2343 /* RoundUseCase.swift */; };
+		D996565B2C241F42006A2343 /* RoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565A2C241F42006A2343 /* RoundStore.swift */; };
+		D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565C2C241F68006A2343 /* RoundBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +86,45 @@
 		D95AEC472C23B48F00250FF8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D95AEC492C23B4B900250FF8 /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
 		D95AEC4C2C23B6B600250FF8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D95AEC4F2C23B76100250FF8 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
+		D95AEC512C23B7DF00250FF8 /* SplashStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashStore.swift; sourceTree = "<group>"; };
+		D95AEC532C23BBBB00250FF8 /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
+		D95AEC552C23BC5B00250FF8 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		D95AEC572C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+LiveIcon.swift"; sourceTree = "<group>"; };
+		D95AEC582C23BCE700250FF8 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		D95AEC592C23BCE700250FF8 /* ProgressHUD+Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+Public.swift"; sourceTree = "<group>"; };
+		D95AEC5A2C23BCE700250FF8 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		D95AEC5B2C23BCE700250FF8 /* ProgressHUD+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+Enums.swift"; sourceTree = "<group>"; };
+		D95AEC5C2C23BCE700250FF8 /* ProgressHUD+Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+Banner.swift"; sourceTree = "<group>"; };
+		D95AEC632C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		D95AEC642C23BCFA00250FF8 /* ProgressHUD+BallVerticalBounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+BallVerticalBounce.swift"; sourceTree = "<group>"; };
+		D95AEC652C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+BarSweepToggle.swift"; sourceTree = "<group>"; };
+		D95AEC662C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleArcDotSpin.swift"; sourceTree = "<group>"; };
+		D95AEC672C23BCFA00250FF8 /* ProgressHUD+CircleBarSpinFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleBarSpinFade.swift"; sourceTree = "<group>"; };
+		D95AEC682C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleDotSpinFade.swift"; sourceTree = "<group>"; };
+		D95AEC692C23BCFA00250FF8 /* ProgressHUD+CirclePulseMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CirclePulseMultiple.swift"; sourceTree = "<group>"; };
+		D95AEC6A2C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CirclePulseSingle.swift"; sourceTree = "<group>"; };
+		D95AEC6B2C23BCFA00250FF8 /* ProgressHUD+CircleRippleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleRippleMultiple.swift"; sourceTree = "<group>"; };
+		D95AEC6C2C23BCFA00250FF8 /* ProgressHUD+CircleRippleSingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleRippleSingle.swift"; sourceTree = "<group>"; };
+		D95AEC6D2C23BCFA00250FF8 /* ProgressHUD+CircleRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleRotateChase.swift"; sourceTree = "<group>"; };
+		D95AEC6E2C23BCFA00250FF8 /* ProgressHUD+CircleStrokeSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+CircleStrokeSpin.swift"; sourceTree = "<group>"; };
+		D95AEC6F2C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+DualDotSidestep.swift"; sourceTree = "<group>"; };
+		D95AEC702C23BCFA00250FF8 /* ProgressHUD+HorizontalBarScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+HorizontalBarScaling.swift"; sourceTree = "<group>"; };
+		D95AEC712C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+HorizontalDotScaling.swift"; sourceTree = "<group>"; };
+		D95AEC722C23BCFA00250FF8 /* ProgressHUD+PacmanProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+PacmanProgress.swift"; sourceTree = "<group>"; };
+		D95AEC732C23BCFA00250FF8 /* ProgressHUD+QuintupleDotDance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+QuintupleDotDance.swift"; sourceTree = "<group>"; };
+		D95AEC742C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+SemiRingRotation.swift"; sourceTree = "<group>"; };
+		D95AEC752C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+SFSymbolBounce.swift"; sourceTree = "<group>"; };
+		D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+SquareCircuitSnake.swift"; sourceTree = "<group>"; };
+		D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProgressHUD+TriangleDotShift.swift"; sourceTree = "<group>"; };
+		D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		D996564F2C241906006A2343 /* SplashUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUseCase.swift; sourceTree = "<group>"; };
+		D99656512C24190F006A2343 /* SplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashService.swift; sourceTree = "<group>"; };
+		D99656542C241E6D006A2343 /* RoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewController.swift; sourceTree = "<group>"; };
+		D99656562C241EDB006A2343 /* RoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundService.swift; sourceTree = "<group>"; };
+		D99656582C241F28006A2343 /* RoundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUseCase.swift; sourceTree = "<group>"; };
+		D996565A2C241F42006A2343 /* RoundStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStore.swift; sourceTree = "<group>"; };
+		D996565C2C241F68006A2343 /* RoundBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +162,7 @@
 		D95AEC112C234FF500250FF8 /* EPICRPS */ = {
 			isa = PBXGroup;
 			children = (
+				D95AEC4E2C23B74700250FF8 /* Services */,
 				D95AEC362C23632A00250FF8 /* App */,
 				D95AEC462C23B48400250FF8 /* Models */,
 				D95AEC372C23633F00250FF8 /* Modules */,
@@ -106,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				D95AEC382C23634C00250FF8 /* Splash */,
+				D99656532C241E49006A2343 /* Round */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -115,6 +195,10 @@
 			children = (
 				D95AEC292C235B2B00250FF8 /* SplashViewController.swift */,
 				D95AEC3A2C236F2D00250FF8 /* SplashView.swift */,
+				D95AEC512C23B7DF00250FF8 /* SplashStore.swift */,
+				D996564F2C241906006A2343 /* SplashUseCase.swift */,
+				D99656512C24190F006A2343 /* SplashService.swift */,
+				D95AEC532C23BBBB00250FF8 /* RecentCell.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -155,9 +239,74 @@
 		D95AEC4B2C23B5BA00250FF8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D95AEC8E2C23BD0900250FF8 /* ProgressHUD */,
 				D95AEC4C2C23B6B600250FF8 /* Store.swift */,
+				D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D95AEC4E2C23B74700250FF8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC4F2C23B76100250FF8 /* FirebaseClient.swift */,
+				D95AEC552C23BC5B00250FF8 /* FileStorage.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D95AEC782C23BCFA00250FF8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC632C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift */,
+				D95AEC642C23BCFA00250FF8 /* ProgressHUD+BallVerticalBounce.swift */,
+				D95AEC652C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift */,
+				D95AEC662C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift */,
+				D95AEC672C23BCFA00250FF8 /* ProgressHUD+CircleBarSpinFade.swift */,
+				D95AEC682C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift */,
+				D95AEC692C23BCFA00250FF8 /* ProgressHUD+CirclePulseMultiple.swift */,
+				D95AEC6A2C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift */,
+				D95AEC6B2C23BCFA00250FF8 /* ProgressHUD+CircleRippleMultiple.swift */,
+				D95AEC6C2C23BCFA00250FF8 /* ProgressHUD+CircleRippleSingle.swift */,
+				D95AEC6D2C23BCFA00250FF8 /* ProgressHUD+CircleRotateChase.swift */,
+				D95AEC6E2C23BCFA00250FF8 /* ProgressHUD+CircleStrokeSpin.swift */,
+				D95AEC6F2C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift */,
+				D95AEC702C23BCFA00250FF8 /* ProgressHUD+HorizontalBarScaling.swift */,
+				D95AEC712C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift */,
+				D95AEC722C23BCFA00250FF8 /* ProgressHUD+PacmanProgress.swift */,
+				D95AEC732C23BCFA00250FF8 /* ProgressHUD+QuintupleDotDance.swift */,
+				D95AEC742C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift */,
+				D95AEC752C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift */,
+				D95AEC762C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift */,
+				D95AEC772C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D95AEC8E2C23BD0900250FF8 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC782C23BCFA00250FF8 /* Animations */,
+				D95AEC582C23BCE700250FF8 /* ProgressHUD.swift */,
+				D95AEC5C2C23BCE700250FF8 /* ProgressHUD+Banner.swift */,
+				D95AEC5B2C23BCE700250FF8 /* ProgressHUD+Enums.swift */,
+				D95AEC572C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift */,
+				D95AEC592C23BCE700250FF8 /* ProgressHUD+Public.swift */,
+				D95AEC5A2C23BCE700250FF8 /* ProgressView.swift */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		D99656532C241E49006A2343 /* Round */ = {
+			isa = PBXGroup;
+			children = (
+				D99656542C241E6D006A2343 /* RoundViewController.swift */,
+				D99656562C241EDB006A2343 /* RoundService.swift */,
+				D99656582C241F28006A2343 /* RoundUseCase.swift */,
+				D996565A2C241F42006A2343 /* RoundStore.swift */,
+				D996565C2C241F68006A2343 /* RoundBackgroundView.swift */,
+			);
+			path = Round;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,14 +392,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AEC7D2C23BCFA00250FF8 /* ProgressHUD+CircleBarSpinFade.swift in Sources */,
+				D95AEC862C23BCFA00250FF8 /* ProgressHUD+HorizontalBarScaling.swift in Sources */,
+				D99656502C241906006A2343 /* SplashUseCase.swift in Sources */,
+				D99656552C241E6D006A2343 /* RoundViewController.swift in Sources */,
+				D95AEC852C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift in Sources */,
+				D99656522C24190F006A2343 /* SplashService.swift in Sources */,
+				D95AEC7E2C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift in Sources */,
+				D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */,
+				D95AEC7C2C23BCFA00250FF8 /* ProgressHUD+CircleArcDotSpin.swift in Sources */,
+				D99656572C241EDB006A2343 /* RoundService.swift in Sources */,
+				D996565B2C241F42006A2343 /* RoundStore.swift in Sources */,
+				D95AEC622C23BCE700250FF8 /* ProgressHUD+Banner.swift in Sources */,
+				D95AEC872C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift in Sources */,
+				D95AEC8C2C23BCFA00250FF8 /* ProgressHUD+SquareCircuitSnake.swift in Sources */,
 				D95AEC4A2C23B4B900250FF8 /* Recent.swift in Sources */,
+				D95AEC892C23BCFA00250FF8 /* ProgressHUD+QuintupleDotDance.swift in Sources */,
+				D95AEC612C23BCE700250FF8 /* ProgressHUD+Enums.swift in Sources */,
+				D95AEC842C23BCFA00250FF8 /* ProgressHUD+CircleStrokeSpin.swift in Sources */,
+				D95AEC5D2C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift in Sources */,
 				D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */,
+				D95AEC5F2C23BCE700250FF8 /* ProgressHUD+Public.swift in Sources */,
+				D95AEC802C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
 				D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */,
+				D95AEC602C23BCE700250FF8 /* ProgressView.swift in Sources */,
+				D95AEC542C23BBBB00250FF8 /* RecentCell.swift in Sources */,
 				D95AEC1D2C234FF500250FF8 /* EPICRPS.xcdatamodeld in Sources */,
+				D95AEC562C23BC5B00250FF8 /* FileStorage.swift in Sources */,
+				D95AEC882C23BCFA00250FF8 /* ProgressHUD+PacmanProgress.swift in Sources */,
+				D95AEC7A2C23BCFA00250FF8 /* ProgressHUD+BallVerticalBounce.swift in Sources */,
+				D95AEC5E2C23BCE700250FF8 /* ProgressHUD.swift in Sources */,
 				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
 				D95AEC482C23B48F00250FF8 /* Person.swift in Sources */,
+				D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */,
+				D95AEC502C23B76100250FF8 /* FirebaseClient.swift in Sources */,
+				D95AEC7F2C23BCFA00250FF8 /* ProgressHUD+CirclePulseMultiple.swift in Sources */,
+				D95AEC522C23B7DF00250FF8 /* SplashStore.swift in Sources */,
+				D95AEC8A2C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift in Sources */,
+				D95AEC8B2C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift in Sources */,
+				D95AEC792C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift in Sources */,
+				D99656592C241F28006A2343 /* RoundUseCase.swift in Sources */,
+				D95AEC812C23BCFA00250FF8 /* ProgressHUD+CircleRippleMultiple.swift in Sources */,
+				D95AEC822C23BCFA00250FF8 /* ProgressHUD+CircleRippleSingle.swift in Sources */,
+				D95AEC832C23BCFA00250FF8 /* ProgressHUD+CircleRotateChase.swift in Sources */,
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
+				D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */,
+				D95AEC7B2C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift in Sources */,
 				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
