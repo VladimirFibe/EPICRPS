@@ -1,6 +1,8 @@
 import UIKit
 
-final class SplashViewController: UIViewController {
+final class SplashViewController: UITableViewController {
+    private var recents: [String] = []
+    private let spashView = SplashView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .xFDFEFF
@@ -31,5 +33,15 @@ final class SplashViewController: UIViewController {
     @objc private func navBarRightButtonAction() {
         let controller = UIViewController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension SplashViewController {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        recents.isEmpty ? view.safeAreaLayoutGuide.layoutFrame.height : 0
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        spashView
     }
 }

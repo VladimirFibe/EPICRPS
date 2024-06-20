@@ -18,6 +18,11 @@
 		D95AEC312C23623500250FF8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC302C23623500250FF8 /* FirebaseFirestoreSwift */; };
 		D95AEC332C23623500250FF8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC322C23623500250FF8 /* FirebaseStorage */; };
 		D95AEC352C2362BE00250FF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */; };
+		D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC3A2C236F2D00250FF8 /* SplashView.swift */; };
+		D95AEC3F2C2371D500250FF8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */; };
+		D95AEC402C2371D500250FF8 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */; };
+		D95AEC412C2371D500250FF8 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */; };
+		D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC422C23720B00250FF8 /* AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		D95AEC292C235B2B00250FF8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D95AEC392C23639300250FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D95AEC3A2C236F2D00250FF8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		D95AEC422C23720B00250FF8 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,10 @@
 				D95AEC202C234FF600250FF8 /* LaunchScreen.storyboard */,
 				D95AEC232C234FF600250FF8 /* Info.plist */,
 				D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */,
+				D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */,
+				D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */,
+				D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */,
+				D95AEC422C23720B00250FF8 /* AppFonts.swift */,
 				D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */,
 			);
 			path = EPICRPS;
@@ -100,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				D95AEC292C235B2B00250FF8 /* SplashViewController.swift */,
+				D95AEC3A2C236F2D00250FF8 /* SplashView.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -172,8 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95AEC1F2C234FF600250FF8 /* Assets.xcassets in Resources */,
+				D95AEC3F2C2371D500250FF8 /* Rubik-Regular.ttf in Resources */,
 				D95AEC222C234FF600250FF8 /* Base in Resources */,
+				D95AEC412C2371D500250FF8 /* Rubik-Medium.ttf in Resources */,
 				D95AEC352C2362BE00250FF8 /* GoogleService-Info.plist in Resources */,
+				D95AEC402C2371D500250FF8 /* Rubik-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
 				D95AEC1D2C234FF500250FF8 /* EPICRPS.xcdatamodeld in Sources */,
+				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
 				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,
 			);
