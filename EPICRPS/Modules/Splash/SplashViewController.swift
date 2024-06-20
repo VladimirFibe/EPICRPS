@@ -2,11 +2,12 @@ import UIKit
 
 final class SplashViewController: UITableViewController {
     private var recents: [String] = []
-    private let spashView = SplashView()
+    private let splashView = SplashView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .xFDFEFF
         setupNavigationBar()
+        splashView.configure(with: self, startAction: #selector(startAction), resultsAction: #selector(resultsAction))
     }
     
     private func setupNavigationBar() {
@@ -34,6 +35,18 @@ final class SplashViewController: UITableViewController {
         let controller = UIViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    @objc private func startAction() {
+        print(#function)
+        let controller = UIViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc private func resultsAction() {
+        print(#function)
+        let controller = UIViewController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension SplashViewController {
@@ -42,6 +55,6 @@ extension SplashViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        spashView
+        splashView
     }
 }

@@ -80,15 +80,7 @@
 			children = (
 				D95AEC362C23632A00250FF8 /* App */,
 				D95AEC372C23633F00250FF8 /* Modules */,
-				D95AEC1E2C234FF600250FF8 /* Assets.xcassets */,
-				D95AEC202C234FF600250FF8 /* LaunchScreen.storyboard */,
-				D95AEC232C234FF600250FF8 /* Info.plist */,
-				D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */,
-				D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */,
-				D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */,
-				D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */,
-				D95AEC422C23720B00250FF8 /* AppFonts.swift */,
-				D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */,
+				D95AEC442C23B0FD00250FF8 /* Supporting Files */,
 			);
 			path = EPICRPS;
 			sourceTree = "<group>";
@@ -117,6 +109,30 @@
 				D95AEC3A2C236F2D00250FF8 /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		D95AEC442C23B0FD00250FF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC452C23B12D00250FF8 /* Fonts */,
+				D95AEC202C234FF600250FF8 /* LaunchScreen.storyboard */,
+				D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */,
+				D95AEC422C23720B00250FF8 /* AppFonts.swift */,
+				D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */,
+				D95AEC232C234FF600250FF8 /* Info.plist */,
+				D95AEC1E2C234FF600250FF8 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D95AEC452C23B12D00250FF8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */,
+				D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */,
+				D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
