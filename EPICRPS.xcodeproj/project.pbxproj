@@ -23,6 +23,9 @@
 		D95AEC402C2371D500250FF8 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */; };
 		D95AEC412C2371D500250FF8 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */; };
 		D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC422C23720B00250FF8 /* AppFonts.swift */; };
+		D95AEC482C23B48F00250FF8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC472C23B48F00250FF8 /* Person.swift */; };
+		D95AEC4A2C23B4B900250FF8 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC492C23B4B900250FF8 /* Recent.swift */; };
+		D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC4C2C23B6B600250FF8 /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		D95AEC3E2C2371D500250FF8 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		D95AEC422C23720B00250FF8 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		D95AEC472C23B48F00250FF8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D95AEC492C23B4B900250FF8 /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
+		D95AEC4C2C23B6B600250FF8 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				D95AEC362C23632A00250FF8 /* App */,
+				D95AEC462C23B48400250FF8 /* Models */,
 				D95AEC372C23633F00250FF8 /* Modules */,
+				D95AEC4B2C23B5BA00250FF8 /* Base */,
 				D95AEC442C23B0FD00250FF8 /* Supporting Files */,
 			);
 			path = EPICRPS;
@@ -133,6 +141,23 @@
 				D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D95AEC462C23B48400250FF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC472C23B48F00250FF8 /* Person.swift */,
+				D95AEC492C23B4B900250FF8 /* Recent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D95AEC4B2C23B5BA00250FF8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D95AEC4C2C23B6B600250FF8 /* Store.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95AEC4A2C23B4B900250FF8 /* Recent.swift in Sources */,
 				D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
+				D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */,
 				D95AEC1D2C234FF500250FF8 /* EPICRPS.xcdatamodeld in Sources */,
 				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
+				D95AEC482C23B48F00250FF8 /* Person.swift in Sources */,
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
 				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,
 			);

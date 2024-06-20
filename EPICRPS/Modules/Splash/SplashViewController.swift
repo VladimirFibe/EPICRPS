@@ -37,13 +37,11 @@ final class SplashViewController: UITableViewController {
     }
     
     @objc private func startAction() {
-        print(#function)
         let controller = UIViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func resultsAction() {
-        print(#function)
         let controller = UIViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
