@@ -64,6 +64,7 @@ extension FirebaseClient {
         guard let id = Auth.auth().currentUser?.uid else { return [] }
         let query = try await Firestore.firestore().collection("persons")
             .whereField("id", isNotEqualTo: id)
+            .order(by: "activity")
             .limit(to: 50).getDocuments()
         return query.documents.compactMap { try? $0.data(as: Person.self)}
     }
@@ -217,7 +218,7 @@ extension FirebaseClient {
         Firestore.firestore().collection("messages")
             .document(uid)
             .collection("recents")
-            .order(by: "date", descending: false)
+            .order(by: "date", descending: true)
             .addSnapshotListener { querySnapshot, error in
                 guard let documents = querySnapshot?.documents else { return }
                 let recents = documents.compactMap {  try? $0.data(as: Recent.self)}

@@ -27,9 +27,9 @@ final class PersonStrore: Store<PersonsEvent, PersonsAction> {
     }
 
     private func fetchPersons() async throws {
-        let persons = try await useCase.fetchPersons()
-        sendEvent(.done(persons))
-//        downloadPersons()
+//        let persons = try await useCase.fetchPersons()
+//        sendEvent(.done(persons))
+        downloadPersons()
     }
     
     private func createRecent(with person: Person, and player: Person) async throws {
