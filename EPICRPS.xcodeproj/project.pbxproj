@@ -84,6 +84,13 @@
 		D99656592C241F28006A2343 /* RoundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656582C241F28006A2343 /* RoundUseCase.swift */; };
 		D996565B2C241F42006A2343 /* RoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565A2C241F42006A2343 /* RoundStore.swift */; };
 		D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565C2C241F68006A2343 /* RoundBackgroundView.swift */; };
+		D9D206322C251E7B006F99F5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206312C251E7B006F99F5 /* ResultsViewController.swift */; };
+		D9D206352C251EB9006F99F5 /* ResultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206342C251EB9006F99F5 /* ResultsStore.swift */; };
+		D9D206372C251ED3006F99F5 /* ResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */; };
+		D9D206392C251EEE006F99F5 /* ResultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206382C251EEE006F99F5 /* ResultsService.swift */; };
+		D9D2063B2C251F81006F99F5 /* ResultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */; };
+		D9D2063D2C251FA7006F99F5 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */; };
+		D9D2063F2C2523C5006F99F5 /* ResultsPersonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +170,13 @@
 		D99656582C241F28006A2343 /* RoundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUseCase.swift; sourceTree = "<group>"; };
 		D996565A2C241F42006A2343 /* RoundStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStore.swift; sourceTree = "<group>"; };
 		D996565C2C241F68006A2343 /* RoundBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBackgroundView.swift; sourceTree = "<group>"; };
+		D9D206312C251E7B006F99F5 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		D9D206342C251EB9006F99F5 /* ResultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsStore.swift; sourceTree = "<group>"; };
+		D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsUseCase.swift; sourceTree = "<group>"; };
+		D9D206382C251EEE006F99F5 /* ResultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsService.swift; sourceTree = "<group>"; };
+		D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionHeader.swift; sourceTree = "<group>"; };
+		D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPersonHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +243,7 @@
 				D97400242C24A0D700843670 /* Persons */,
 				D974002B2C24A32A00843670 /* Rules */,
 				D974002F2C24A3EE00843670 /* Settings */,
+				D9D206332C251E81006F99F5 /* Results */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -430,6 +445,20 @@
 			path = Round;
 			sourceTree = "<group>";
 		};
+		D9D206332C251E81006F99F5 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				D9D206312C251E7B006F99F5 /* ResultsViewController.swift */,
+				D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */,
+				D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */,
+				D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */,
+				D9D206342C251EB9006F99F5 /* ResultsStore.swift */,
+				D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */,
+				D9D206382C251EEE006F99F5 /* ResultsService.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,6 +549,8 @@
 				D95AEC852C23BCFA00250FF8 /* ProgressHUD+DualDotSidestep.swift in Sources */,
 				D97400312C24A41F00843670 /* SettingsNameTableViewCell.swift in Sources */,
 				D974002D2C24A3D500843670 /* SettingsViewController.swift in Sources */,
+				D9D206392C251EEE006F99F5 /* ResultsService.swift in Sources */,
+				D9D206322C251E7B006F99F5 /* ResultsViewController.swift in Sources */,
 				D99656522C24190F006A2343 /* SplashService.swift in Sources */,
 				D97400352C24A52300843670 /* EditProfileViewController.swift in Sources */,
 				D95AEC7E2C23BCFA00250FF8 /* ProgressHUD+CircleDotSpinFade.swift in Sources */,
@@ -530,6 +561,7 @@
 				D98CB41E2C24389A001F8A9A /* FightResultView.swift in Sources */,
 				D97400432C24A64E00843670 /* ProfileStatusStore.swift in Sources */,
 				D99656572C241EDB006A2343 /* RoundService.swift in Sources */,
+				D9D2063D2C251FA7006F99F5 /* ResultsCell.swift in Sources */,
 				D996565B2C241F42006A2343 /* RoundStore.swift in Sources */,
 				D95AEC622C23BCE700250FF8 /* ProgressHUD+Banner.swift in Sources */,
 				D974002A2C24A2FB00843670 /* RulesViewController.swift in Sources */,
@@ -542,11 +574,14 @@
 				D95AEC5D2C23BCE700250FF8 /* ProgressHUD+LiveIcon.swift in Sources */,
 				D95AEC432C23720B00250FF8 /* AppFonts.swift in Sources */,
 				D95AEC5F2C23BCE700250FF8 /* ProgressHUD+Public.swift in Sources */,
+				D9D206352C251EB9006F99F5 /* ResultsStore.swift in Sources */,
 				D97400452C24A6FB00843670 /* SplashFooterView.swift in Sources */,
+				D9D2063F2C2523C5006F99F5 /* ResultsPersonHeader.swift in Sources */,
 				D98CB41C2C243581001F8A9A /* FightLoadViewController.swift in Sources */,
 				D95AEC802C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
 				D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */,
+				D9D206372C251ED3006F99F5 /* ResultsUseCase.swift in Sources */,
 				D95AEC602C23BCE700250FF8 /* ProgressView.swift in Sources */,
 				D95AEC542C23BBBB00250FF8 /* RecentCell.swift in Sources */,
 				D95AEC1D2C234FF500250FF8 /* EPICRPS.xcdatamodeld in Sources */,
@@ -558,6 +593,7 @@
 				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
 				D95AEC482C23B48F00250FF8 /* Person.swift in Sources */,
 				D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */,
+				D9D2063B2C251F81006F99F5 /* ResultSectionHeader.swift in Sources */,
 				D97400382C24A54D00843670 /* EditProfileStore.swift in Sources */,
 				D97400232C24A0C000843670 /* PersonCell.swift in Sources */,
 				D95AEC502C23B76100250FF8 /* FirebaseClient.swift in Sources */,

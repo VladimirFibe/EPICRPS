@@ -82,7 +82,7 @@ extension SplashViewController {
     }
     
     @objc private func resultsAction() {
-        let controller = UIViewController()
+        let controller = ResultsViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
     
