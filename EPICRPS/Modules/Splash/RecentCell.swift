@@ -14,6 +14,7 @@ final class RecentCell: UITableViewCell {
     }(UILabel())
 
     private let lastMessageLabel: UILabel = {
+        $0.font = RubikFont.bold.size16
         return $0
     }(UILabel())
 
@@ -31,7 +32,7 @@ final class RecentCell: UITableViewCell {
 
     public func configure(with recent: Recent) {
         usernameLabel.text = recent.name
-        lastMessageLabel.text = recent.currentHand == 0 ? "Ваш ход" : "Ждем"
+        lastMessageLabel.text = "\(recent.playerCount) : \(recent.currentCount) Round: \(recent.round)"
         dateLabel.text = recent.date.timeElapsed
         unreadCounterLabel.text = "1"
         unreadCounterLabel.isHidden = recent.hand == 0
