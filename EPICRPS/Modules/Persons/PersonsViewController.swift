@@ -3,7 +3,10 @@ import UIKit
 final class PersonsViewController: UITableViewController {
     private var bag = Bag()
     private let store = PersonStrore()
-    private var persons: [Person] = [] { didSet { self.tableView.reloadData() }}
+    private var persons: [Person] = [] { didSet {
+        print("DEBUG: \(persons.count)")
+        self.tableView.reloadData()
+    }}
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Friends"

@@ -5,6 +5,7 @@ import FirebaseStorage
 final class FirebaseClient {
     static let shared = FirebaseClient()
     var recentListener: ListenerRegistration?
+    var personsListener: ListenerRegistration?
     var person: Person?
     var friend: Person?
     var recent = Recent()
@@ -45,6 +46,18 @@ extension FirebaseClient {
     func fetchPerson(with uid: String) async throws -> Person? {
         let querySnapshot = try await Firestore.firestore().collection("persons").document(uid).getDocument()
         return try querySnapshot.data(as: Person.self)
+    }
+    
+    func downloadPersons(completion: @escaping ([Person]) -> Void) {
+        guard let id = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("persons")
+            .whereField("id", isNotEqualTo: id)
+            .order(by: "activity", descending: true)
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else { return }
+                let persons = documents.compactMap {  try? $0.data(as: Person.self)}
+                completion(persons)
+            }
     }
     
     func fetchPersons() async throws -> [Person] {
@@ -184,6 +197,7 @@ extension FirebaseClient {
             .updateData(["hand": hand])
     }
     
+    
     func createRecentObserver(completion: @escaping (Recent) -> Void) {
         recentListener = Firestore.firestore().collection("messages")
             .document(recent.currentId)
@@ -203,6 +217,7 @@ extension FirebaseClient {
         Firestore.firestore().collection("messages")
             .document(uid)
             .collection("recents")
+            .order(by: "date", descending: false)
             .addSnapshotListener { querySnapshot, error in
                 guard let documents = querySnapshot?.documents else { return }
                 let recents = documents.compactMap {  try? $0.data(as: Recent.self)}

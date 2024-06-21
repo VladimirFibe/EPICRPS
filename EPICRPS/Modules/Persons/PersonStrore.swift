@@ -29,10 +29,17 @@ final class PersonStrore: Store<PersonsEvent, PersonsAction> {
     private func fetchPersons() async throws {
         let persons = try await useCase.fetchPersons()
         sendEvent(.done(persons))
+//        downloadPersons()
     }
     
     private func createRecent(with person: Person, and player: Person) async throws {
         FirebaseClient.shared.recent = try await FirebaseClient.shared.createRecent(with: person, and: player)
         sendEvent(.push)
+    }
+    
+    private func downloadPersons() {
+        FirebaseClient.shared.downloadPersons { persons in
+            self.sendEvent(.done(persons))
+        }
     }
 }

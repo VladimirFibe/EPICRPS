@@ -17,7 +17,6 @@
 		D95AEC2F2C23623500250FF8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC2E2C23623500250FF8 /* FirebaseFirestore */; };
 		D95AEC312C23623500250FF8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC302C23623500250FF8 /* FirebaseFirestoreSwift */; };
 		D95AEC332C23623500250FF8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D95AEC322C23623500250FF8 /* FirebaseStorage */; };
-		D95AEC352C2362BE00250FF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */; };
 		D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95AEC3A2C236F2D00250FF8 /* SplashView.swift */; };
 		D95AEC3F2C2371D500250FF8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */; };
 		D95AEC402C2371D500250FF8 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D95AEC3D2C2371D500250FF8 /* Rubik-Bold.ttf */; };
@@ -91,6 +90,7 @@
 		D9D2063B2C251F81006F99F5 /* ResultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */; };
 		D9D2063D2C251FA7006F99F5 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */; };
 		D9D2063F2C2523C5006F99F5 /* ResultsPersonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */; };
+		D9D206412C2557EB006F99F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9D206402C2557EB006F99F5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,7 +102,6 @@
 		D95AEC212C234FF600250FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95AEC232C234FF600250FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95AEC292C235B2B00250FF8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D95AEC392C23639300250FF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D95AEC3A2C236F2D00250FF8 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D95AEC3C2C2371D500250FF8 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -177,6 +176,7 @@
 		D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionHeader.swift; sourceTree = "<group>"; };
 		D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
 		D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPersonHeader.swift; sourceTree = "<group>"; };
+		D9D206402C2557EB006F99F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +269,7 @@
 				D95AEC202C234FF600250FF8 /* LaunchScreen.storyboard */,
 				D95AEC1B2C234FF500250FF8 /* EPICRPS.xcdatamodeld */,
 				D95AEC422C23720B00250FF8 /* AppFonts.swift */,
-				D95AEC342C2362BE00250FF8 /* GoogleService-Info.plist */,
+				D9D206402C2557EB006F99F5 /* GoogleService-Info.plist */,
 				D95AEC232C234FF600250FF8 /* Info.plist */,
 				D95AEC1E2C234FF600250FF8 /* Assets.xcassets */,
 			);
@@ -530,8 +530,8 @@
 				D95AEC3F2C2371D500250FF8 /* Rubik-Regular.ttf in Resources */,
 				D95AEC222C234FF600250FF8 /* Base in Resources */,
 				D95AEC412C2371D500250FF8 /* Rubik-Medium.ttf in Resources */,
-				D95AEC352C2362BE00250FF8 /* GoogleService-Info.plist in Resources */,
 				D95AEC402C2371D500250FF8 /* Rubik-Bold.ttf in Resources */,
+				D9D206412C2557EB006F99F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,7 +773,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.EPICRPS;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.RPSPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -806,7 +806,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.EPICRPS;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.RPSPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
