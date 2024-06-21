@@ -52,7 +52,8 @@ final class PersonsViewController: UITableViewController {
             .sink { [weak self] event in
                 guard let self else { return }
                 switch event {
-                case .done(let persons): self.persons = persons
+                case .done(let persons): 
+                    self.persons = persons
                 case .push: self.runRound()
                 }
             }

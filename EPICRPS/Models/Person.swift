@@ -3,13 +3,14 @@ import Foundation
 struct Person: Identifiable, Hashable, Codable, Comparable {
     var id = UUID().uuidString
     var name: String
-    var avatar = "firstPlayer"
+    var avatar = ""
     var male = true
     var win = 0
     var lose = 0
     var round = 0
-    var bot = true
+    var bot = false
     var status = Status()
+    var activity = Date()
     
     var winLabel: String { String(win)}
     var loseLabel: String { String(lose)}
