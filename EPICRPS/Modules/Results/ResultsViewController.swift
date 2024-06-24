@@ -10,7 +10,13 @@ final class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Leaderboard"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonAction))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(backButtonAction)
+        )
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(editName))
         view.backgroundColor = .systemBackground
         setupViews()
         setupObservers()
@@ -65,6 +71,16 @@ final class ResultsViewController: UIViewController {
     
     @objc private func backButtonAction() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func editName() {
+        let controller = EditNameViewController()
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .crossDissolve
+        controller.doneSaving = {
+            print("save")
+        }
+        present(controller, animated: true)
     }
 }
 

@@ -1,12 +1,9 @@
 import UIKit
 
 final class SplashViewController: UITableViewController {
-    private var recents: [Recent] = [] { didSet {
-        footerView.configure(with: recents.isEmpty)
-        tableView.reloadData()
-    }}
+    private var recents: [Recent] = [] { didSet { tableView.reloadData() }}
     private let splashView = SplashView()
-    private let footerView = SplashFooterView()
+    private let addButton = UIButton(type: .system)
     private let store: SplashStore
     private var bag = Bag()
     
@@ -32,7 +29,28 @@ extension SplashViewController {
         setupNavigationBar()
         setupObservers()
         tableView.register(RecentCell.self, forCellReuseIdentifier: RecentCell.identifier)
-        footerView.configure(with: self, startAction: #selector(startAction), resultsAction: #selector(resultsAction))
+        splashView.configure(with: self, startAction: #selector(startAction), resultsAction: #selector(resultsAction))
+        setupAddButton()
+    }
+    
+    private func setupAddButton() {
+        let radius = 28.0
+        view.addSubview(addButton)
+        addButton.translatesAutoresizingMaskIntoConstraints = false
+        addButton.setImage(UIImage(systemName: "plus"), for: [])
+        addButton.backgroundColor = .orange
+        addButton.tintColor = .white
+        addButton.layer.cornerRadius = radius
+        addButton.layer.shadowOpacity = 0.25
+        addButton.layer.shadowRadius = 5
+        addButton.layer.shadowOffset = .init(width: 0, height: 10)
+        addButton.addTarget(self, action: #selector(startAction), for: .primaryActionTriggered)
+        NSLayoutConstraint.activate([
+            addButton.widthAnchor.constraint(equalToConstant: 2 * radius),
+            addButton.heightAnchor.constraint(equalTo: addButton.widthAnchor),
+            addButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            addButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+        ])
     }
     
     private func setupNavigationBar() {
@@ -47,7 +65,7 @@ extension SplashViewController {
             image: .rulers35,
             style: .plain,
             target: self,
-            action: #selector(navBarRightButtonAction)
+            action: #selector(resultsAction)
         )
     }
     
@@ -96,20 +114,13 @@ extension SplashViewController {
 // MARK: - Tableview
 extension SplashViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        recents.isEmpty ? 500 : 0
+        recents.isEmpty ? view.layoutMarginsGuide.layoutFrame.height : 0
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         splashView
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        90
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        footerView
-    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         recents.count
     }

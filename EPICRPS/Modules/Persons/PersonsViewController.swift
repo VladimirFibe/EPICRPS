@@ -4,7 +4,6 @@ final class PersonsViewController: UITableViewController {
     private var bag = Bag()
     private let store = PersonStrore()
     private var persons: [Person] = [] { didSet {
-        print("DEBUG: \(persons.count)")
         self.tableView.reloadData()
     }}
     override func viewDidLoad() {
@@ -18,6 +17,13 @@ final class PersonsViewController: UITableViewController {
             style: .plain,
             target: self,
             action: #selector(backButtonAction)
+        )
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Results",
+            style: .plain,
+            target: self,
+            action: #selector(resultsAction)
         )
     }
     
@@ -46,6 +52,11 @@ final class PersonsViewController: UITableViewController {
 
     @objc private func backButtonAction() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func resultsAction() {
+        let controller = ResultsViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     private func setupObservers() {

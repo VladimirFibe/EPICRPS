@@ -7,6 +7,7 @@ protocol SplashUseCaseProtocol {
 
 final class SplashUseCase: SplashUseCaseProtocol {
     func downloadRecentChats(completion: @escaping ([Recent]) -> Void) {
+        try? service.updateActivity()
         service.downloadRecentChats(completion: completion)
     }
     

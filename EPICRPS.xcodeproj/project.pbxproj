@@ -83,6 +83,9 @@
 		D99656592C241F28006A2343 /* RoundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656582C241F28006A2343 /* RoundUseCase.swift */; };
 		D996565B2C241F42006A2343 /* RoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565A2C241F42006A2343 /* RoundStore.swift */; };
 		D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565C2C241F68006A2343 /* RoundBackgroundView.swift */; };
+		D9A5B84B2C297BAB00764693 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5B84A2C297BAB00764693 /* PopupViewController.swift */; };
+		D9A5B84D2C297D2600764693 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5B84C2C297D2600764693 /* PopupView.swift */; };
+		D9A5B84F2C29814000764693 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5B84E2C29814000764693 /* EditNameViewController.swift */; };
 		D9D206322C251E7B006F99F5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206312C251E7B006F99F5 /* ResultsViewController.swift */; };
 		D9D206352C251EB9006F99F5 /* ResultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206342C251EB9006F99F5 /* ResultsStore.swift */; };
 		D9D206372C251ED3006F99F5 /* ResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */; };
@@ -169,6 +172,9 @@
 		D99656582C241F28006A2343 /* RoundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUseCase.swift; sourceTree = "<group>"; };
 		D996565A2C241F42006A2343 /* RoundStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStore.swift; sourceTree = "<group>"; };
 		D996565C2C241F68006A2343 /* RoundBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBackgroundView.swift; sourceTree = "<group>"; };
+		D9A5B84A2C297BAB00764693 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		D9A5B84C2C297D2600764693 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		D9A5B84E2C29814000764693 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		D9D206312C251E7B006F99F5 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		D9D206342C251EB9006F99F5 /* ResultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsStore.swift; sourceTree = "<group>"; };
 		D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsUseCase.swift; sourceTree = "<group>"; };
@@ -300,6 +306,8 @@
 			children = (
 				D95AEC8E2C23BD0900250FF8 /* ProgressHUD */,
 				D95AEC4C2C23B6B600250FF8 /* Store.swift */,
+				D9A5B84A2C297BAB00764693 /* PopupViewController.swift */,
+				D9A5B84C2C297D2600764693 /* PopupView.swift */,
 				D95AEC8F2C23C6AC00250FF8 /* UIApplication+Extension.swift */,
 			);
 			path = Base;
@@ -449,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D206312C251E7B006F99F5 /* ResultsViewController.swift */,
+				D9A5B84E2C29814000764693 /* EditNameViewController.swift */,
 				D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */,
 				D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */,
 				D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */,
@@ -563,6 +572,7 @@
 				D99656572C241EDB006A2343 /* RoundService.swift in Sources */,
 				D9D2063D2C251FA7006F99F5 /* ResultsCell.swift in Sources */,
 				D996565B2C241F42006A2343 /* RoundStore.swift in Sources */,
+				D9A5B84D2C297D2600764693 /* PopupView.swift in Sources */,
 				D95AEC622C23BCE700250FF8 /* ProgressHUD+Banner.swift in Sources */,
 				D974002A2C24A2FB00843670 /* RulesViewController.swift in Sources */,
 				D95AEC872C23BCFA00250FF8 /* ProgressHUD+HorizontalDotScaling.swift in Sources */,
@@ -592,6 +602,7 @@
 				D98CB4192C2434F1001F8A9A /* FightLoadView.swift in Sources */,
 				D95AEC3B2C236F2D00250FF8 /* SplashView.swift in Sources */,
 				D95AEC482C23B48F00250FF8 /* Person.swift in Sources */,
+				D9A5B84B2C297BAB00764693 /* PopupViewController.swift in Sources */,
 				D95AEC902C23C6AC00250FF8 /* UIApplication+Extension.swift in Sources */,
 				D9D2063B2C251F81006F99F5 /* ResultSectionHeader.swift in Sources */,
 				D97400382C24A54D00843670 /* EditProfileStore.swift in Sources */,
@@ -613,6 +624,7 @@
 				D95AEC152C234FF500250FF8 /* SceneDelegate.swift in Sources */,
 				D95AEC8D2C23BCFA00250FF8 /* ProgressHUD+TriangleDotShift.swift in Sources */,
 				D95AEC7B2C23BCFA00250FF8 /* ProgressHUD+BarSweepToggle.swift in Sources */,
+				D9A5B84F2C29814000764693 /* EditNameViewController.swift in Sources */,
 				D97400332C24A45500843670 /* SettingsStore.swift in Sources */,
 				D98CB4212C245118001F8A9A /* FightResultViewController.swift in Sources */,
 				D95AEC2A2C235B2B00250FF8 /* SplashViewController.swift in Sources */,

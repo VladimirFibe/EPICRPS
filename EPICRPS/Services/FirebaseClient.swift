@@ -72,6 +72,7 @@ extension FirebaseClient {
     func updateAvatar(_ url: String) throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         person?.avatar = url
+        person?.activity = Date()
         try Firestore.firestore().collection("persons")
             .document(uid)
             .setData(from: person)
@@ -80,6 +81,7 @@ extension FirebaseClient {
     func updateUsername(_ name: String) throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         person?.name = name
+        person?.activity = Date()
         try Firestore.firestore().collection("persons")
             .document(uid)
             .setData(from: person)
@@ -88,6 +90,7 @@ extension FirebaseClient {
     func updateStatus(_ status: Person.Status) throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         person?.status = status
+        person?.activity = Date()
         try Firestore.firestore().collection("persons")
             .document(uid)
             .setData(from: person)
@@ -96,6 +99,7 @@ extension FirebaseClient {
     func updateBot() throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         person?.bot.toggle()
+        person?.activity = Date()
         try Firestore.firestore().collection("persons")
             .document(uid)
             .setData(from: person)
@@ -104,6 +108,15 @@ extension FirebaseClient {
     func updateSex() throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         person?.male.toggle()
+        person?.activity = Date()
+        try Firestore.firestore().collection("persons")
+            .document(uid)
+            .setData(from: person)
+    }
+    
+    func updateActivity() throws {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        person?.activity = Date()
         try Firestore.firestore().collection("persons")
             .document(uid)
             .setData(from: person)
