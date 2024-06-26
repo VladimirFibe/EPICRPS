@@ -22,7 +22,7 @@ final class ResultSectionHeader: UIView {
     private func setupTopRateImage() {
         addSubview(topRateImage)
         topRateImage.translatesAutoresizingMaskIntoConstraints = false
-        topRateImage.image = UIImage(named: "topRate")
+        topRateImage.image = .topRate
         topRateImage.contentMode = .scaleAspectFit
         NSLayoutConstraint.activate([
             topRateImage.centerXAnchor.constraint(equalTo: centerXAnchor),

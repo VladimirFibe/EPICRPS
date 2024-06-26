@@ -27,7 +27,6 @@ final class ResultsCell: UITableViewCell {
     }
     
     public func configure(with person: Person, and index: Int) {
-        avatarImageView.image = UIImage(named: person.avatar)
         nameLabel.text = person.name
         percentLabel.text = person.percentString
         scorerLabel.text = person.score
