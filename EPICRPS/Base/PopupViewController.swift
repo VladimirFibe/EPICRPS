@@ -4,6 +4,7 @@ class PopupViewController: UIViewController {
     let cardView = UIView()
     let stackView = UIStackView()
     let button = UIButton(type: .system)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
@@ -29,8 +30,9 @@ class PopupViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .center
+        stackView.spacing = 42
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 16),
+            stackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 32),
             stackView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16),
             stackView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
@@ -38,11 +40,13 @@ class PopupViewController: UIViewController {
     }
     
     private func setupButton() {
-        button.setTitle("OK", for: [])
         var config = UIButton.Configuration.filled()
         config.baseBackgroundColor = .xEA9975
         config.baseForegroundColor = .xFCD9C3
         config.cornerStyle = .capsule
+        var attributedTitle = AttributedString("OK")
+        attributedTitle.font = RubikFont.bold.size16
+        config.attributedTitle = attributedTitle
         button.configuration = config
         NSLayoutConstraint.activate([
             button.widthAnchor.constraint(equalToConstant: 134),

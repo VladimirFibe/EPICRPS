@@ -1,11 +1,16 @@
 import UIKit
 
 final class ResultsPersonHeader: UIView {
-    public var addImage: Callback?
-    public var editText: Callback?
     private let imageView = UIImageView()
     private let textFieldBackground = UIView()
     private let label = UILabel()
+    private let tapAvatar = UITapGestureRecognizer()
+    private let tapText = UITapGestureRecognizer()
+    
+    var text: String {
+        label.text ?? ""
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupImageView()
@@ -19,6 +24,8 @@ final class ResultsPersonHeader: UIView {
     
     private func setupImageView() {
         addSubview(imageView)
+        imageView.addGestureRecognizer(tapAvatar)
+        imageView.isUserInteractionEnabled = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .white
         imageView.layer.borderColor = UIColor.white.cgColor
@@ -35,6 +42,7 @@ final class ResultsPersonHeader: UIView {
     
     private func setupTextFieldBackground() {
         addSubview(textFieldBackground)
+        textFieldBackground.addGestureRecognizer(tapText)
         textFieldBackground.backgroundColor = .white
         textFieldBackground.translatesAutoresizingMaskIntoConstraints = false
         textFieldBackground.layer.cornerRadius = 20
@@ -60,7 +68,9 @@ final class ResultsPersonHeader: UIView {
         ])
     }
     
-    public func configure(with person: Person) {
+    public func configure(with person: Person, target: Any, avatarAction: Selector, textAction: Selector) {
+        tapText.addTarget(target, action: textAction)
+        tapAvatar.addTarget(target, action: avatarAction)
         label.text = person.name
         FileStorage.downloadImage(id: person.id, link: person.avatar) { image in
             if let image {
@@ -69,6 +79,10 @@ final class ResultsPersonHeader: UIView {
                 self.imageView.image = .avatar
             }
         }
+    }
+    
+    public func configure(with text: String) {
+        label.text = text
     }
 }
 

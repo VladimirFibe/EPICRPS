@@ -1,6 +1,5 @@
 import UIKit
 
-
 final class ResultsCell: UITableViewCell {
     static let identifier = "ResultsCell"
     private let colorView = UIView()
@@ -131,6 +130,7 @@ final class ResultsCell: UITableViewCell {
             indexLabel.leadingAnchor.constraint(equalTo: colorView.leadingAnchor)
         ])
     }
+    
     private func setupCircleImage() {
         contentView.addSubview(circleImage)
         circleImage.translatesAutoresizingMaskIntoConstraints = false

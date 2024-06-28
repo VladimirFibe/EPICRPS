@@ -83,9 +83,11 @@
 		D99656592C241F28006A2343 /* RoundUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99656582C241F28006A2343 /* RoundUseCase.swift */; };
 		D996565B2C241F42006A2343 /* RoundStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565A2C241F42006A2343 /* RoundStore.swift */; };
 		D996565D2C241F68006A2343 /* RoundBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D996565C2C241F68006A2343 /* RoundBackgroundView.swift */; };
+		D99B2FA82C2BD6C200F97753 /* AvatarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B2FA72C2BD6C200F97753 /* AvatarsViewController.swift */; };
 		D9A5B84B2C297BAB00764693 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5B84A2C297BAB00764693 /* PopupViewController.swift */; };
 		D9A5B84D2C297D2600764693 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5B84C2C297D2600764693 /* PopupView.swift */; };
 		D9A5B84F2C29814000764693 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A5B84E2C29814000764693 /* EditNameViewController.swift */; };
+		D9CDDE2B2C2E51A500A76B33 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CDDE2A2C2E51A500A76B33 /* AvatarCell.swift */; };
 		D9D206322C251E7B006F99F5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206312C251E7B006F99F5 /* ResultsViewController.swift */; };
 		D9D206352C251EB9006F99F5 /* ResultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206342C251EB9006F99F5 /* ResultsStore.swift */; };
 		D9D206372C251ED3006F99F5 /* ResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */; };
@@ -172,9 +174,11 @@
 		D99656582C241F28006A2343 /* RoundUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUseCase.swift; sourceTree = "<group>"; };
 		D996565A2C241F42006A2343 /* RoundStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStore.swift; sourceTree = "<group>"; };
 		D996565C2C241F68006A2343 /* RoundBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBackgroundView.swift; sourceTree = "<group>"; };
+		D99B2FA72C2BD6C200F97753 /* AvatarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarsViewController.swift; sourceTree = "<group>"; };
 		D9A5B84A2C297BAB00764693 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		D9A5B84C2C297D2600764693 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		D9A5B84E2C29814000764693 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		D9CDDE2A2C2E51A500A76B33 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		D9D206312C251E7B006F99F5 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		D9D206342C251EB9006F99F5 /* ResultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsStore.swift; sourceTree = "<group>"; };
 		D9D206362C251ED3006F99F5 /* ResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsUseCase.swift; sourceTree = "<group>"; };
@@ -458,6 +462,8 @@
 			children = (
 				D9D206312C251E7B006F99F5 /* ResultsViewController.swift */,
 				D9A5B84E2C29814000764693 /* EditNameViewController.swift */,
+				D99B2FA72C2BD6C200F97753 /* AvatarsViewController.swift */,
+				D9CDDE2A2C2E51A500A76B33 /* AvatarCell.swift */,
 				D9D2063A2C251F81006F99F5 /* ResultSectionHeader.swift */,
 				D9D2063E2C2523C5006F99F5 /* ResultsPersonHeader.swift */,
 				D9D2063C2C251FA7006F99F5 /* ResultsCell.swift */,
@@ -588,6 +594,7 @@
 				D97400452C24A6FB00843670 /* SplashFooterView.swift in Sources */,
 				D9D2063F2C2523C5006F99F5 /* ResultsPersonHeader.swift in Sources */,
 				D98CB41C2C243581001F8A9A /* FightLoadViewController.swift in Sources */,
+				D99B2FA82C2BD6C200F97753 /* AvatarsViewController.swift in Sources */,
 				D95AEC802C23BCFA00250FF8 /* ProgressHUD+CirclePulseSingle.swift in Sources */,
 				D95AEC132C234FF500250FF8 /* AppDelegate.swift in Sources */,
 				D95AEC4D2C23B6B600250FF8 /* Store.swift in Sources */,
@@ -613,6 +620,7 @@
 				D974003E2C24A59F00843670 /* EditProfileBotCell.swift in Sources */,
 				D95AEC8A2C23BCFA00250FF8 /* ProgressHUD+SemiRingRotation.swift in Sources */,
 				D974003A2C24A56200843670 /* PhotoTableViewCell.swift in Sources */,
+				D9CDDE2B2C2E51A500A76B33 /* AvatarCell.swift in Sources */,
 				D95AEC8B2C23BCFA00250FF8 /* ProgressHUD+SFSymbolBounce.swift in Sources */,
 				D95AEC792C23BCFA00250FF8 /* ProgressHUD+ActivityIndicator.swift in Sources */,
 				D974003C2C24A57800843670 /* TextFieldTableViewCell.swift in Sources */,

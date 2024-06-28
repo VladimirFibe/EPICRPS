@@ -16,7 +16,6 @@ final class ResultsViewController: UIViewController {
             target: self,
             action: #selector(backButtonAction)
         )
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(editName))
         view.backgroundColor = .systemBackground
         setupViews()
         setupObservers()
@@ -49,15 +48,12 @@ final class ResultsViewController: UIViewController {
         tableView.backgroundColor = .clear
         let headerView = ResultsPersonHeader(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
         if let person = FirebaseClient.shared.person {
-            headerView.configure(with: person)
-        }
-        headerView.editText = {[weak self] in
-            guard let self else { return }
-            let controller = UIViewController()
-            controller.modalPresentationStyle = .overCurrentContext
-            controller.modalTransitionStyle = .crossDissolve
-//            controller.doneSaving = {}
-            self.present(controller, animated: true)
+            headerView.configure(
+                with: person,
+                target: self,
+                avatarAction: #selector(avatarTapped),
+                textAction: #selector(editName)
+            )
         }
         tableView.tableHeaderView = headerView
         tableView.register(ResultsCell.self, forCellReuseIdentifier: ResultsCell.identifier)
@@ -69,17 +65,25 @@ final class ResultsViewController: UIViewController {
         ])
     }
     
+    @objc private func avatarTapped() {
+        let controller = AvatarsViewController(avatar: "") { avatar in
+            print(avatar)
+        }
+        controller.modalPresentationStyle = .overCurrentContext
+        controller.modalTransitionStyle = .crossDissolve
+        present(controller, animated: true)
+    }
+    
     @objc private func backButtonAction() {
         navigationController?.popViewController(animated: true)
     }
     
     @objc private func editName() {
-        let controller = EditNameViewController()
+        let controller = EditNameViewController(name: "Player 1", doneSaving: { name in
+            print("Save", name)
+        })
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
-        controller.doneSaving = {
-            print("save")
-        }
         present(controller, animated: true)
     }
 }
